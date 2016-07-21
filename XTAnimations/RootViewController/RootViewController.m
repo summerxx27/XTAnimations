@@ -9,6 +9,7 @@
 #import "RootViewController.h"
 #import "XTLoveHeartViewController.h"
 #import "ViewController.h"
+#import "EmitterSnowController.h"
 
 #define cellIdentifier @"cell"
 @interface RootViewController ()<UITableViewDelegate, UITableViewDataSource>
@@ -22,24 +23,29 @@
 {
     if (!_tableView) {
         _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+        _tableView.delegate = self;
+        _tableView.dataSource = self;
+        _tableView.rowHeight = 44;
+        [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier: cellIdentifier];
     }
     return _tableView;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.title = @"Animations";
     self.classNames = @[].mutableCopy;
     self.titleNames = @[].mutableCopy;
     
-    [self addCell:@"YY直播小心形" class:@"XTLoveHeartViewController"];
-    [self addCell:@"烟花展示" class:@"ViewController"];
+    [self addCell:@"YY直播小心形 - drawRect" class:@"XTLoveHeartViewController"];
+    [self addCell:@"YY直播小心型 - 图片" class:@""];
+    [self addCell:@"烟花动画展示" class:@"ViewController"];
+    [self addCell:@"粒子雪花动画" class:@"EmitterSnowController"];
+    [self addCell:@"跑马灯动画" class:@"XTScrollLabelViewController"];
+    
+    
     
     [self.view addSubview:self.tableView];
-    _tableView.delegate = self;
-    _tableView.dataSource = self;
-    _tableView.rowHeight = 44;
-    [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier: cellIdentifier];
-    
-    
     [_tableView reloadData];
 }
 - (void)addCell:(NSString *)title class:(NSString *)className;
@@ -57,7 +63,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    cell.textLabel.text = self.titleNames[indexPath.row];
+    cell.textLabel.text = [NSString stringWithFormat:@"%ld -- %@", (long)indexPath.row, self.titleNames[indexPath.row]];
     return cell;
 }
 

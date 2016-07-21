@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC8A9D0D1D409E0500981050 /* EmitterSnowController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8A9D0C1D409E0500981050 /* EmitterSnowController.m */; };
+		BC8A9D0F1D40A0A900981050 /* snow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC8A9D0E1D40A0A900981050 /* snow@2x.png */; };
+		BC8A9D111D40A0DE00981050 /* alpha@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC8A9D101D40A0DE00981050 /* alpha@2x.png */; };
+		BC8A9D161D40B0CA00981050 /* XTScrollLabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8A9D151D40B0CA00981050 /* XTScrollLabelViewController.m */; };
+		BC8A9D191D40B0E100981050 /* XTScrollLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8A9D181D40B0E100981050 /* XTScrollLabelView.m */; };
+		BC8A9D1C1D40B79000981050 /* NSString+Width.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8A9D1B1D40B79000981050 /* NSString+Width.m */; };
 		BC8B4E281D376BDF009B441C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8B4E271D376BDF009B441C /* main.m */; };
 		BC8B4E2B1D376BDF009B441C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8B4E2A1D376BDF009B441C /* AppDelegate.m */; };
 		BC8B4E311D376BDF009B441C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC8B4E2F1D376BDF009B441C /* Main.storyboard */; };
@@ -41,6 +47,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BC8A9D0B1D409E0500981050 /* EmitterSnowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmitterSnowController.h; sourceTree = "<group>"; };
+		BC8A9D0C1D409E0500981050 /* EmitterSnowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterSnowController.m; sourceTree = "<group>"; };
+		BC8A9D0E1D40A0A900981050 /* snow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snow@2x.png"; sourceTree = "<group>"; };
+		BC8A9D101D40A0DE00981050 /* alpha@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alpha@2x.png"; sourceTree = "<group>"; };
+		BC8A9D141D40B0CA00981050 /* XTScrollLabelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XTScrollLabelViewController.h; sourceTree = "<group>"; };
+		BC8A9D151D40B0CA00981050 /* XTScrollLabelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XTScrollLabelViewController.m; sourceTree = "<group>"; };
+		BC8A9D171D40B0E100981050 /* XTScrollLabelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XTScrollLabelView.h; sourceTree = "<group>"; };
+		BC8A9D181D40B0E100981050 /* XTScrollLabelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XTScrollLabelView.m; sourceTree = "<group>"; };
+		BC8A9D1A1D40B79000981050 /* NSString+Width.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Width.h"; sourceTree = "<group>"; };
+		BC8A9D1B1D40B79000981050 /* NSString+Width.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Width.m"; sourceTree = "<group>"; };
 		BC8B4E231D376BDE009B441C /* XTAnimations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XTAnimations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC8B4E271D376BDF009B441C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BC8B4E291D376BDF009B441C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -93,6 +109,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BC8A9D0A1D409DE100981050 /* 雪花效果 */ = {
+			isa = PBXGroup;
+			children = (
+				BC8A9D101D40A0DE00981050 /* alpha@2x.png */,
+				BC8A9D0E1D40A0A900981050 /* snow@2x.png */,
+				BC8A9D0B1D409E0500981050 /* EmitterSnowController.h */,
+				BC8A9D0C1D409E0500981050 /* EmitterSnowController.m */,
+			);
+			path = "雪花效果";
+			sourceTree = "<group>";
+		};
+		BC8A9D131D40AFDA00981050 /* 跑马灯效果 */ = {
+			isa = PBXGroup;
+			children = (
+				BC8A9D141D40B0CA00981050 /* XTScrollLabelViewController.h */,
+				BC8A9D151D40B0CA00981050 /* XTScrollLabelViewController.m */,
+				BC8A9D171D40B0E100981050 /* XTScrollLabelView.h */,
+				BC8A9D181D40B0E100981050 /* XTScrollLabelView.m */,
+				BC8A9D1A1D40B79000981050 /* NSString+Width.h */,
+				BC8A9D1B1D40B79000981050 /* NSString+Width.m */,
+			);
+			path = "跑马灯效果";
+			sourceTree = "<group>";
+		};
 		BC8B4E1A1D376BDE009B441C = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +157,8 @@
 			isa = PBXGroup;
 			children = (
 				BC8B4E6C1D377EB7009B441C /* RootViewController */,
+				BC8A9D131D40AFDA00981050 /* 跑马灯效果 */,
+				BC8A9D0A1D409DE100981050 /* 雪花效果 */,
 				BC8B4E651D37784C009B441C /* YY直播点赞 */,
 				BC8B4E5D1D37758B009B441C /* 烟花 */,
 				BC8B4E291D376BDF009B441C /* AppDelegate.h */,
@@ -292,11 +334,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC8B4E741D37998D009B441C /* darong.png in Resources */,
+				BC8A9D0F1D40A0A900981050 /* snow@2x.png in Resources */,
 				BC8B4E361D376BDF009B441C /* LaunchScreen.storyboard in Resources */,
 				BC8B4E621D37758B009B441C /* FFRing.png in Resources */,
 				BC8B4E331D376BDF009B441C /* Assets.xcassets in Resources */,
 				BC8B4E631D37758B009B441C /* FFTspark.png in Resources */,
 				BC8B4E311D376BDF009B441C /* Main.storyboard in Resources */,
+				BC8A9D111D40A0DE00981050 /* alpha@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,7 +365,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC8A9D0D1D409E0500981050 /* EmitterSnowController.m in Sources */,
 				BC8B4E641D37758B009B441C /* ViewController.m in Sources */,
+				BC8A9D1C1D40B79000981050 /* NSString+Width.m in Sources */,
+				BC8A9D161D40B0CA00981050 /* XTScrollLabelViewController.m in Sources */,
+				BC8A9D191D40B0E100981050 /* XTScrollLabelView.m in Sources */,
 				BC8B4E2B1D376BDF009B441C /* AppDelegate.m in Sources */,
 				BC8B4E681D377BE9009B441C /* XTLoveHeartView.m in Sources */,
 				BC8B4E721D3781BE009B441C /* XTLoveHeartViewController.m in Sources */,
@@ -552,6 +600,7 @@
 				BC8B4E521D376BE1009B441C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BC8B4E531D376BE1009B441C /* Build configuration list for PBXNativeTarget "XTAnimationsTests" */ = {
 			isa = XCConfigurationList;
@@ -560,6 +609,7 @@
 				BC8B4E551D376BE1009B441C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BC8B4E561D376BE1009B441C /* Build configuration list for PBXNativeTarget "XTAnimationsUITests" */ = {
 			isa = XCConfigurationList;
@@ -568,6 +618,7 @@
 				BC8B4E581D376BE1009B441C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
