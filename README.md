@@ -1,7 +1,7 @@
 # XTAnimations
 About the collection of various forms of animation
 
-##### YY直播点赞效果
+#### YY直播点赞效果
 ![](http://ww4.sinaimg.cn/large/e6a4355cgw1f5ttdqlqrvg208w0h2x6s.gif)
 ```objectivec
 XTLoveHeartView *heart = [[XTLoveHeartView alloc]initWithFrame:CGRectMake(0, 0, 40, 40)];
@@ -10,11 +10,11 @@ CGPoint fountainSource = CGPointMake(self.view.frame.size.width - 80, self.view.
 heart.center = fountainSource;
 [heart animateInView:self.view];
 ```
-##### 烟花演示效果
+#### 烟花演示效果
 ![](http://ww3.sinaimg.cn/large/e6a4355cgw1f5tll5lp8qg208w0gk7wk.gif)
-##### SNOW
+#### SNOW
 ![](http://ww4.sinaimg.cn/large/e6a4355cgw1f61moqud49g208w0gp4qq.gif)
-##### 跑马灯
+#### 跑马灯
 ![](http://ww4.sinaimg.cn/large/e6a4355cgw1f61mq3x60gg208w0gnkjl.gif)
 ```objectivec
 - (void)viewDidLoad {
