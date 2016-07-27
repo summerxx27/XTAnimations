@@ -66,7 +66,6 @@ textColor:[self randomColor]]];
 - (NSString *)randomString {
 
 NSArray *array = @[@"人帅",
-@"勤劳",
 @"年轻",
 @"刻苦",
 @"开玩笑",
