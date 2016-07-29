@@ -75,7 +75,7 @@ return array[arc4random() % array.count];
 
 ```
 ### POP实践 - 01
-![精心制作, 图片是不是很美](http://ww1.sinaimg.cn/large/e6a4355cgw1f6aovm0tm6g208w0gib2d.gif)
+![](http://ww4.sinaimg.cn/large/e6a4355cgw1f6aq37wc1ag208w0gib2d.gif)
 ```objectivec
 - (void)click:(UIButton *)btn
 {
