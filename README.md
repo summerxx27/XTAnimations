@@ -74,4 +74,19 @@ return array[arc4random() % array.count];
 }
 
 ```
+### POP实践 - 01
+![精心制作, 图片是不是很美](http://ww1.sinaimg.cn/large/e6a4355cgw1f6aovm0tm6g208w0gib2d.gif)
+```objectivec
+- (void)click:(UIButton *)btn
+{
+XTPopingView *view = [[XTPopingView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+view.fly_h = 350;
+view.fly_w = 250;
+UIImageView *headerImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, view.fly_w, view.fly_h)];
+headerImage.image = [UIImage imageNamed:@"chenyao.jpg"];
 
+[self.view addSubview:view];
+[view.flyView addSubview:headerImage];
+[view startFly:FlyTypeUToD];
+}
+```
