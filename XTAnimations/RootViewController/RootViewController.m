@@ -10,6 +10,7 @@
 #import "XTLoveHeartViewController.h"
 #import "ViewController.h"
 #import "EmitterSnowController.h"
+#import "PopingViewController.h"
 
 #define cellIdentifier @"cell"
 @interface RootViewController ()<UITableViewDelegate, UITableViewDataSource>
@@ -42,7 +43,7 @@
     [self addCell:@"烟花动画展示" class:@"ViewController"];
     [self addCell:@"粒子雪花动画" class:@"EmitterSnowController"];
     [self addCell:@"跑马灯动画" class:@"XTScrollLabelViewController"];
-    
+    [self addCell:@"POP实践" class:@"PopingViewController"];
     
     
     [self.view addSubview:self.tableView];
