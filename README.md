@@ -93,3 +93,5 @@ headerImage.image = [UIImage imageNamed:@"chenyao.jpg"];
 ```
 ### 点赞加自定义图片样式
 ![](http://ww1.sinaimg.cn/large/e6a4355cgw1f6ujnyhu1hj208l0fumzb.jpg)
+
+>在原有的基础上进行的修改
