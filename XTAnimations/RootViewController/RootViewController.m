@@ -8,9 +8,10 @@
 
 #import "RootViewController.h"
 #import "XTLoveHeartViewController.h"
-#import "ViewController.h"
+#import "ViewController1.h"
 #import "EmitterSnowController.h"
 #import "PopingViewController.h"
+#import "XTPictureViewController.h"
 
 #define cellIdentifier @"cell"
 @interface RootViewController ()<UITableViewDelegate, UITableViewDataSource>
@@ -26,7 +27,7 @@
         _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
         _tableView.delegate = self;
         _tableView.dataSource = self;
-        _tableView.rowHeight = 44;
+        _tableView.rowHeight = 66;
         [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier: cellIdentifier];
     }
     return _tableView;
@@ -39,12 +40,12 @@
     self.titleNames = @[].mutableCopy;
     
     [self addCell:@"YY直播小心形 - drawRect" class:@"XTLoveHeartViewController"];
-    [self addCell:@"YY直播小心型 - 图片" class:@""];
+    [self addCell:@"直播图片动画  " class:@"XTPictureViewController"];
     [self addCell:@"烟花动画展示" class:@"ViewController"];
     [self addCell:@"粒子雪花动画" class:@"EmitterSnowController"];
     [self addCell:@"跑马灯动画" class:@"XTScrollLabelViewController"];
     [self addCell:@"POP实践" class:@"PopingViewController"];
-    
+    [self addCell:@"自定义转场动画" class:@"FromViewController"];
     
     [self.view addSubview:self.tableView];
     [_tableView reloadData];

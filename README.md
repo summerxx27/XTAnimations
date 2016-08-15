@@ -74,8 +74,8 @@ return array[arc4random() % array.count];
 }
 
 ```
-### POP实践 - 01
-![](http://ww4.sinaimg.cn/large/e6a4355cgw1f6aq37wc1ag208w0gib2d.gif)
+### POP实践
+![](http://ww4.sinaimg.cn/large/e6a4355cgw1f6ujncz5dsj208p0fyab1.jpg)
 ```objectivec
 - (void)click:(UIButton *)btn
 {
@@ -90,3 +90,5 @@ headerImage.image = [UIImage imageNamed:@"chenyao.jpg"];
 [view startFly:FlyTypeUToD];
 }
 ```
+### 点赞加自定义图片样式
+![](http://ww1.sinaimg.cn/large/e6a4355cgw1f6ujnyhu1hj208l0fumzb.jpg)

@@ -6,15 +6,15 @@
 //  Copyright © 2016年 夏天然后. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "ViewController1.h"
 
-@interface ViewController ()
+@interface ViewController1 ()
 
 @property (nonatomic, strong) CAEmitterLayer *caELayer;
 
 @end
 
-@implementation ViewController
+@implementation ViewController1
 
 - (void)viewDidLoad {
     [super viewDidLoad];
