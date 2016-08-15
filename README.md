@@ -77,6 +77,7 @@ return array[arc4random() % array.count];
 
 ### POP实践
 ![](http://ww4.sinaimg.cn/large/e6a4355cgw1f6ujncz5dsj208p0fyab1.jpg)
+
 ```objectivec
 - (void)click:(UIButton *)btn
 {
