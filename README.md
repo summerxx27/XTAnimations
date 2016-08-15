@@ -74,14 +74,10 @@ return array[arc4random() % array.count];
 }
 
 ```
-<<<<<<< HEAD
+
 ### POP实践
 ![](http://ww4.sinaimg.cn/large/e6a4355cgw1f6ujncz5dsj208p0fyab1.jpg)
-=======
-### POP实践 - 01
-![](http://ww4.sinaimg.cn/large/e6a4355cgw1f6aq37wc1ag208w0gib2d.gif)
 
->>>>>>> master
 ```objectivec
 - (void)click:(UIButton *)btn
 {
@@ -97,4 +93,6 @@ headerImage.image = [UIImage imageNamed:@"chenyao.jpg"];
 }
 ```
 ### 点赞加自定义图片样式
+>在原有的基础上进行的修改
+
 ![](http://ww1.sinaimg.cn/large/e6a4355cgw1f6ujnyhu1hj208l0fumzb.jpg)
