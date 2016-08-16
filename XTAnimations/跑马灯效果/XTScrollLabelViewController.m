@@ -22,15 +22,42 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor blackColor];
     
-    XTScrollLabelView *drawMarqueeView  = [[XTScrollLabelView alloc] initWithFrame:CGRectMake(0, 0, 250.f, 20)];
+    XTScrollLabelView *drawMarqueeView   = [[XTScrollLabelView alloc] initWithFrame:CGRectMake(0, 104, 375, 20)];
+    XTScrollLabelView *drawMarqueeView1  = [[XTScrollLabelView alloc] initWithFrame:CGRectMake(0, 124, 375, 20)];
+    XTScrollLabelView *drawMarqueeView2  = [[XTScrollLabelView alloc] initWithFrame:CGRectMake(0, 144, 375, 20)];
+    XTScrollLabelView *drawMarqueeView3  = [[XTScrollLabelView alloc] initWithFrame:CGRectMake(0, 164, 375, 20)];
+
     drawMarqueeView.delegate          = self;
+    drawMarqueeView1.delegate         = self;
+    drawMarqueeView2.delegate         = self;
+    drawMarqueeView3.delegate         = self;
+    
+
     drawMarqueeView.marqueeDirection  = FromLeftType;
-    drawMarqueeView.center            = self.view.center;
+    drawMarqueeView1.marqueeDirection  = FromLeftType;
+    drawMarqueeView2.marqueeDirection  = FromLeftType;
+    drawMarqueeView3.marqueeDirection  = FromLeftType;
+
+
     [self.view addSubview:drawMarqueeView];
+    [self.view addSubview:drawMarqueeView1];
+    [self.view addSubview:drawMarqueeView2];
+    [self.view addSubview:drawMarqueeView3];
+
+    
     [drawMarqueeView addContentView:[self createLabelWithText:@"夏天是个很好的季节, 而夏天然后是简书的推荐作者, 喜欢分享!"
                                                     textColor:[self randomColor]]];
+    [drawMarqueeView1 addContentView:[self createLabelWithText:@"夏天然后是简书的推荐作者"
+                                                    textColor:[self randomColor]]];
+    [drawMarqueeView2 addContentView:[self createLabelWithText:@"夏天是个iOS开发者"
+                                                    textColor:[self randomColor]]];
+    [drawMarqueeView3 addContentView:[self createLabelWithText:@"喜欢分享!"
+                                                    textColor:[self randomColor]]];
     [drawMarqueeView startAnimation];
-    
+    [drawMarqueeView1 startAnimation];
+    [drawMarqueeView2 startAnimation];
+    [drawMarqueeView3 startAnimation];
+
 }
 
 - (UILabel *)createLabelWithText:(NSString *)text textColor:(UIColor *)textColor {
