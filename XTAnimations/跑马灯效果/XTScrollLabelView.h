@@ -9,14 +9,6 @@
 #import <UIKit/UIKit.h>
 @class XTScrollLabelView;
 
-//
-//typedef enum : NSUInteger {
-//    
-//    kDrawMarqueeLeft,
-//    kDrawMarqueeRight,
-//    
-//} EDrawMarqueeViewDirection;
-
 typedef NS_ENUM(NSInteger, ScrollDirectionType) {
     FromLeftType        = 0,
     FromRightType       = 1,
@@ -37,10 +29,10 @@ typedef NS_ENUM(NSInteger, ScrollDirectionType) {
 @property (nonatomic, weak) id <XTScrollLabelViewDelegate> delegate;
 
 // 速度
-@property (nonatomic) CGFloat                    speed;
+@property (nonatomic) CGFloat                               speed;
 
 // 方向
-@property (nonatomic) ScrollDirectionType  marqueeDirection;
+@property (nonatomic) ScrollDirectionType                   marqueeDirection;
 
 // 容器
 - (void)addContentView:(UIView *)view;
