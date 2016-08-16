@@ -41,7 +41,7 @@
     
     [self addCell:@"YY直播小心形 - drawRect" class:@"XTLoveHeartViewController"];
     [self addCell:@"直播图片动画  " class:@"XTPictureViewController"];
-    [self addCell:@"烟花动画展示" class:@"ViewController"];
+    [self addCell:@"烟花动画展示" class:@"ViewController1"];
     [self addCell:@"粒子雪花动画" class:@"EmitterSnowController"];
     [self addCell:@"跑马灯动画" class:@"XTScrollLabelViewController"];
     [self addCell:@"POP实践" class:@"PopingViewController"];
