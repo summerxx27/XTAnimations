@@ -50,6 +50,7 @@
     [self.view addSubview:self.tableView];
     [_tableView reloadData];
 }
+#pragma mark - 
 - (void)addCell:(NSString *)title class:(NSString *)className;
 {
     [self.classNames addObject:className];
