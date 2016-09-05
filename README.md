@@ -99,5 +99,4 @@ heart.center = fountainSource;
 ```
 ### 点赞加自定义图片样式
 >在原有的基础上进行的修改
-
 如图六
