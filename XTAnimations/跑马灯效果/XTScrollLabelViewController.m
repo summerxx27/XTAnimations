@@ -22,30 +22,30 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor blackColor];
     
-    XTScrollLabelView *drawMarqueeView   = [[XTScrollLabelView alloc] initWithFrame:CGRectMake(0, 104, 375, 20)];
-    XTScrollLabelView *drawMarqueeView1  = [[XTScrollLabelView alloc] initWithFrame:CGRectMake(0, 124, 375, 20)];
-    XTScrollLabelView *drawMarqueeView2  = [[XTScrollLabelView alloc] initWithFrame:CGRectMake(0, 144, 375, 20)];
-    XTScrollLabelView *drawMarqueeView3  = [[XTScrollLabelView alloc] initWithFrame:CGRectMake(0, 164, 375, 20)];
+    XTScrollLabelView *drawMarqueeView0   = [[XTScrollLabelView alloc] initWithFrame:CGRectMake(0, 104, self.view.frame.size.width, 20)];
+    XTScrollLabelView *drawMarqueeView1  = [[XTScrollLabelView alloc] initWithFrame:CGRectMake(0, 124, self.view.frame.size.width, 20)];
+    XTScrollLabelView *drawMarqueeView2  = [[XTScrollLabelView alloc] initWithFrame:CGRectMake(0, 144, self.view.frame.size.width, 20)];
+    XTScrollLabelView *drawMarqueeView3  = [[XTScrollLabelView alloc] initWithFrame:CGRectMake(0, 164, self.view.frame.size.width, 20)];
 
-    drawMarqueeView.delegate          = self;
+    drawMarqueeView0.delegate          = self;
     drawMarqueeView1.delegate         = self;
     drawMarqueeView2.delegate         = self;
     drawMarqueeView3.delegate         = self;
     
-
-    drawMarqueeView.marqueeDirection  = FromLeftType;
+    //
+    drawMarqueeView0.marqueeDirection  = FromLeftType;
     drawMarqueeView1.marqueeDirection  = FromLeftType;
     drawMarqueeView2.marqueeDirection  = FromLeftType;
     drawMarqueeView3.marqueeDirection  = FromLeftType;
 
-
-    [self.view addSubview:drawMarqueeView];
+    // add
+    [self.view addSubview:drawMarqueeView0];
     [self.view addSubview:drawMarqueeView1];
     [self.view addSubview:drawMarqueeView2];
     [self.view addSubview:drawMarqueeView3];
 
-    
-    [drawMarqueeView addContentView:[self createLabelWithText:@"夏天是个很好的季节, 而夏天然后是简书的推荐作者, 喜欢分享!"
+    // text
+    [drawMarqueeView0 addContentView:[self createLabelWithText:@"夏天是个很好的季节, 而夏天然后是简书的推荐作者, 喜欢分享!"
                                                     textColor:[self randomColor]]];
     [drawMarqueeView1 addContentView:[self createLabelWithText:@"夏天然后是简书的推荐作者"
                                                     textColor:[self randomColor]]];
@@ -53,13 +53,15 @@
                                                     textColor:[self randomColor]]];
     [drawMarqueeView3 addContentView:[self createLabelWithText:@"喜欢分享!"
                                                     textColor:[self randomColor]]];
-    [drawMarqueeView startAnimation];
+    
+    // start
+    [drawMarqueeView0 startAnimation];
     [drawMarqueeView1 startAnimation];
     [drawMarqueeView2 startAnimation];
     [drawMarqueeView3 startAnimation];
 
 }
-
+#pragma mark -
 - (UILabel *)createLabelWithText:(NSString *)text textColor:(UIColor *)textColor {
     
     NSString *string = [NSString stringWithFormat:@" %@ ", text];
@@ -68,17 +70,19 @@
     label.font       = [UIFont systemFontOfSize:14.f];
     label.text       = string;
     label.textColor  = textColor;
-    
     return label;
 }
+#pragma mark -
 - (UIColor *)randomColor {
     
     return [UIColor colorWithRed:[self randomValue] green:[self randomValue] blue:[self randomValue] alpha:1];
 }
+#pragma mark -
 - (CGFloat)randomValue {
     
     return arc4random() % 256 / 255.f;
 }
+#pragma mark -
 - (void)drawMarqueeView:(XTScrollLabelView *)drawMarqueeView animationDidStopFinished:(BOOL)finished
 {
     [drawMarqueeView stopAnimation];
@@ -88,6 +92,7 @@
         [drawMarqueeView startAnimation];
     });
 }
+#pragma mark -
 - (NSString *)randomString {
     
     NSArray *array = @[@"人帅",

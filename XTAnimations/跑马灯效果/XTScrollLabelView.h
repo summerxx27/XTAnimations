@@ -12,6 +12,7 @@
 typedef NS_ENUM(NSInteger, ScrollDirectionType) {
     FromLeftType        = 0,
     FromRightType       = 1,
+    
 };
 
 @protocol XTScrollLabelViewDelegate <NSObject>

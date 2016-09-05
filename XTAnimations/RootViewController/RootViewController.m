@@ -48,9 +48,10 @@
     [self addCell:@"自定义转场动画" class:@"FromViewController"];
     
     [self.view addSubview:self.tableView];
+    
     [_tableView reloadData];
 }
-#pragma mark - 
+#pragma mark -
 - (void)addCell:(NSString *)title class:(NSString *)className;
 {
     [self.classNames addObject:className];
