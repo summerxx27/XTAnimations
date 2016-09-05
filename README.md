@@ -1,7 +1,6 @@
 # XTAnimations
 About the collection of various forms of animation
 
-#### YY直播点赞效果
 <table border="1">
 <tr>
 <td><img src="http://ww4.sinaimg.cn/large/e6a4355cgw1f5ttdqlqrvg208w0h2x6s.gif" width="200" height="300"></td>
@@ -10,6 +9,15 @@ About the collection of various forms of animation
 <td><img src="http://ww4.sinaimg.cn/large/e6a4355cgw1f61mq3x60gg208w0gnkjl.gif" width="200" height="300"></td>
 </tr>
 </table>
+
+<table border="1">
+<tr>
+<td><img src="http://ww4.sinaimg.cn/large/e6a4355cgw1f6ujncz5dsj208p0fyab1.jpg" width="200" height="300"></td>
+<td><img src="http://ww1.sinaimg.cn/large/e6a4355cgw1f6ujnyhu1hj208l0fumzb.jpg" width="200" height="300"></td>
+</tr>
+</table>
+
+### YY直播点赞效果模仿
 
 ```objectivec
 XTLoveHeartView *heart = [[XTLoveHeartView alloc]initWithFrame:CGRectMake(0, 0, 40, 40)];
@@ -74,7 +82,6 @@ heart.center = fountainSource;
 ```
 
 ### POP实践
-![](http://ww4.sinaimg.cn/large/e6a4355cgw1f6ujncz5dsj208p0fyab1.jpg)
 
 ```objectivec
 - (void)click:(UIButton *)btn
@@ -92,5 +99,4 @@ heart.center = fountainSource;
 ```
 ### 点赞加自定义图片样式
 >在原有的基础上进行的修改
-
-![](http://ww1.sinaimg.cn/large/e6a4355cgw1f6ujnyhu1hj208l0fumzb.jpg)
+如图六
