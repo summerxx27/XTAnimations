@@ -17,7 +17,7 @@ About the collection of various forms of animation
 </tr>
 </table>
 
-#### YY直播点赞效果
+### YY直播点赞效果模仿
 
 ```objectivec
 XTLoveHeartView *heart = [[XTLoveHeartView alloc]initWithFrame:CGRectMake(0, 0, 40, 40)];
