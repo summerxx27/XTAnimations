@@ -7,8 +7,8 @@
 //
 
 #import "XTPopingView.h"
-#define SCREEN_WIDTH_XT [UIScreen mainScreen].bounds.size.width
-#define SCREEN_HEIGHT_XT [UIScreen mainScreen].bounds.size.height
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 @implementation XTPopingView
 
 - (instancetype)initWithFrame:(CGRect)frame
@@ -36,12 +36,12 @@
     switch (type) {
         case FlyTypeUToD:
         {
-            _flyView.frame = CGRectMake(SCREEN_WIDTH_XT / 2 - self.fly_w / 2, -self.fly_h, self.fly_w, self.fly_h);
+            _flyView.frame = CGRectMake(SCREEN_WIDTH / 2 - self.fly_w / 2, -self.fly_h, self.fly_w, self.fly_h);
         }
             break;
         case FlyTypeDToD:
         {
-            _flyView.frame = CGRectMake(SCREEN_WIDTH_XT / 2 - self.fly_w / 2, SCREEN_HEIGHT_XT + self.fly_h, self.fly_w, self.fly_h);
+            _flyView.frame = CGRectMake(SCREEN_WIDTH / 2 - self.fly_w / 2, SCREEN_HEIGHT + self.fly_h, self.fly_w, self.fly_h);
         }
         default:
             break;
@@ -58,7 +58,7 @@
 - (void)tapClickAction
 {
     POPSpringAnimation *anim = [POPSpringAnimation animationWithPropertyNamed:kPOPViewCenter];
-    anim.toValue = [NSValue valueWithCGPoint:CGPointMake(self.center.x, SCREEN_HEIGHT_XT + self.fly_h)];
+    anim.toValue = [NSValue valueWithCGPoint:CGPointMake(self.center.x, SCREEN_HEIGHT + self.fly_h)];
     [_flyView pop_addAnimation:anim forKey:@"animationRemove"];
     anim.springSpeed = 5;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
