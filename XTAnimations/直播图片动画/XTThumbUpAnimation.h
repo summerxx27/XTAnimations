@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface XTLikePictureView : UIView
+@interface XTThumbUpAnimation : UIView
 @property (nonatomic, strong) UIImageView *imageView;
 
 - (void)animatePictureInView:(UIView *)view Image:(UIImage *)image;

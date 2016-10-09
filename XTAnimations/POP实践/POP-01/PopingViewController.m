@@ -52,7 +52,8 @@
     headerImage.image = [UIImage imageNamed:@"chenyao2.jpg"];
     
     [self.view addSubview:view];
-    [view.flyView addSubview:headerImage];    [view startFly:FlyTypeDToD];
+    [view.flyView addSubview:headerImage];
+    [view startFly:FlyTypeDToD];
 }
 
 

@@ -6,10 +6,10 @@
 //  Copyright © 2016年 夏天然后. All rights reserved.
 //
 
-#import "NSString+Width.h"
+#import "NSString+XTAdd.h"
 
 
-@implementation NSString (Width)
+@implementation NSString (XTAdd)
 - (CGFloat)widthWithStringAttribute:(NSDictionary <NSString *, id> *)attribute {
     
     NSParameterAssert(attribute);

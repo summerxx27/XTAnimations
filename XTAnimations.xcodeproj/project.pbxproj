@@ -21,7 +21,7 @@
 		BC8A9D111D40A0DE00981050 /* alpha@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC8A9D101D40A0DE00981050 /* alpha@2x.png */; };
 		BC8A9D161D40B0CA00981050 /* XTScrollLabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8A9D151D40B0CA00981050 /* XTScrollLabelViewController.m */; };
 		BC8A9D191D40B0E100981050 /* XTScrollLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8A9D181D40B0E100981050 /* XTScrollLabelView.m */; };
-		BC8A9D1C1D40B79000981050 /* NSString+Width.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8A9D1B1D40B79000981050 /* NSString+Width.m */; };
+		BC8A9D1C1D40B79000981050 /* NSString+XTAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8A9D1B1D40B79000981050 /* NSString+XTAdd.m */; };
 		BC8B4E281D376BDF009B441C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8B4E271D376BDF009B441C /* main.m */; };
 		BC8B4E2B1D376BDF009B441C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8B4E2A1D376BDF009B441C /* AppDelegate.m */; };
 		BC8B4E311D376BDF009B441C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC8B4E2F1D376BDF009B441C /* Main.storyboard */; };
@@ -38,7 +38,7 @@
 		BC8B4E741D37998D009B441C /* darong.png in Resources */ = {isa = PBXBuildFile; fileRef = BC8B4E731D37998D009B441C /* darong.png */; };
 		BCE46FA21D61AAB30034CC9B /* XTPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE46FA11D61AAB30034CC9B /* XTPictureViewController.m */; };
 		BCE46FA61D61AE370034CC9B /* resource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BCE46FA51D61AE370034CC9B /* resource.bundle */; };
-		BCE46FA91D61B63D0034CC9B /* XTLikePictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE46FA81D61B63D0034CC9B /* XTLikePictureView.m */; };
+		BCE46FA91D61B63D0034CC9B /* XTThumbUpAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = BCE46FA81D61B63D0034CC9B /* XTThumbUpAnimation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,8 +83,8 @@
 		BC8A9D151D40B0CA00981050 /* XTScrollLabelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XTScrollLabelViewController.m; sourceTree = "<group>"; };
 		BC8A9D171D40B0E100981050 /* XTScrollLabelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XTScrollLabelView.h; sourceTree = "<group>"; };
 		BC8A9D181D40B0E100981050 /* XTScrollLabelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XTScrollLabelView.m; sourceTree = "<group>"; };
-		BC8A9D1A1D40B79000981050 /* NSString+Width.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Width.h"; sourceTree = "<group>"; };
-		BC8A9D1B1D40B79000981050 /* NSString+Width.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Width.m"; sourceTree = "<group>"; };
+		BC8A9D1A1D40B79000981050 /* NSString+XTAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+XTAdd.h"; sourceTree = "<group>"; };
+		BC8A9D1B1D40B79000981050 /* NSString+XTAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+XTAdd.m"; sourceTree = "<group>"; };
 		BC8B4E231D376BDE009B441C /* XTAnimations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XTAnimations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC8B4E271D376BDF009B441C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BC8B4E291D376BDF009B441C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -113,8 +113,8 @@
 		BCE46FA01D61AAB30034CC9B /* XTPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XTPictureViewController.h; sourceTree = "<group>"; };
 		BCE46FA11D61AAB30034CC9B /* XTPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XTPictureViewController.m; sourceTree = "<group>"; };
 		BCE46FA51D61AE370034CC9B /* resource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = resource.bundle; sourceTree = "<group>"; };
-		BCE46FA71D61B63D0034CC9B /* XTLikePictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XTLikePictureView.h; sourceTree = "<group>"; };
-		BCE46FA81D61B63D0034CC9B /* XTLikePictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XTLikePictureView.m; sourceTree = "<group>"; };
+		BCE46FA71D61B63D0034CC9B /* XTThumbUpAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XTThumbUpAnimation.h; sourceTree = "<group>"; };
+		BCE46FA81D61B63D0034CC9B /* XTThumbUpAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XTThumbUpAnimation.m; sourceTree = "<group>"; };
 		EDCD2A704C4C9397CA81F078 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -232,8 +232,8 @@
 				BC8A9D151D40B0CA00981050 /* XTScrollLabelViewController.m */,
 				BC8A9D171D40B0E100981050 /* XTScrollLabelView.h */,
 				BC8A9D181D40B0E100981050 /* XTScrollLabelView.m */,
-				BC8A9D1A1D40B79000981050 /* NSString+Width.h */,
-				BC8A9D1B1D40B79000981050 /* NSString+Width.m */,
+				BC8A9D1A1D40B79000981050 /* NSString+XTAdd.h */,
+				BC8A9D1B1D40B79000981050 /* NSString+XTAdd.m */,
 			);
 			path = "跑马灯效果";
 			sourceTree = "<group>";
@@ -346,8 +346,8 @@
 				BCE46FA51D61AE370034CC9B /* resource.bundle */,
 				BCE46FA01D61AAB30034CC9B /* XTPictureViewController.h */,
 				BCE46FA11D61AAB30034CC9B /* XTPictureViewController.m */,
-				BCE46FA71D61B63D0034CC9B /* XTLikePictureView.h */,
-				BCE46FA81D61B63D0034CC9B /* XTLikePictureView.m */,
+				BCE46FA71D61B63D0034CC9B /* XTThumbUpAnimation.h */,
+				BCE46FA81D61B63D0034CC9B /* XTThumbUpAnimation.m */,
 			);
 			path = "直播图片动画";
 			sourceTree = "<group>";
@@ -543,13 +543,13 @@
 			files = (
 				BC7E95F81D54388C00C42427 /* FromViewController.m in Sources */,
 				BC73FDCC1D4B1DD700EA9503 /* PopingViewController.m in Sources */,
-				BCE46FA91D61B63D0034CC9B /* XTLikePictureView.m in Sources */,
+				BCE46FA91D61B63D0034CC9B /* XTThumbUpAnimation.m in Sources */,
 				BC73FDD41D4B1E0500EA9503 /* XTPopingView.m in Sources */,
 				BC7E95F51D54386400C42427 /* PresentAnimator.m in Sources */,
 				BC8A9D0D1D409E0500981050 /* EmitterSnowController.m in Sources */,
 				BC8B4E641D37758B009B441C /* ViewController1.m in Sources */,
 				BCE46FA21D61AAB30034CC9B /* XTPictureViewController.m in Sources */,
-				BC8A9D1C1D40B79000981050 /* NSString+Width.m in Sources */,
+				BC8A9D1C1D40B79000981050 /* NSString+XTAdd.m in Sources */,
 				BC8A9D161D40B0CA00981050 /* XTScrollLabelViewController.m in Sources */,
 				BC8A9D191D40B0E100981050 /* XTScrollLabelView.m in Sources */,
 				BC8B4E2B1D376BDF009B441C /* AppDelegate.m in Sources */,

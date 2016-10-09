@@ -27,6 +27,7 @@
     [positionAnim setCompletionBlock:^(POPAnimation *anim, BOOL finished) {
         [transitionContext completeTransition:YES];
     }];
+    
     POPSpringAnimation *scaleAnim = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerScaleXY];
     scaleAnim.springBounciness = 20;
     scaleAnim.fromValue = [NSValue valueWithCGPoint:CGPointMake(1.2, 1.4)];

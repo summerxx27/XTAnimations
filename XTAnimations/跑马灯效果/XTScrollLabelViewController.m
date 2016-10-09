@@ -8,7 +8,7 @@
 
 #import "XTScrollLabelViewController.h"
 #import "XTScrollLabelView.h"
-#import "NSString+Width.h"
+#import "NSString+XTAdd.h"
 @interface XTScrollLabelViewController ()<XTScrollLabelViewDelegate>
 
 @property (nonatomic, strong) UILabel *label;

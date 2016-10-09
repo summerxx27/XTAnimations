@@ -12,6 +12,8 @@
 #import "ToViewController.h"
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+#warning 暂时不可使用
+/// -[UIWindow endDisablingInterfaceAutorotationAnimated:] called on <UIWindow: 0x7fba75004c70; frame = (0 0; 414 736); gestureRecognizers = <NSArray: 0x608000055db0>; layer = <UIWindowLayer: 0x608000036560>> without matching -beginDisablingInterfaceAutorotation. Ignoring.
 @interface FromViewController ()<UIViewControllerTransitioningDelegate, UINavigationControllerDelegate>
 
 @end
@@ -27,8 +29,9 @@
     presentButton.frame = CGRectMake(0, 300, SCREEN_WIDTH, 20);
     [presentButton setTitle:@"Presnet View Controller" forState:UIControlStateNormal];
     [presentButton setTitleColor:[UIColor colorWithRed:0.2912 green:0.904 blue:1.0 alpha:1.0] forState:UIControlStateNormal];
-    [presentButton addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
+    [presentButton addTarget:self action:@selector(buttonClickPresent:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:presentButton];
+    
     // push
     UIButton *pushButton = [UIButton buttonWithType:UIButtonTypeCustom];
     pushButton.frame = CGRectMake(0, 380, SCREEN_WIDTH, 20);
@@ -61,7 +64,7 @@
     return [DismissAnimator new];
 }
 
-- (void)buttonClick:(UIButton *)sender
+- (void)buttonClickPresent:(UIButton *)sender
 {
     ToViewController *modalViewController = [ToViewController new];
     modalViewController.transitioningDelegate = self;
