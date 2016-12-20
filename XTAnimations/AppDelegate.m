@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "RootViewController.h"
+#import "XTTransAnimate.h"
+#import "XTNavigation.h"
 @interface AppDelegate ()
 
 @end
@@ -20,6 +22,8 @@
     
     RootViewController *root = [[RootViewController alloc] init];
     UINavigationController *navRoot = [[UINavigationController alloc] initWithRootViewController:root];
+    navRoot.delegate = [XTNavigation getNavigationPerformerInstance];
+    [[XTNavigation getNavigationPerformerInstance] setupPanGesture:navRoot];
     self.window.rootViewController = navRoot;
     [self.window makeKeyAndVisible];
     return YES;
