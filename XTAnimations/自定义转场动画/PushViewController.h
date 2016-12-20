@@ -1,13 +1,13 @@
 //
-//  FromViewController.h
+//  PushViewController.h
 //  XTAnimations
 //
-//  Created by zjwang on 16/8/5.
+//  Created by summerxx on 2016/12/21.
 //  Copyright © 2016年 夏天然后. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface FromViewController : UIViewController
+@interface PushViewController : UIViewController
 
 @end
