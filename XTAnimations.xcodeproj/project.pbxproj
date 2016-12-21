@@ -8,10 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		9E38AB566FD5606AE372FA37 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E1EFF6F6238522ACAA683C5 /* libPods.a */; };
-		B9DAAC051E098F5A0073FADE /* PushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9DAAC041E098F5A0073FADE /* PushViewController.m */; };
-		B9DAAC0B1E098FC30073FADE /* XTNavigation.m in Sources */ = {isa = PBXBuildFile; fileRef = B9DAAC0A1E098FC30073FADE /* XTNavigation.m */; };
-		B9DAAC0E1E0990CF0073FADE /* XTTransAnimate.m in Sources */ = {isa = PBXBuildFile; fileRef = B9DAAC0D1E0990CF0073FADE /* XTTransAnimate.m */; };
-		B9DAAC101E0995F30073FADE /* topic_bar_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9DAAC0F1E0995F30073FADE /* topic_bar_bg@2x.png */; };
 		BC73FDCC1D4B1DD700EA9503 /* PopingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC73FDCB1D4B1DD700EA9503 /* PopingViewController.m */; };
 		BC73FDD21D4B1E0500EA9503 /* chenyao.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC73FDCE1D4B1E0500EA9503 /* chenyao.jpg */; };
 		BC73FDD31D4B1E0500EA9503 /* chenyao2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC73FDCF1D4B1E0500EA9503 /* chenyao2.jpg */; };
@@ -61,13 +57,6 @@
 /* Begin PBXFileReference section */
 		5E1EFF6F6238522ACAA683C5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A28A7FFEFA78664711629022 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		B9DAAC031E098F5A0073FADE /* PushViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushViewController.h; sourceTree = "<group>"; };
-		B9DAAC041E098F5A0073FADE /* PushViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushViewController.m; sourceTree = "<group>"; };
-		B9DAAC091E098FC30073FADE /* XTNavigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XTNavigation.h; sourceTree = "<group>"; };
-		B9DAAC0A1E098FC30073FADE /* XTNavigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XTNavigation.m; sourceTree = "<group>"; };
-		B9DAAC0C1E0990CF0073FADE /* XTTransAnimate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XTTransAnimate.h; sourceTree = "<group>"; };
-		B9DAAC0D1E0990CF0073FADE /* XTTransAnimate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XTTransAnimate.m; sourceTree = "<group>"; };
-		B9DAAC0F1E0995F30073FADE /* topic_bar_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "topic_bar_bg@2x.png"; sourceTree = "<group>"; };
 		BC73FDCA1D4B1DD700EA9503 /* PopingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopingViewController.h; sourceTree = "<group>"; };
 		BC73FDCB1D4B1DD700EA9503 /* PopingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopingViewController.m; sourceTree = "<group>"; };
 		BC73FDCE1D4B1E0500EA9503 /* chenyao.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chenyao.jpg; sourceTree = "<group>"; };
@@ -190,20 +179,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		BC7E95EE1D54380000C42427 /* 自定义转场动画 */ = {
-			isa = PBXGroup;
-			children = (
-				B9DAAC0F1E0995F30073FADE /* topic_bar_bg@2x.png */,
-				B9DAAC031E098F5A0073FADE /* PushViewController.h */,
-				B9DAAC041E098F5A0073FADE /* PushViewController.m */,
-				B9DAAC091E098FC30073FADE /* XTNavigation.h */,
-				B9DAAC0A1E098FC30073FADE /* XTNavigation.m */,
-				B9DAAC0C1E0990CF0073FADE /* XTTransAnimate.h */,
-				B9DAAC0D1E0990CF0073FADE /* XTTransAnimate.m */,
-			);
-			path = "自定义转场动画";
-			sourceTree = "<group>";
-		};
 		BC8A9D0A1D409DE100981050 /* 雪花效果 */ = {
 			isa = PBXGroup;
 			children = (
@@ -254,7 +229,6 @@
 			isa = PBXGroup;
 			children = (
 				BCE46F9F1D61AA980034CC9B /* 直播图片动画 */,
-				BC7E95EE1D54380000C42427 /* 自定义转场动画 */,
 				BC73FDC81D4B1DC200EA9503 /* POP实践 */,
 				BC8B4E6C1D377EB7009B441C /* RootViewController */,
 				BC8A9D131D40AFDA00981050 /* 跑马灯效果 */,
@@ -412,6 +386,7 @@
 				TargetAttributes = {
 					BC8B4E221D376BDE009B441C = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 637U33J5E6;
 					};
 					BC8B4E3B1D376BDF009B441C = {
 						CreatedOnToolsVersion = 7.3;
@@ -451,7 +426,6 @@
 				BC8B4E741D37998D009B441C /* darong.png in Resources */,
 				BC73FDD21D4B1E0500EA9503 /* chenyao.jpg in Resources */,
 				BCE46FA61D61AE370034CC9B /* resource.bundle in Resources */,
-				B9DAAC101E0995F30073FADE /* topic_bar_bg@2x.png in Resources */,
 				BC8A9D0F1D40A0A900981050 /* snow@2x.png in Resources */,
 				BC8B4E361D376BDF009B441C /* LaunchScreen.storyboard in Resources */,
 				BC8B4E621D37758B009B441C /* FFRing.png in Resources */,
@@ -537,15 +511,12 @@
 				BC73FDD41D4B1E0500EA9503 /* XTPopingView.m in Sources */,
 				BC8A9D0D1D409E0500981050 /* EmitterSnowController.m in Sources */,
 				BC8B4E641D37758B009B441C /* ViewController1.m in Sources */,
-				B9DAAC0B1E098FC30073FADE /* XTNavigation.m in Sources */,
 				BCE46FA21D61AAB30034CC9B /* XTPictureViewController.m in Sources */,
 				BC8A9D1C1D40B79000981050 /* NSString+XTAdd.m in Sources */,
-				B9DAAC0E1E0990CF0073FADE /* XTTransAnimate.m in Sources */,
 				BC8A9D161D40B0CA00981050 /* XTScrollLabelViewController.m in Sources */,
 				BC8A9D191D40B0E100981050 /* XTScrollLabelView.m in Sources */,
 				BC8B4E2B1D376BDF009B441C /* AppDelegate.m in Sources */,
 				BC8B4E681D377BE9009B441C /* XTLoveHeartView.m in Sources */,
-				B9DAAC051E098F5A0073FADE /* PushViewController.m in Sources */,
 				BC8B4E721D3781BE009B441C /* XTLoveHeartViewController.m in Sources */,
 				BC8B4E281D376BDF009B441C /* main.m in Sources */,
 				BC8B4E6F1D377EB7009B441C /* RootViewController.m in Sources */,
@@ -692,7 +663,9 @@
 			baseConfigurationReference = EDCD2A704C4C9397CA81F078 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 637U33J5E6;
 				INFOPLIST_FILE = XTAnimations/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-MyCompanyName-.XTAnimations";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -704,7 +677,9 @@
 			baseConfigurationReference = A28A7FFEFA78664711629022 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 637U33J5E6;
 				INFOPLIST_FILE = XTAnimations/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-MyCompanyName-.XTAnimations";
 				PRODUCT_NAME = "$(TARGET_NAME)";

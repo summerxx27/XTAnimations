@@ -45,7 +45,6 @@
     [self addCell:@"粒子雪花动画" class:@"EmitterSnowController"];
     [self addCell:@"跑马灯动画" class:@"XTScrollLabelViewController"];
     [self addCell:@"POP实践" class:@"PopingViewController"];
-    [self addCell:@"自定义转场动画" class:@"PushViewController"];
     
     [self.view addSubview:self.tableView];
     
