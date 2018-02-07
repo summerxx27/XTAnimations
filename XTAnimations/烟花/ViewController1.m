@@ -52,8 +52,7 @@
     // 声明周期
     cell.lifetime                   = 2.04;
     //是个CGImageRef的对象,既粒子要展现的图片
-    cell.contents                   = (id)
-    [[UIImage imageNamed:@"FFRing"] CGImage];
+    cell.contents                   = (id)[[UIImage imageNamed:@"FFRing"] CGImage];
     // 缩放比例
     cell.scale                      = 0.2;
     // 粒子的颜色

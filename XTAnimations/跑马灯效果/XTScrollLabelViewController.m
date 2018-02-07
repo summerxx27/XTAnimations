@@ -22,15 +22,20 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor blackColor];
     
-    XTScrollLabelView *drawMarqueeView0   = [[XTScrollLabelView alloc] initWithFrame:CGRectMake(0, 104, self.view.frame.size.width, 20)];
+    XTScrollLabelView *drawMarqueeView0  = [[XTScrollLabelView alloc] initWithFrame:CGRectMake(0, 104, self.view.frame.size.width, 20)];
     XTScrollLabelView *drawMarqueeView1  = [[XTScrollLabelView alloc] initWithFrame:CGRectMake(0, 124, self.view.frame.size.width, 20)];
     XTScrollLabelView *drawMarqueeView2  = [[XTScrollLabelView alloc] initWithFrame:CGRectMake(0, 144, self.view.frame.size.width, 20)];
     XTScrollLabelView *drawMarqueeView3  = [[XTScrollLabelView alloc] initWithFrame:CGRectMake(0, 164, self.view.frame.size.width, 20)];
 
-    drawMarqueeView0.delegate          = self;
+    drawMarqueeView0.delegate         = self;
     drawMarqueeView1.delegate         = self;
     drawMarqueeView2.delegate         = self;
     drawMarqueeView3.delegate         = self;
+    
+    drawMarqueeView0.speed = 2;
+    drawMarqueeView1.speed = 2;
+    drawMarqueeView2.speed = 2;
+    drawMarqueeView3.speed = 2;
     
     //
     drawMarqueeView0.marqueeDirection  = FromLeftType;

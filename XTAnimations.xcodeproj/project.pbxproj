@@ -667,7 +667,7 @@
 				INFOPLIST_FILE = XTAnimations/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "-MyCompanyName-.XTAnimations";
+				PRODUCT_BUNDLE_IDENTIFIER = "-MyCompanyName-.XTAnimations-summerxx";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -681,7 +681,7 @@
 				INFOPLIST_FILE = XTAnimations/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "-MyCompanyName-.XTAnimations";
+				PRODUCT_BUNDLE_IDENTIFIER = "-MyCompanyName-.XTAnimations-summerxx";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
