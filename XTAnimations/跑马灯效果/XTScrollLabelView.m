@@ -34,7 +34,8 @@
         self.speed               = 1.f;
         self.marqueeDirection    = FromLeftType;
         self.layer.masksToBounds = YES;
-        self.animationView       = [[UIView alloc] initWithFrame:CGRectMake(_width, 0, _width, _height)];
+//        self.animationView       = [[UIView alloc] initWithFrame:CGRectMake(_width, 0, _width, _height)];
+        self.animationView = [UIView new];
         [self addSubview:self.animationView];
     }
     
