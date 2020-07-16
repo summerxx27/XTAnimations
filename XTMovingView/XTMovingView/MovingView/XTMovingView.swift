@@ -15,6 +15,13 @@ enum MovingDirectionType {
     case top
 }
 
+enum SpeedType {
+    /// 长文字慢, 短文字快
+    case special
+    /// 不根据文字长短, 都是匀速
+    case normal
+}
+
 protocol XTMovingViewProtocol {
     func drawMarqueeView(drawMarqueeView: XTMovingView, animationDidStopFinished: Bool) -> Void
 }
@@ -38,6 +45,8 @@ class XTMovingView: UIView, CAAnimationDelegate {
     var stop: Bool = true
     /// 方向
     var moveType: MovingDirectionType = .left
+    /// 速度类型
+    var speedType: SpeedType = .special
     /// 内容
     var contentView = UIView()
     /// 动画视图
@@ -110,7 +119,15 @@ class XTMovingView: UIView, CAAnimationDelegate {
         let moveAnimation = CAKeyframeAnimation.init(keyPath: "position")
         moveAnimation.path = movePath.cgPath
         moveAnimation.isRemovedOnCompletion = true
-        moveAnimation.duration = CFTimeInterval(animationViewWidth / 30 * (1 / speed))
+        
+        if self.speedType == .special {
+            moveAnimation.duration = CFTimeInterval(animationViewWidth / 30 * (1 / speed))
+        }
+        
+        if self.speedType == .normal {
+            moveAnimation.duration = CFTimeInterval(2 * (1 / speed))
+        }
+        
         moveAnimation.delegate = self
         animationView.layer.add(moveAnimation, forKey: "animationViewPosition")
     }

@@ -25,6 +25,7 @@ class ViewController: UIViewController, XTMovingViewProtocol {
         drawMarqueeView0.speed = 1
         drawMarqueeView0.backgroundColor = UIColor.clear
         drawMarqueeView0.moveType = .right
+        drawMarqueeView0.speedType = .normal
         self.view.addSubview(drawMarqueeView0)
         drawMarqueeView0.addContentView(v: self.createLabelWithText(text: "夏天然后😁", color: UIColor.black))
         drawMarqueeView0.startAnimation()
@@ -95,7 +96,7 @@ class ViewController: UIViewController, XTMovingViewProtocol {
     
     /// 标题字符串
     func randomString() -> NSString {
-        let array = ["夏天是个大人了很赞🤗", "我的博客: summerxx.com☺️"]
+        let array = ["🤗", "我的博客: summerxx.com☺️"]
         return array[Int(arc4random()) % array.count] as NSString
     }
     
