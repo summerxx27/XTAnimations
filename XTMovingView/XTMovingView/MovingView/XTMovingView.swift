@@ -11,14 +11,19 @@ import UIKit
 enum MovingDirectionType {
     case left
     case right
+    case bottom
+    case top
 }
 
 protocol XTMovingViewProtocol {
     func drawMarqueeView(drawMarqueeView: XTMovingView, animationDidStopFinished: Bool) -> Void
 }
 
-class XTMovingView: UIView, CAAnimationDelegate {
+extension XTMovingViewProtocol {
+    
+}
 
+class XTMovingView: UIView, CAAnimationDelegate {
     /// 速度
     var speed: Float = 1.0
     /// 宽
@@ -55,28 +60,49 @@ class XTMovingView: UIView, CAAnimationDelegate {
         self.addSubview(animationView)
     }
     
+    /// 添加Content视图
     func addContentView(v: UIView) -> Void {
         contentView.removeFromSuperview()
         v.frame = v.bounds
         contentView = v
         animationView.frame = v.bounds
         animationView.addSubview(contentView)
+        /// 内部空间W
         animationViewWidth = Float(animationView.frame.size.width)
+        /// 内部空间H
         animationViewHeight = Float(animationView.frame.size.height)
     }
     
+    /// 开始动画
     func startAnimation() -> Void {
         animationView.layer.removeAnimation(forKey: "animationViewPosition")
         stop = false
+        /// 右边的中心
         let pointRightCenter = CGPoint.init(x: Int(width + animationViewWidth / 2), y: Int(animationViewHeight) / 2)
-        
+        /// 左边的中信
         let pointLeftCenter = CGPoint.init(x: -Int(animationViewWidth / 2), y: Int(animationViewHeight) / 2)
-        
-        let fromPoint  = moveType == .left ? pointRightCenter : pointLeftCenter
-        let toPoint = moveType == .left ? pointLeftCenter : pointRightCenter
+        /// 下中心
+        let pointBottomCenter = CGPoint.init(x: Int(animationViewWidth / 2), y: Int(animationViewHeight) / 2 + Int(height))
+        /// 上中心
+        let pointUpCenter = CGPoint.init(x: Int(animationViewWidth) / 2, y: -Int(animationViewHeight) / 2)
+        var fromPoint = CGPoint.init()
+        var toPoint = CGPoint.init()
+        switch moveType {
+        case .left:
+            fromPoint = pointRightCenter
+            toPoint = pointLeftCenter
+        case .right:
+            fromPoint = pointLeftCenter
+            toPoint = pointRightCenter
+        case .bottom:
+            fromPoint = pointBottomCenter
+            toPoint = pointUpCenter
+        case .top:
+            fromPoint = pointUpCenter
+            toPoint = pointBottomCenter
+        }
         
         animationView.center = fromPoint
-        
         let movePath = UIBezierPath.init()
         movePath.move(to: fromPoint)
         movePath.addLine(to: toPoint)
@@ -89,19 +115,20 @@ class XTMovingView: UIView, CAAnimationDelegate {
         animationView.layer.add(moveAnimation, forKey: "animationViewPosition")
     }
     
+    /// 停止动画
     func stopAnimation() -> Void {
         stop = true
-        animationView.layer .removeAnimation(forKey: "animationViewPosition")
+        animationView.layer.removeAnimation(forKey: "animationViewPosition")
     }
     
     func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
         delegate?.drawMarqueeView(drawMarqueeView: self, animationDidStopFinished: flag)
-        
         if flag && !stop {
             self.startAnimation()
         }
     }
     
+    /// 暂停
     func pauseAnimation() -> Void {
         let layer = animationView.layer
         let pausedTime = layer.convertTime(CACurrentMediaTime(), from: nil)
@@ -109,6 +136,7 @@ class XTMovingView: UIView, CAAnimationDelegate {
         layer.timeOffset = pausedTime
     }
     
+    /// 重启
     func resumeAnimation() -> Void {
         let layer = animationView.layer
         let pausedTime = layer.timeOffset
