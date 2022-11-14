@@ -1,0 +1,66 @@
+BUILD_CONFIGURATIONS:
+  Debug: :debug
+  Release: :release
+CACHE_KEYS:
+  Masonry:
+    BUILD_SETTINGS_CHECKSUM:
+      Masonry:
+        :debug: 79cd884fc7e8367c579216bb7b4faccc
+        :release: 79cd884fc7e8367c579216bb7b4faccc
+    CHECKSUM: 678fab65091a9290e40e2832a55e7ab731aad201
+    PROJECT_NAME: Masonry
+    SPECS:
+      - Masonry (1.1.0)
+  ModuleA:
+    BUILD_SETTINGS_CHECKSUM:
+      ModuleA:
+        :debug: b56f622ae01f12e5ee118e643bffbfe4
+        :release: b56f622ae01f12e5ee118e643bffbfe4
+    CHECKSUM: 60aace5d74b2408dd0bfb8a949db2935844151ac
+    FILES:
+      []
+    PROJECT_NAME: ModuleA
+    SPECS:
+      - ModuleA (0.0.1)
+      - ModuleA/Core (0.0.1)
+  Pods-XTAnimations:
+    BUILD_SETTINGS_CHECKSUM:
+      Debug: 8ca9d5f79b003accf14fa06b875464f2
+      Release: 8ca9d5f79b003accf14fa06b875464f2
+    FILES:
+      - "${PODS_CONFIGURATION_BUILD_DIR}/ModuleA/DJMine.bundle"
+  pop:
+    BUILD_SETTINGS_CHECKSUM:
+      pop:
+        :debug: 39d5e4b0ea6801d63035ab2a1a6348e0
+        :release: 39d5e4b0ea6801d63035ab2a1a6348e0
+    CHECKSUM: f667631a5108a2e60d9e8797c9b32ddaf2080bce
+    PROJECT_NAME: pop
+    SPECS:
+      - pop (1.0.9)
+  SnapKit:
+    BUILD_SETTINGS_CHECKSUM:
+      SnapKit:
+        :debug: 1e163fb78e2bdd34b4d56f4e9f3f01a3
+        :release: 1e163fb78e2bdd34b4d56f4e9f3f01a3
+    CHECKSUM: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+    PROJECT_NAME: SnapKit
+    SPECS:
+      - SnapKit (5.6.0)
+INSTALLATION_OPTIONS:
+  clean: true
+  deduplicate_targets: true
+  deterministic_uuids: false
+  disable_input_output_paths: false
+  generate_multiple_pod_projects: true
+  incremental_installation: true
+  integrate_targets: true
+  lock_pod_sources: true
+  preserve_pod_file_structure: false
+  share_schemes_for_development_pods: false
+  skip_pods_project_generation: false
+  warn_for_multiple_pod_sources: true
+  warn_for_unused_master_specs_repo: false
+OBJECT_VERSION: 46
+PLUGINS:
+  {}

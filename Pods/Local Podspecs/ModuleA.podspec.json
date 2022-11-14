@@ -1,0 +1,37 @@
+{
+  "name": "ModuleA",
+  "version": "0.0.1",
+  "summary": "ModuleA",
+  "description": "模块 A",
+  "homepage": "summerxx.com",
+  "authors": {
+    "summerxx": "summerxx.com"
+  },
+  "platforms": {
+    "ios": "11.0"
+  },
+  "source": {
+    "git": ""
+  },
+  "resource_bundles": {
+    "DJMine": [
+      "Resources/*"
+    ]
+  },
+  "dependencies": {
+    "SnapKit": [
+
+    ]
+  },
+  "source_files": [
+    "Classes/DJMineModule.{h,m}",
+    "Classes/MineModule.swift"
+  ],
+  "private_header_files": "Classes/DJMineModule.h",
+  "subspecs": [
+    {
+      "name": "Core",
+      "source_files": "Classes/Core/**/*.{swift}"
+    }
+  ]
+}

@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <POP.h>
 
 typedef NS_ENUM(NSInteger, FlyType) {
     FlyTypeUToD     = 0,

@@ -1,10 +1,35 @@
 PODS:
+  - Masonry (1.1.0)
+  - ModuleA (0.0.1):
+    - ModuleA/Core (= 0.0.1)
+    - SnapKit
+  - ModuleA/Core (0.0.1):
+    - SnapKit
   - pop (1.0.9)
+  - SnapKit (5.6.0)
 
 DEPENDENCIES:
-  - pop (~> 1.0.9)
+  - Masonry
+  - ModuleA (from `Components/ModuleA`)
+  - pop
+  - SnapKit
+
+SPEC REPOS:
+  trunk:
+    - Masonry
+    - pop
+    - SnapKit
+
+EXTERNAL SOURCES:
+  ModuleA:
+    :path: Components/ModuleA
 
 SPEC CHECKSUMS:
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  ModuleA: 60aace5d74b2408dd0bfb8a949db2935844151ac
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: 09c6c1ecf5ac11494dd2ca2a0d2fb09d9577f0ba
+
+COCOAPODS: 1.11.3

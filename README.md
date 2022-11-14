@@ -165,4 +165,4 @@ extension NSString {
 }
 ```
 
- 以上就是这次把ObjC翻译成Swift的大致情况~ Ease!
+ 以上就是这次把ObjC翻译成Swift的大致情况~ !

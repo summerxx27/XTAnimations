@@ -1,0 +1,6 @@
+module Pods_XTAnimations {
+  umbrella header "Pods-XTAnimations-umbrella.h"
+
+  export *
+  module * { export * }
+}

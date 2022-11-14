@@ -7,8 +7,11 @@
 //
 
 #import "XTPopingView.h"
+#import <POP.h>
+
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+
 @implementation XTPopingView
 
 - (instancetype)initWithFrame:(CGRect)frame
