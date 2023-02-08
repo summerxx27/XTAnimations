@@ -15,6 +15,7 @@ example:
 <tr>
 <td><img src="http://ww4.sinaimg.cn/large/e6a4355cgw1f6ujncz5dsj208p0fyab1.jpg" width="200" height="300"></td>
 <td><img src="http://ww1.sinaimg.cn/large/e6a4355cgw1f6ujnyhu1hj208l0fumzb.jpg" width="200" height="300"></td>
-<td><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ggsx5mk0csg30gq0xc1l0.gif" width="180" height="325"></td>
+<td><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ggsx5mk0csg30gq0xc1l0.gif" width="180" height="325"></td><td><img src="https://p.ipic.vip/ko4zbo.gif" width="180" height="325"></td>
+
 </tr>
 </table>
