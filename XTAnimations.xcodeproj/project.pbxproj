@@ -14,6 +14,11 @@
 		B94141B2299369670030EEE1 /* LivingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94141B1299369670030EEE1 /* LivingView.swift */; };
 		B94141B429936AB50030EEE1 /* PixelTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94141B329936AB50030EEE1 /* PixelTransformer.swift */; };
 		B94141B729936BAD0030EEE1 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94141B629936BAD0030EEE1 /* UIView.swift */; };
+		B94141B92993BEFE0030EEE1 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94141B82993BEFE0030EEE1 /* UIViewController.swift */; };
+		B94145E52993C6D10030EEE1 /* AssociatedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94145E42993C6D10030EEE1 /* AssociatedObject.swift */; };
+		B94145E72993C9D90030EEE1 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94145E62993C9D90030EEE1 /* Array.swift */; };
+		B94145E92993CAD00030EEE1 /* CGGeometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94145E82993CAD00030EEE1 /* CGGeometry.swift */; };
+		B94145EB2993CBC10030EEE1 /* ObjcRuntime.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94145EA2993CBC10030EEE1 /* ObjcRuntime.swift */; };
 		BC73FDCC1D4B1DD700EA9503 /* PopingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC73FDCB1D4B1DD700EA9503 /* PopingViewController.m */; };
 		BC73FDD21D4B1E0500EA9503 /* chenyao.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC73FDCE1D4B1E0500EA9503 /* chenyao.jpg */; };
 		BC73FDD31D4B1E0500EA9503 /* chenyao2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC73FDCF1D4B1E0500EA9503 /* chenyao2.jpg */; };
@@ -71,6 +76,11 @@
 		B94141B1299369670030EEE1 /* LivingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivingView.swift; sourceTree = "<group>"; };
 		B94141B329936AB50030EEE1 /* PixelTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelTransformer.swift; sourceTree = "<group>"; };
 		B94141B629936BAD0030EEE1 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		B94141B82993BEFE0030EEE1 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		B94145E42993C6D10030EEE1 /* AssociatedObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssociatedObject.swift; sourceTree = "<group>"; };
+		B94145E62993C9D90030EEE1 /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
+		B94145E82993CAD00030EEE1 /* CGGeometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGGeometry.swift; sourceTree = "<group>"; };
+		B94145EA2993CBC10030EEE1 /* ObjcRuntime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjcRuntime.swift; sourceTree = "<group>"; };
 		BC73FDCA1D4B1DD700EA9503 /* PopingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopingViewController.h; sourceTree = "<group>"; };
 		BC73FDCB1D4B1DD700EA9503 /* PopingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopingViewController.m; sourceTree = "<group>"; };
 		BC73FDCE1D4B1E0500EA9503 /* chenyao.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chenyao.jpg; sourceTree = "<group>"; };
@@ -178,6 +188,10 @@
 				B94141A929935A020030EEE1 /* XTAnimations-Bridging-Header.h */,
 				B94141AD29935C390030EEE1 /* Then.swift */,
 				B94141B329936AB50030EEE1 /* PixelTransformer.swift */,
+				B94145E42993C6D10030EEE1 /* AssociatedObject.swift */,
+				B94145E62993C9D90030EEE1 /* Array.swift */,
+				B94145E82993CAD00030EEE1 /* CGGeometry.swift */,
+				B94145EA2993CBC10030EEE1 /* ObjcRuntime.swift */,
 			);
 			path = XTFoundationSwift;
 			sourceTree = "<group>";
@@ -186,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				B94141B629936BAD0030EEE1 /* UIView.swift */,
+				B94141B82993BEFE0030EEE1 /* UIViewController.swift */,
 			);
 			path = XTUIKitSwift;
 			sourceTree = "<group>";
@@ -531,8 +546,10 @@
 				BC73FDCC1D4B1DD700EA9503 /* PopingViewController.m in Sources */,
 				B94141B429936AB50030EEE1 /* PixelTransformer.swift in Sources */,
 				BCE46FA91D61B63D0034CC9B /* XTThumbUpAnimation.m in Sources */,
+				B94145EB2993CBC10030EEE1 /* ObjcRuntime.swift in Sources */,
 				BC73FDD41D4B1E0500EA9503 /* XTPopingView.m in Sources */,
 				B94141B029935D940030EEE1 /* LivingViewController.swift in Sources */,
+				B94145E72993C9D90030EEE1 /* Array.swift in Sources */,
 				BC8A9D0D1D409E0500981050 /* EmitterSnowController.m in Sources */,
 				B94141AE29935C390030EEE1 /* Then.swift in Sources */,
 				B94141AB29935A020030EEE1 /* XTActivityVIew.swift in Sources */,
@@ -543,7 +560,10 @@
 				BC8A9D161D40B0CA00981050 /* XTScrollLabelViewController.m in Sources */,
 				BC8A9D191D40B0E100981050 /* XTScrollLabelView.m in Sources */,
 				BC8B4E2B1D376BDF009B441C /* AppDelegate.m in Sources */,
+				B94145E92993CAD00030EEE1 /* CGGeometry.swift in Sources */,
+				B94145E52993C6D10030EEE1 /* AssociatedObject.swift in Sources */,
 				BC8B4E681D377BE9009B441C /* XTLoveHeartView.m in Sources */,
+				B94141B92993BEFE0030EEE1 /* UIViewController.swift in Sources */,
 				BC8B4E721D3781BE009B441C /* XTLoveHeartViewController.m in Sources */,
 				BC8B4E281D376BDF009B441C /* main.m in Sources */,
 				BC8B4E6F1D377EB7009B441C /* RootViewController.m in Sources */,

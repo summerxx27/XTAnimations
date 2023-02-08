@@ -76,7 +76,7 @@ class ActivityView: UIView {
     }
 
     /// 开始动画
-    func startAnimation() {
+    internal func startAnimation() {
         addRect()
     }
 
