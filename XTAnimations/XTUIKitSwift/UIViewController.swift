@@ -12,7 +12,8 @@ import UIKit
 extension UIViewController {
 
     /// 打印对象的指针地址
-    func printPointer<T>(ptr: UnsafePointer<T>) {
-        print(ptr)
+    func printPointer(object: AnyObject) {
+        let pointer = Unmanaged.passUnretained(object).toOpaque()
+        print("Object pointer: \(pointer)")
     }
 }

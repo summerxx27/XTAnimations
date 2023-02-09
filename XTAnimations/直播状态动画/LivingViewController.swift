@@ -31,6 +31,8 @@ public class LivingViewController: UIViewController {
             $0.top.equalTo(activityView.snp.bottom).offset(10)
             $0.size.equalTo(CGSize(width: 35, height: 15))
         }
+
+        printPointer(object: animationView)
     }
 
     private lazy var animationView = LivingView().then {

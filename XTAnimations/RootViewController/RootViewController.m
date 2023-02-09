@@ -41,6 +41,7 @@
     [self addCell:@"跑马灯动画" class:@"XTScrollLabelViewController"];
     [self addCell:@"POP实践" class:@"PopingViewController"];
     [self addCell:@"直播中动画" class:@"LivingViewController"];
+    [self addCell:@"简单跑马灯" class:@"RunningViewController"];
 
     [self.view addSubview:self.tableView];
     
@@ -76,6 +77,12 @@
         if (indexPath.row == 6) {
 
             LivingViewController *vc = [[LivingViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+            return;
+        }
+
+        if (indexPath.row == 7) {
+            RunningViewController *vc = [[RunningViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
         }
         return;
