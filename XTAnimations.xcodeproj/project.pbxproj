@@ -20,6 +20,7 @@
 		B94145E92993CAD00030EEE1 /* CGGeometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94145E82993CAD00030EEE1 /* CGGeometry.swift */; };
 		B94145EB2993CBC10030EEE1 /* ObjcRuntime.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94145EA2993CBC10030EEE1 /* ObjcRuntime.swift */; };
 		B94146292994E3780030EEE1 /* RunningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94146282994E3780030EEE1 /* RunningViewController.swift */; };
+		B9414E802994F6D90030EEE1 /* SortViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9414E7F2994F6D90030EEE1 /* SortViewController.swift */; };
 		BC73FDCC1D4B1DD700EA9503 /* PopingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC73FDCB1D4B1DD700EA9503 /* PopingViewController.m */; };
 		BC73FDD21D4B1E0500EA9503 /* chenyao.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC73FDCE1D4B1E0500EA9503 /* chenyao.jpg */; };
 		BC73FDD31D4B1E0500EA9503 /* chenyao2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC73FDCF1D4B1E0500EA9503 /* chenyao2.jpg */; };
@@ -83,6 +84,7 @@
 		B94145E82993CAD00030EEE1 /* CGGeometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGGeometry.swift; sourceTree = "<group>"; };
 		B94145EA2993CBC10030EEE1 /* ObjcRuntime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjcRuntime.swift; sourceTree = "<group>"; };
 		B94146282994E3780030EEE1 /* RunningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningViewController.swift; sourceTree = "<group>"; };
+		B9414E7F2994F6D90030EEE1 /* SortViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortViewController.swift; sourceTree = "<group>"; };
 		BC73FDCA1D4B1DD700EA9503 /* PopingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopingViewController.h; sourceTree = "<group>"; };
 		BC73FDCB1D4B1DD700EA9503 /* PopingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopingViewController.m; sourceTree = "<group>"; };
 		BC73FDCE1D4B1E0500EA9503 /* chenyao.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chenyao.jpg; sourceTree = "<group>"; };
@@ -215,6 +217,14 @@
 			path = "简单跑马灯";
 			sourceTree = "<group>";
 		};
+		B9414E7E2994F6C50030EEE1 /* 排序算法的实现 */ = {
+			isa = PBXGroup;
+			children = (
+				B9414E7F2994F6D90030EEE1 /* SortViewController.swift */,
+			);
+			path = "排序算法的实现";
+			sourceTree = "<group>";
+		};
 		BC73FDC81D4B1DC200EA9503 /* POP实践 */ = {
 			isa = PBXGroup;
 			children = (
@@ -294,6 +304,7 @@
 		BC8B4E251D376BDF009B441C /* XTAnimations */ = {
 			isa = PBXGroup;
 			children = (
+				B9414E7E2994F6C50030EEE1 /* 排序算法的实现 */,
 				B94146272994E3480030EEE1 /* 简单跑马灯 */,
 				B94141B529936B960030EEE1 /* XTUIKitSwift */,
 				B94141AC29935A150030EEE1 /* XTFoundationSwift */,
@@ -564,6 +575,7 @@
 				B94145E72993C9D90030EEE1 /* Array.swift in Sources */,
 				BC8A9D0D1D409E0500981050 /* EmitterSnowController.m in Sources */,
 				B94141AE29935C390030EEE1 /* Then.swift in Sources */,
+				B9414E802994F6D90030EEE1 /* SortViewController.swift in Sources */,
 				B94141AB29935A020030EEE1 /* XTActivityVIew.swift in Sources */,
 				B94141B2299369670030EEE1 /* LivingView.swift in Sources */,
 				BC8B4E641D37758B009B441C /* ViewController1.m in Sources */,
