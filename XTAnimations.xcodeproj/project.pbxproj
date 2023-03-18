@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		B71D3D70EABC8BC32F76B4FA /* libPods-XTAnimations.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EA90339B1319E5F8AC16D33 /* libPods-XTAnimations.a */; };
+		B939EE3229C611D30026F247 /* CollectionViewLayoutDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B939EE3129C611D30026F247 /* CollectionViewLayoutDemoViewController.swift */; };
+		B939EE3429C612980026F247 /* UIScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B939EE3329C612980026F247 /* UIScreen.swift */; };
+		B939EE3629C6133F0026F247 /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B939EE3529C6133F0026F247 /* UICollectionView.swift */; };
+		B939EE3829C613AE0026F247 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B939EE3729C613AE0026F247 /* UIColor.swift */; };
 		B94141AB29935A020030EEE1 /* XTActivityVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94141AA29935A020030EEE1 /* XTActivityVIew.swift */; };
 		B94141AE29935C390030EEE1 /* Then.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94141AD29935C390030EEE1 /* Then.swift */; };
 		B94141B029935D940030EEE1 /* LivingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94141AF29935D940030EEE1 /* LivingViewController.swift */; };
@@ -71,6 +75,10 @@
 		2EA90339B1319E5F8AC16D33 /* libPods-XTAnimations.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XTAnimations.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FC9E68F277B73F7C85E6569 /* Pods-XTAnimations.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XTAnimations.debug.xcconfig"; path = "Target Support Files/Pods-XTAnimations/Pods-XTAnimations.debug.xcconfig"; sourceTree = "<group>"; };
 		80AC877AE046A8669099E077 /* Pods-XTAnimations.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XTAnimations.release.xcconfig"; path = "Target Support Files/Pods-XTAnimations/Pods-XTAnimations.release.xcconfig"; sourceTree = "<group>"; };
+		B939EE3129C611D30026F247 /* CollectionViewLayoutDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewLayoutDemoViewController.swift; sourceTree = "<group>"; };
+		B939EE3329C612980026F247 /* UIScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScreen.swift; sourceTree = "<group>"; };
+		B939EE3529C6133F0026F247 /* UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
+		B939EE3729C613AE0026F247 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		B94141A929935A020030EEE1 /* XTAnimations-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XTAnimations-Bridging-Header.h"; sourceTree = "<group>"; };
 		B94141AA29935A020030EEE1 /* XTActivityVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XTActivityVIew.swift; sourceTree = "<group>"; };
 		B94141AD29935C390030EEE1 /* Then.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Then.swift; sourceTree = "<group>"; };
@@ -176,6 +184,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		B939EE3029C611A10026F247 /* CollectionView复杂布局 */ = {
+			isa = PBXGroup;
+			children = (
+				B939EE3129C611D30026F247 /* CollectionViewLayoutDemoViewController.swift */,
+			);
+			path = "CollectionView复杂布局";
+			sourceTree = "<group>";
+		};
 		B9413D7E299357170030EEE1 /* 直播状态动画 */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,6 +221,9 @@
 			children = (
 				B94141B629936BAD0030EEE1 /* UIView.swift */,
 				B94141B82993BEFE0030EEE1 /* UIViewController.swift */,
+				B939EE3329C612980026F247 /* UIScreen.swift */,
+				B939EE3529C6133F0026F247 /* UICollectionView.swift */,
+				B939EE3729C613AE0026F247 /* UIColor.swift */,
 			);
 			path = XTUIKitSwift;
 			sourceTree = "<group>";
@@ -304,6 +323,7 @@
 		BC8B4E251D376BDF009B441C /* XTAnimations */ = {
 			isa = PBXGroup;
 			children = (
+				B939EE3029C611A10026F247 /* CollectionView复杂布局 */,
 				B9414E7E2994F6C50030EEE1 /* 排序算法的实现 */,
 				B94146272994E3480030EEE1 /* 简单跑马灯 */,
 				B94141B529936B960030EEE1 /* XTUIKitSwift */,
@@ -564,6 +584,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B939EE3629C6133F0026F247 /* UICollectionView.swift in Sources */,
 				B94146292994E3780030EEE1 /* RunningViewController.swift in Sources */,
 				B94141B729936BAD0030EEE1 /* UIView.swift in Sources */,
 				BC73FDCC1D4B1DD700EA9503 /* PopingViewController.m in Sources */,
@@ -573,6 +594,7 @@
 				BC73FDD41D4B1E0500EA9503 /* XTPopingView.m in Sources */,
 				B94141B029935D940030EEE1 /* LivingViewController.swift in Sources */,
 				B94145E72993C9D90030EEE1 /* Array.swift in Sources */,
+				B939EE3429C612980026F247 /* UIScreen.swift in Sources */,
 				BC8A9D0D1D409E0500981050 /* EmitterSnowController.m in Sources */,
 				B94141AE29935C390030EEE1 /* Then.swift in Sources */,
 				B9414E802994F6D90030EEE1 /* SortViewController.swift in Sources */,
@@ -580,8 +602,10 @@
 				B94141B2299369670030EEE1 /* LivingView.swift in Sources */,
 				BC8B4E641D37758B009B441C /* ViewController1.m in Sources */,
 				BCE46FA21D61AAB30034CC9B /* XTPictureViewController.m in Sources */,
+				B939EE3229C611D30026F247 /* CollectionViewLayoutDemoViewController.swift in Sources */,
 				BC8A9D1C1D40B79000981050 /* NSString+XTAdd.m in Sources */,
 				BC8A9D161D40B0CA00981050 /* XTScrollLabelViewController.m in Sources */,
+				B939EE3829C613AE0026F247 /* UIColor.swift in Sources */,
 				BC8A9D191D40B0E100981050 /* XTScrollLabelView.m in Sources */,
 				BC8B4E2B1D376BDF009B441C /* AppDelegate.m in Sources */,
 				B94145E92993CAD00030EEE1 /* CGGeometry.swift in Sources */,

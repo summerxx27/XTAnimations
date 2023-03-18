@@ -3,12 +3,14 @@ PODS:
   - Masonry (1.1.0)
   - pop (1.0.9)
   - SnapKit (5.0.1)
+  - ZLCollectionViewFlowLayout (1.4.8)
 
 DEPENDENCIES:
   - Alamofire (= 5.4.1)
   - Masonry
   - pop
   - SnapKit (= 5.0.1)
+  - ZLCollectionViewFlowLayout
 
 SPEC REPOS:
   trunk:
@@ -16,13 +18,15 @@ SPEC REPOS:
     - Masonry
     - pop
     - SnapKit
+    - ZLCollectionViewFlowLayout
 
 SPEC CHECKSUMS:
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  ZLCollectionViewFlowLayout: 6cd506c05d77cb2ac0772f68155e377d50d39f8a
 
-PODFILE CHECKSUM: db39bcfc28fa7bb96fdf66e0211ededd891d4e25
+PODFILE CHECKSUM: 6c608041343f1018c0769ee86893c7f3daa7daf7
 
 COCOAPODS: 1.11.3

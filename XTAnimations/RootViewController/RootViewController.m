@@ -43,6 +43,7 @@
     [self addCell:@"直播中动画" class:@"LivingViewController"];
     [self addCell:@"简单跑马灯" class:@"RunningViewController"];
     [self addCell:@"常用的排序算法" class:@"SortViewController"];
+    [self addCell:@"CollectionView 复杂布局" class:@"CollectionViewLayoutDemoViewController"];
 
     [self.view addSubview:self.tableView];
     
@@ -90,6 +91,12 @@
 
         if (indexPath.row == 8) {
             SortViewController *vc = [[SortViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+            return;
+        }
+
+        if (indexPath.row == 9) {
+            CollectionViewLayoutDemoViewController *vc = [[CollectionViewLayoutDemoViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
             return;
         }
