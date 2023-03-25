@@ -14,6 +14,8 @@
 #import "XTPictureViewController.h"
 #import "XTAnimations-Swift.h"
 
+@import UIKit;
+
 #define cellIdentifier @"cell"
 
 @interface RootViewController ()<UITableViewDelegate, UITableViewDataSource>
@@ -40,30 +42,28 @@
     [self addCell:@"粒子雪花动画" class:@"EmitterSnowController"];
     [self addCell:@"跑马灯动画" class:@"XTScrollLabelViewController"];
     [self addCell:@"POP实践" class:@"PopingViewController"];
-    [self addCell:@"直播中动画,PK 进度条" class:@"LivingViewController"];
-    [self addCell:@"简单跑马灯" class:@"RunningViewController"];
-    [self addCell:@"常用的排序算法" class:@"SortViewController"];
-    [self addCell:@"连麦 16 宫格布局" class:@"CollectionViewLayoutDemoViewController"];
+    // 在 ObjC 中字符串转成 swift 类需要加模块名字 eg: MyModule.MyClass
+    [self addCell:@"直播中动画,PK 进度条" class:@"XTAnimations.LivingViewController"];
+    [self addCell:@"简单跑马灯" class:@"XTAnimations.RunningViewController"];
+    [self addCell:@"常用的排序算法" class:@"XTAnimations.SortViewController"];
+    [self addCell:@"连麦 16 宫格布局" class:@"XTAnimations.CollectionViewLayoutDemoViewController"];
 
     [self.view addSubview:self.tableView];
     
     [_tableView reloadData];
 }
 
-#pragma mark -
 - (void)addCell:(NSString *)title class:(NSString *)className;
 {
     [self.classNames addObject:className];
     [self.titleNames addObject:title];
 }
 
-#pragma mark - 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return self.classNames.count;
 }
 
-#pragma mark -
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
@@ -71,37 +71,8 @@
     return cell;
 }
 
-#pragma mark -
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row > 5) {
-
-        if (indexPath.row == 6) {
-
-            LivingViewController *vc = [[LivingViewController alloc] init];
-            [self.navigationController pushViewController:vc animated:YES];
-            return;
-        }
-
-        if (indexPath.row == 7) {
-            RunningViewController *vc = [[RunningViewController alloc] init];
-            [self.navigationController pushViewController:vc animated:YES];
-            return;
-        }
-
-        if (indexPath.row == 8) {
-            SortViewController *vc = [[SortViewController alloc] init];
-            [self.navigationController pushViewController:vc animated:YES];
-            return;
-        }
-
-        if (indexPath.row == 9) {
-            CollectionViewLayoutDemoViewController *vc = [[CollectionViewLayoutDemoViewController alloc] init];
-            [self.navigationController pushViewController:vc animated:YES];
-            return;
-        }
-        return;
-    }
     NSString *className = self.classNames[indexPath.row];
     Class class = NSClassFromString(className);
     if (class) {
