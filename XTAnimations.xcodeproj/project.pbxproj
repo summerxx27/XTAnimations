@@ -12,6 +12,10 @@
 		B939EE3429C612980026F247 /* UIScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B939EE3329C612980026F247 /* UIScreen.swift */; };
 		B939EE3629C6133F0026F247 /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B939EE3529C6133F0026F247 /* UICollectionView.swift */; };
 		B939EE3829C613AE0026F247 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B939EE3729C613AE0026F247 /* UIColor.swift */; };
+		B939F2AE29CE02140026F247 /* PKProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B939F2AD29CE02140026F247 /* PKProgressBar.swift */; };
+		B939F6D729CEE6480026F247 /* NSAttributedStringJoiner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B939F6D629CEE6480026F247 /* NSAttributedStringJoiner.swift */; };
+		B939F6D929CEE6700026F247 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = B939F6D829CEE6700026F247 /* UIFont.swift */; };
+		B939F6DB29CEE6D50026F247 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B939F6DA29CEE6D50026F247 /* UIImage.swift */; };
 		B94141AB29935A020030EEE1 /* XTActivityVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94141AA29935A020030EEE1 /* XTActivityVIew.swift */; };
 		B94141AE29935C390030EEE1 /* Then.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94141AD29935C390030EEE1 /* Then.swift */; };
 		B94141B029935D940030EEE1 /* LivingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94141AF29935D940030EEE1 /* LivingViewController.swift */; };
@@ -79,6 +83,10 @@
 		B939EE3329C612980026F247 /* UIScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScreen.swift; sourceTree = "<group>"; };
 		B939EE3529C6133F0026F247 /* UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
 		B939EE3729C613AE0026F247 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		B939F2AD29CE02140026F247 /* PKProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKProgressBar.swift; sourceTree = "<group>"; };
+		B939F6D629CEE6480026F247 /* NSAttributedStringJoiner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedStringJoiner.swift; sourceTree = "<group>"; };
+		B939F6D829CEE6700026F247 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		B939F6DA29CEE6D50026F247 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		B94141A929935A020030EEE1 /* XTAnimations-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XTAnimations-Bridging-Header.h"; sourceTree = "<group>"; };
 		B94141AA29935A020030EEE1 /* XTActivityVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XTActivityVIew.swift; sourceTree = "<group>"; };
 		B94141AD29935C390030EEE1 /* Then.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Then.swift; sourceTree = "<group>"; };
@@ -198,6 +206,7 @@
 				B94141AA29935A020030EEE1 /* XTActivityVIew.swift */,
 				B94141B1299369670030EEE1 /* LivingView.swift */,
 				B94141AF29935D940030EEE1 /* LivingViewController.swift */,
+				B939F2AD29CE02140026F247 /* PKProgressBar.swift */,
 			);
 			path = "直播状态动画";
 			sourceTree = "<group>";
@@ -212,6 +221,7 @@
 				B94145E62993C9D90030EEE1 /* Array.swift */,
 				B94145E82993CAD00030EEE1 /* CGGeometry.swift */,
 				B94145EA2993CBC10030EEE1 /* ObjcRuntime.swift */,
+				B939F6D629CEE6480026F247 /* NSAttributedStringJoiner.swift */,
 			);
 			path = XTFoundationSwift;
 			sourceTree = "<group>";
@@ -224,6 +234,8 @@
 				B939EE3329C612980026F247 /* UIScreen.swift */,
 				B939EE3529C6133F0026F247 /* UICollectionView.swift */,
 				B939EE3729C613AE0026F247 /* UIColor.swift */,
+				B939F6D829CEE6700026F247 /* UIFont.swift */,
+				B939F6DA29CEE6D50026F247 /* UIImage.swift */,
 			);
 			path = XTUIKitSwift;
 			sourceTree = "<group>";
@@ -590,6 +602,7 @@
 				BC73FDCC1D4B1DD700EA9503 /* PopingViewController.m in Sources */,
 				B94141B429936AB50030EEE1 /* PixelTransformer.swift in Sources */,
 				BCE46FA91D61B63D0034CC9B /* XTThumbUpAnimation.m in Sources */,
+				B939F6DB29CEE6D50026F247 /* UIImage.swift in Sources */,
 				B94145EB2993CBC10030EEE1 /* ObjcRuntime.swift in Sources */,
 				BC73FDD41D4B1E0500EA9503 /* XTPopingView.m in Sources */,
 				B94141B029935D940030EEE1 /* LivingViewController.swift in Sources */,
@@ -597,12 +610,15 @@
 				B939EE3429C612980026F247 /* UIScreen.swift in Sources */,
 				BC8A9D0D1D409E0500981050 /* EmitterSnowController.m in Sources */,
 				B94141AE29935C390030EEE1 /* Then.swift in Sources */,
+				B939F6D729CEE6480026F247 /* NSAttributedStringJoiner.swift in Sources */,
 				B9414E802994F6D90030EEE1 /* SortViewController.swift in Sources */,
 				B94141AB29935A020030EEE1 /* XTActivityVIew.swift in Sources */,
 				B94141B2299369670030EEE1 /* LivingView.swift in Sources */,
 				BC8B4E641D37758B009B441C /* ViewController1.m in Sources */,
+				B939F6D929CEE6700026F247 /* UIFont.swift in Sources */,
 				BCE46FA21D61AAB30034CC9B /* XTPictureViewController.m in Sources */,
 				B939EE3229C611D30026F247 /* CollectionViewLayoutDemoViewController.swift in Sources */,
+				B939F2AE29CE02140026F247 /* PKProgressBar.swift in Sources */,
 				BC8A9D1C1D40B79000981050 /* NSString+XTAdd.m in Sources */,
 				BC8A9D161D40B0CA00981050 /* XTScrollLabelViewController.m in Sources */,
 				B939EE3829C613AE0026F247 /* UIColor.swift in Sources */,

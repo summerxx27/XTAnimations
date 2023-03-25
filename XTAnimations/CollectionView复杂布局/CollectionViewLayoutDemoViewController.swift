@@ -33,8 +33,6 @@ class CollectionViewLayoutDemoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configUI()
-//        UICollectionViewLayoutInvalidationContext
-
     }
 
     deinit {
@@ -71,12 +69,13 @@ private extension CollectionViewLayoutDemoViewController {
             $0.height.equalTo(bigW * 2 + 2)
         }
 
-//        RunLoop.main.add(timer, forMode: .common)
-//        timer.fire()
+        RunLoop.main.add(timer, forMode: .common)
+        timer.fire()
 
 
-        self.collectionView.reloadData()
+//        self.collectionView.reloadData()
 
+        /// 这里需要加回到主线程, 不加可能导致布局错误
 //        DispatchQueue.main.async {
 //            self.collectionView.reloadData()
 //            print("Current thread1: \(Thread.current)")
@@ -89,21 +88,13 @@ private extension CollectionViewLayoutDemoViewController {
 extension CollectionViewLayoutDemoViewController {
 
     @objc func start() {
-//        self.count = Int(arc4random()) % (16 - 5 + 1) + 2
+        self.count = Int(arc4random()) % (16 - 5 + 1) + 2
 
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 0.0001) {
-//            self.collectionView.reloadData()
-//        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.0001) {
+            self.collectionView.reloadData()
+        }
     }
 }
-
-// MARK: - ZLCollectionViewBaseFlowLayoutDelegate
-//extension CollectionViewLayoutDemoViewController: ZLCollectionViewBaseFlowLayoutDelegate {
-//
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewFlowLayout, typeOfLayout section: Int) -> ZLLayoutType {
-//        return ZLLayoutType.init(rawValue: 5)
-//    }
-//}
 
 // MARK: - UICollectionViewDelegate, UICollectionViewDataSourc
 extension CollectionViewLayoutDemoViewController: UICollectionViewDelegate, UICollectionViewDataSource, ZLCollectionViewBaseFlowLayoutDelegate {

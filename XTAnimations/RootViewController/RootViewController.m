@@ -40,10 +40,10 @@
     [self addCell:@"粒子雪花动画" class:@"EmitterSnowController"];
     [self addCell:@"跑马灯动画" class:@"XTScrollLabelViewController"];
     [self addCell:@"POP实践" class:@"PopingViewController"];
-    [self addCell:@"直播中动画" class:@"LivingViewController"];
+    [self addCell:@"直播中动画,PK 进度条" class:@"LivingViewController"];
     [self addCell:@"简单跑马灯" class:@"RunningViewController"];
     [self addCell:@"常用的排序算法" class:@"SortViewController"];
-    [self addCell:@"CollectionView 复杂布局" class:@"CollectionViewLayoutDemoViewController"];
+    [self addCell:@"连麦 16 宫格布局" class:@"CollectionViewLayoutDemoViewController"];
 
     [self.view addSubview:self.tableView];
     

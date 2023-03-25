@@ -39,15 +39,22 @@ class ActivityView: UIView {
     }
 
     func addAnimateWithDelay(delay: Double) -> CAAnimation {
-        let animation = CABasicAnimation.init(keyPath: "transform.rotation.x")
-        animation.repeatCount = MAXFLOAT;
-        animation.isRemovedOnCompletion = true;
-        animation.autoreverses = false;
-        animation.timingFunction = CAMediaTimingFunction.init(name: CAMediaTimingFunctionName.linear)
-        animation.fromValue = 0
-        animation.toValue = Double.pi
-        animation.duration = (Double)(numberOfRect) * 0.2;
-        animation.beginTime = CACurrentMediaTime() + delay;
+        let animation = CAKeyframeAnimation(keyPath: "transform.scale.y")
+        animation.duration = 1
+        animation.values = [0.2, 0.9, 0.2]
+        animation.autoreverses = true
+        animation.repeatCount = MAXFLOAT
+        animation.isRemovedOnCompletion = false
+        return animation;
+    }
+
+    func addAnimateWithDelay1(delay: Double) -> CAAnimation {
+        let animation = CAKeyframeAnimation(keyPath: "transform.scale.y")
+        animation.duration = 1
+        animation.values = [0.9, 0.2, 0.9]
+        animation.autoreverses = true
+        animation.repeatCount = MAXFLOAT
+        animation.isRemovedOnCompletion = false
         return animation;
     }
 
@@ -62,7 +69,13 @@ class ActivityView: UIView {
             let x = (CGFloat)(i) * (size.width + space)
             let rView = UIView(frame: CGRect(x: x, y: 0, width: size.width, height: size.height))
             rView.backgroundColor = rectBackgroundColor
-            rView.layer.add(addAnimateWithDelay(delay: (Double)(i) * 0.2), forKey: "TBRotate")
+            if i == 0 || i == 2 {
+
+                rView.layer.add(addAnimateWithDelay(delay: (Double)(i) * 0.2), forKey: "TBRotate")
+            } else {
+                rView.layer.add(addAnimateWithDelay1(delay: (Double)(i) * 0.2), forKey: "TBRotate")
+
+            }
             addSubview(rView)
         }
     }
