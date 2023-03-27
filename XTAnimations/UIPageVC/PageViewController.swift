@@ -10,23 +10,36 @@ import UIKit
 
 class PageViewController: UIViewController {
 
+    /// Max count
     static let max = 5
 
-    var isFirstTime: Bool = true
+    /// Fist time
+    private var isFirstTime: Bool = true
 
-    let startIndex = 0
+    /// Start index
+    private let startIndex = 0
 
-    var endIndex = 0
+    /// End index
+    private var endIndex = 0
 
-    var currentIndex = 0
+    /// Current index
+    private var currentIndex = 0
 
-    var currentPageVC = LivingViewController()
+    /// Current viewController
+    private var currentPageVC = LivingViewController()
 
-    var nextPageVC = LivingViewController()
+    /// Next ViewController
+    private var nextPageVC = LivingViewController()
 
-    var prevPageVC = LivingViewController()
+    /// Prev ViewController
+    private var prevPageVC = LivingViewController()
 
-    var liveArray = [0, 1, 2, 3, 4]
+    /// Live data: set value after get net data
+    var liveData = [0, 1, 2, 3, 4] {
+        didSet {
+
+        }
+    }
 
     private lazy  var scrollView = UIScrollView().then {
         $0.frame = CGRect(0, 0, UIScreen.width, UIScreen.height)
@@ -38,28 +51,27 @@ class PageViewController: UIViewController {
 
     public override func viewDidLoad() {
         super.viewDidLoad()
-        title = "测试"
-        view.backgroundColor = .systemPink
-        view.addSubview(scrollView)
-        // 获取数据后重新设置
+        title = "滚动容器"
+        view += scrollView
+        // TODO: resize after get net data
         resizeContentLength()
     }
 
-    /// 重置 contentSize
+    /// resize contentSize
     func resizeContentLength() {
-        endIndex = liveArray.count - 1
+        endIndex = liveData.count - 1
         let scrollLength = endIndex - startIndex + 1
         scrollView.contentSize = CGSize(UIScreen.width, UIScreen.height * (CGFloat)(scrollLength))
         scrollAtIndex(currentIndex)
         scrollView.contentOffset = CGPoint(0, CGRectGetMinY(currentPageVC.view.frame))
     }
 
-    /// 前Index
+    /// Prev Index
     func prevIndex() -> Int {
         currentIndex - 1 >= 0 ? currentIndex - 1 : -1
     }
 
-    /// 下一个Index
+    /// Next Index
     func nextIndex() -> Int {
         currentIndex + 1 <= endIndex ? currentIndex + 1 : -1
     }
@@ -74,36 +86,36 @@ class PageViewController: UIViewController {
 
         var liveVC = liveViewControllerAt(index)
 
-        removeViewController(liveVC: currentPageVC)
-        addViewController(liveVC: liveVC, index: index)
+        removeViewController(currentPageVC)
+        addViewController(liveVC, index: index)
         currentPageVC = liveVC
 
         if nextIndex() != -1 {
             liveVC = liveViewControllerAt(nextIndex())
-            removeViewController(liveVC: nextPageVC)
-            addViewController(liveVC: liveVC, index: nextIndex())
+            removeViewController(nextPageVC)
+            addViewController(liveVC, index: nextIndex())
             nextPageVC = liveVC
         }
 
         if prevIndex() != -1 {
             liveVC = liveViewControllerAt(prevIndex())
-            removeViewController(liveVC: prevPageVC)
-            addViewController(liveVC: liveVC, index: prevIndex())
+            removeViewController(prevPageVC)
+            addViewController(liveVC, index: prevIndex())
             prevPageVC = liveVC
         }
 
         view.bringSubviewToFront(currentPageVC.view)
 
-        if liveArray.count - index <= PageViewController.max {
+        if liveData.count - index <= PageViewController.max {
             // 重新加载数据
-            print("到底了~")
+            print("超过限制了~")
         }
 
         isFirstTime = false
     }
 
     func liveViewControllerAt(_ index: Int) -> LivingViewController {
-        if index >= self.liveArray.count {
+        if index >= liveData.count {
             debugPrint("异常")
             return UIViewController() as! LivingViewController
         }
@@ -113,17 +125,21 @@ class PageViewController: UIViewController {
 
 extension PageViewController {
 
-    /// 删除
-    func removeViewController(liveVC: LivingViewController) {
-        liveVC.view.removeFromSuperview()
-        liveVC.removeFromParent()
+    /// remove viewController
+    func removeViewController(_ vc: LivingViewController) {
+        vc.view.removeFromSuperview()
+        vc.removeFromParent()
     }
 
-    /// 添加
-    func addViewController(liveVC: LivingViewController, index: Int) {
-        liveVC.view.frame = CGRect(0, UIScreen.height * CGFloat((index - startIndex)), UIScreen.width, UIScreen.height)
-        scrollView.addSubview(liveVC.view)
-        addChild(liveVC)
+
+    /// Add viewController
+    /// - Parameters:
+    ///   - vc: vc
+    ///   - index: index
+    func addViewController(_ vc: LivingViewController, index: Int) {
+        vc.view.frame = CGRect(0, UIScreen.height * CGFloat((index - startIndex)), UIScreen.width, UIScreen.height)
+        scrollView.addSubview(vc.view)
+        addChild(vc)
     }
 }
 
@@ -131,7 +147,7 @@ extension PageViewController {
 
     override func willMove(toParent parent: UIViewController?) {
         if (parent == nil) {
-            // 视图控制器即将从父视图控制器移除
+            // remove it from parent
             currentPageVC.willMove(toParent: parent)
         }
     }
@@ -140,26 +156,29 @@ extension PageViewController {
 // MARK: UIScrollViewDelegate
 extension PageViewController: UIScrollViewDelegate {
 
+    // User stop dragging UIScrollView，and the UIScrollView stop rolling
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         if !decelerate {
-            // 用户停止拖动 UIScrollView，且 UIScrollView 停止滚动
-            // 在这里执行相关操作
-            let index = (Int)(scrollView.contentOffset.y / UIScreen.height)
-
-            if scrollView.contentOffset.y < CGFloat((currentIndex - startIndex)) * UIScreen.height - UIScreen.height / 2 ||
-                scrollView.contentOffset.y > CGFloat((currentIndex - startIndex)) * UIScreen.height + UIScreen.height / 2 {
-                scrollAtIndex(index + startIndex)
-            }
-
+            scrollViewDidAction(scrollView)
         }
     }
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        // 获取当前可见的第一个 item 的索引
-        let index = (Int)(scrollView.contentOffset.y / UIScreen.height)
 
+    /// End Decelerating
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        scrollViewDidAction(scrollView)
+    }
+
+    private func scrollViewDidAction(_ scrollView: UIScrollView) {
+        let index = (Int)(scrollView.contentOffset.y / UIScreen.height)
         if scrollView.contentOffset.y < CGFloat((currentIndex - startIndex)) * UIScreen.height - UIScreen.height / 2 ||
             scrollView.contentOffset.y > CGFloat((currentIndex - startIndex)) * UIScreen.height + UIScreen.height / 2 {
             scrollAtIndex(index + startIndex)
+        }
+    }
+
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView.contentOffset.y > CGFloat(currentIndex) * UIScreen.height + UIScreen.height / 2 {
+            print("需要开始加载了")
         }
     }
 
