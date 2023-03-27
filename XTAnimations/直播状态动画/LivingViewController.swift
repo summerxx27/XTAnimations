@@ -14,7 +14,7 @@ public class LivingViewController: UIViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
         title = "ActivityView"
-        view.backgroundColor = .white
+        view.backgroundColor = UIColor.randomColor
 
         view += [
             activityView,

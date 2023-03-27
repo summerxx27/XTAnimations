@@ -16,6 +16,8 @@
 		B939F6D729CEE6480026F247 /* NSAttributedStringJoiner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B939F6D629CEE6480026F247 /* NSAttributedStringJoiner.swift */; };
 		B939F6D929CEE6700026F247 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = B939F6D829CEE6700026F247 /* UIFont.swift */; };
 		B939F6DB29CEE6D50026F247 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B939F6DA29CEE6D50026F247 /* UIImage.swift */; };
+		B939F6DF29D13FC70026F247 /* ButtonUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B939F6DE29D13FC70026F247 /* ButtonUtils.swift */; };
+		B939FB0F29D1BAA00026F247 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B939FB0E29D1BAA00026F247 /* PageViewController.swift */; };
 		B94141AB29935A020030EEE1 /* XTActivityVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94141AA29935A020030EEE1 /* XTActivityVIew.swift */; };
 		B94141AE29935C390030EEE1 /* Then.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94141AD29935C390030EEE1 /* Then.swift */; };
 		B94141B029935D940030EEE1 /* LivingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94141AF29935D940030EEE1 /* LivingViewController.swift */; };
@@ -87,6 +89,8 @@
 		B939F6D629CEE6480026F247 /* NSAttributedStringJoiner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedStringJoiner.swift; sourceTree = "<group>"; };
 		B939F6D829CEE6700026F247 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		B939F6DA29CEE6D50026F247 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		B939F6DE29D13FC70026F247 /* ButtonUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonUtils.swift; sourceTree = "<group>"; };
+		B939FB0E29D1BAA00026F247 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		B94141A929935A020030EEE1 /* XTAnimations-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XTAnimations-Bridging-Header.h"; sourceTree = "<group>"; };
 		B94141AA29935A020030EEE1 /* XTActivityVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XTActivityVIew.swift; sourceTree = "<group>"; };
 		B94141AD29935C390030EEE1 /* Then.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Then.swift; sourceTree = "<group>"; };
@@ -200,6 +204,14 @@
 			path = "CollectionView复杂布局";
 			sourceTree = "<group>";
 		};
+		B939FB0D29D1BA810026F247 /* UIPageVC */ = {
+			isa = PBXGroup;
+			children = (
+				B939FB0E29D1BAA00026F247 /* PageViewController.swift */,
+			);
+			path = UIPageVC;
+			sourceTree = "<group>";
+		};
 		B9413D7E299357170030EEE1 /* 直播状态动画 */ = {
 			isa = PBXGroup;
 			children = (
@@ -236,6 +248,7 @@
 				B939EE3729C613AE0026F247 /* UIColor.swift */,
 				B939F6D829CEE6700026F247 /* UIFont.swift */,
 				B939F6DA29CEE6D50026F247 /* UIImage.swift */,
+				B939F6DE29D13FC70026F247 /* ButtonUtils.swift */,
 			);
 			path = XTUIKitSwift;
 			sourceTree = "<group>";
@@ -336,6 +349,7 @@
 			isa = PBXGroup;
 			children = (
 				BC8B4E6C1D377EB7009B441C /* RootViewController */,
+				B939FB0D29D1BA810026F247 /* UIPageVC */,
 				B939EE3029C611A10026F247 /* CollectionView复杂布局 */,
 				B9414E7E2994F6C50030EEE1 /* 排序算法的实现 */,
 				B94146272994E3480030EEE1 /* 简单跑马灯 */,
@@ -614,8 +628,10 @@
 				B9414E802994F6D90030EEE1 /* SortViewController.swift in Sources */,
 				B94141AB29935A020030EEE1 /* XTActivityVIew.swift in Sources */,
 				B94141B2299369670030EEE1 /* LivingView.swift in Sources */,
+				B939FB0F29D1BAA00026F247 /* PageViewController.swift in Sources */,
 				BC8B4E641D37758B009B441C /* ViewController1.m in Sources */,
 				B939F6D929CEE6700026F247 /* UIFont.swift in Sources */,
+				B939F6DF29D13FC70026F247 /* ButtonUtils.swift in Sources */,
 				BCE46FA21D61AAB30034CC9B /* XTPictureViewController.m in Sources */,
 				B939EE3229C611D30026F247 /* CollectionViewLayoutDemoViewController.swift in Sources */,
 				B939F2AE29CE02140026F247 /* PKProgressBar.swift in Sources */,

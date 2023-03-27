@@ -47,6 +47,7 @@
     [self addCell:@"简单跑马灯" class:@"XTAnimations.RunningViewController"];
     [self addCell:@"常用的排序算法" class:@"XTAnimations.SortViewController"];
     [self addCell:@"连麦 16 宫格布局" class:@"XTAnimations.CollectionViewLayoutDemoViewController"];
+    [self addCell:@"PageViewController演示" class:@"XTAnimations.PageViewController"];
 
     [self.view addSubview:self.tableView];
     

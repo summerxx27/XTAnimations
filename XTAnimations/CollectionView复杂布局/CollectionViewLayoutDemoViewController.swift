@@ -81,6 +81,18 @@ private extension CollectionViewLayoutDemoViewController {
 //            print("Current thread1: \(Thread.current)")
 //        }
 
+
+        // 创建一个按钮
+        let button = UIButton(type: .custom)
+        button.frame = CGRect(x: 50, y: 600, width: 50, height: 50)
+        button.setImage(UIImage(named: "darong.png"), for: .normal)
+        button.setTitle("T", for: .normal)
+        button.setTitleColor(.black, for: .normal)
+        // 调用 ButtonUtils 的方法调整标题和图片位置
+        ButtonUtils.centerAlign(button: button, spacing: 20)
+
+        // 将按钮添加到视图中
+        view.addSubview(button)
     }
 }
 
