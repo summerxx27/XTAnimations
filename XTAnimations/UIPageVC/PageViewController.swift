@@ -10,8 +10,11 @@ import UIKit
 
 class PageViewController: UIViewController {
 
-    /// Max count
-    static let max = 5
+    /// error
+    static let errorNotFound = -1
+
+    /// Threshold value
+    static let kPreloadThreshold = 2
 
     /// Fist time
     private var isFirstTime: Bool = true
@@ -68,12 +71,12 @@ class PageViewController: UIViewController {
 
     /// Prev Index
     func prevIndex() -> Int {
-        currentIndex - 1 >= 0 ? currentIndex - 1 : -1
+        currentIndex - 1 >= 0 ? currentIndex - 1 : PageViewController.errorNotFound
     }
 
     /// Next Index
     func nextIndex() -> Int {
-        currentIndex + 1 <= endIndex ? currentIndex + 1 : -1
+        currentIndex + 1 <= endIndex ? currentIndex + 1 : PageViewController.errorNotFound
     }
 
     func scrollAtIndex(_ index: Int) {
@@ -84,31 +87,31 @@ class PageViewController: UIViewController {
 
         currentIndex = index
 
-        var liveVC = liveViewControllerAt(index)
+        var vc = liveViewControllerAt(index)
 
         removeViewController(currentPageVC)
-        addViewController(liveVC, index: index)
-        currentPageVC = liveVC
+        addViewController(vc, index: index)
+        currentPageVC = vc
 
-        if nextIndex() != -1 {
-            liveVC = liveViewControllerAt(nextIndex())
+        if nextIndex() != PageViewController.errorNotFound {
+            vc = liveViewControllerAt(nextIndex())
             removeViewController(nextPageVC)
-            addViewController(liveVC, index: nextIndex())
-            nextPageVC = liveVC
+            addViewController(vc, index: nextIndex())
+            nextPageVC = vc
         }
 
-        if prevIndex() != -1 {
-            liveVC = liveViewControllerAt(prevIndex())
+        if prevIndex() != PageViewController.errorNotFound {
+            vc = liveViewControllerAt(prevIndex())
             removeViewController(prevPageVC)
-            addViewController(liveVC, index: prevIndex())
-            prevPageVC = liveVC
+            addViewController(vc, index: prevIndex())
+            prevPageVC = vc
         }
 
         view.bringSubviewToFront(currentPageVC.view)
 
-        if liveData.count - index <= PageViewController.max {
-            // 重新加载数据
-            print("超过限制了~")
+        if liveData.count - index <= PageViewController.kPreloadThreshold {
+            // 预加载
+            print("需要加载数据了~")
         }
 
         isFirstTime = false
@@ -119,7 +122,14 @@ class PageViewController: UIViewController {
             debugPrint("异常")
             return UIViewController() as! LivingViewController
         }
-        return LivingViewController()
+//        let model = self.liveData[safe: index]
+//        let params: [String : Any] = [
+//            "pageSource": LiveRoomPageSource.list.rawValue,
+//            "roomInfo": model,
+//        ]
+        let vc = LivingViewController()
+//        vc.params = params
+        return vc
     }
 }
 
@@ -168,6 +178,18 @@ extension PageViewController: UIScrollViewDelegate {
         scrollViewDidAction(scrollView)
     }
 
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        print("y === \(scrollView.contentOffset.y)")
+        if scrollView.contentOffset.y > CGFloat(currentIndex) * UIScreen.height + UIScreen.height / 2 ||
+            scrollView.contentOffset.y < CGFloat(currentIndex) * UIScreen.height - UIScreen.height / 2{
+            print("需要开始加载了")
+        }
+    }
+}
+
+// MARK: Action
+extension PageViewController {
+
     private func scrollViewDidAction(_ scrollView: UIScrollView) {
         let index = (Int)(scrollView.contentOffset.y / UIScreen.height)
         if scrollView.contentOffset.y < CGFloat((currentIndex - startIndex)) * UIScreen.height - UIScreen.height / 2 ||
@@ -175,13 +197,6 @@ extension PageViewController: UIScrollViewDelegate {
             scrollAtIndex(index + startIndex)
         }
     }
-
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if scrollView.contentOffset.y > CGFloat(currentIndex) * UIScreen.height + UIScreen.height / 2 {
-            print("需要开始加载了")
-        }
-    }
-
 }
 
 
