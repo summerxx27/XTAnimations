@@ -32,6 +32,12 @@
 		B94146292994E3780030EEE1 /* RunningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94146282994E3780030EEE1 /* RunningViewController.swift */; };
 		B9414E802994F6D90030EEE1 /* SortViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9414E7F2994F6D90030EEE1 /* SortViewController.swift */; };
 		B9E2F19429D2D24E004A283F /* PipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E2F19329D2D24E004A283F /* PipViewController.swift */; };
+		B9E2F19A29D2EF38004A283F /* gift_demo1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B9E2F19829D2EB22004A283F /* gift_demo1.mp4 */; };
+		B9E2F19B29D2EF38004A283F /* gift_demo2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B9E2F19729D2EB22004A283F /* gift_demo2.mp4 */; };
+		B9E2F19F29D30971004A283F /* slience.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9E2F19D29D30971004A283F /* slience.mp3 */; };
+		B9E2F1A029D30971004A283F /* BackgroundTaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E2F19E29D30971004A283F /* BackgroundTaskManager.swift */; };
+		B9E2F1A229D30B32004A283F /* gift_demo5.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B9E2F1A129D30ADC004A283F /* gift_demo5.mp4 */; };
+		B9E2F1A429D311C4004A283F /* pip_video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B9E2F1A329D311B6004A283F /* pip_video.mp4 */; };
 		BC73FDCC1D4B1DD700EA9503 /* PopingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC73FDCB1D4B1DD700EA9503 /* PopingViewController.m */; };
 		BC73FDD21D4B1E0500EA9503 /* chenyao.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC73FDCE1D4B1E0500EA9503 /* chenyao.jpg */; };
 		BC73FDD31D4B1E0500EA9503 /* chenyao2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC73FDCF1D4B1E0500EA9503 /* chenyao2.jpg */; };
@@ -107,6 +113,12 @@
 		B94146282994E3780030EEE1 /* RunningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningViewController.swift; sourceTree = "<group>"; };
 		B9414E7F2994F6D90030EEE1 /* SortViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortViewController.swift; sourceTree = "<group>"; };
 		B9E2F19329D2D24E004A283F /* PipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipViewController.swift; sourceTree = "<group>"; };
+		B9E2F19729D2EB22004A283F /* gift_demo2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = gift_demo2.mp4; sourceTree = "<group>"; };
+		B9E2F19829D2EB22004A283F /* gift_demo1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = gift_demo1.mp4; sourceTree = "<group>"; };
+		B9E2F19D29D30971004A283F /* slience.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = slience.mp3; sourceTree = "<group>"; };
+		B9E2F19E29D30971004A283F /* BackgroundTaskManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundTaskManager.swift; sourceTree = "<group>"; };
+		B9E2F1A129D30ADC004A283F /* gift_demo5.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = gift_demo5.mp4; sourceTree = "<group>"; };
+		B9E2F1A329D311B6004A283F /* pip_video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = pip_video.mp4; sourceTree = "<group>"; };
 		BC73FDCA1D4B1DD700EA9503 /* PopingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopingViewController.h; sourceTree = "<group>"; };
 		BC73FDCB1D4B1DD700EA9503 /* PopingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopingViewController.m; sourceTree = "<group>"; };
 		BC73FDCE1D4B1E0500EA9503 /* chenyao.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chenyao.jpg; sourceTree = "<group>"; };
@@ -274,9 +286,18 @@
 		B9E2F19229D2D246004A283F /* 画中画 */ = {
 			isa = PBXGroup;
 			children = (
+				B9E2F19C29D30971004A283F /* BackgroundTaskManager */,
 				B9E2F19329D2D24E004A283F /* PipViewController.swift */,
 			);
 			path = "画中画";
+			sourceTree = "<group>";
+		};
+		B9E2F19C29D30971004A283F /* BackgroundTaskManager */ = {
+			isa = PBXGroup;
+			children = (
+				B9E2F19E29D30971004A283F /* BackgroundTaskManager.swift */,
+			);
+			path = BackgroundTaskManager;
 			sourceTree = "<group>";
 		};
 		BC73FDC81D4B1DC200EA9503 /* POP实践 */ = {
@@ -387,6 +408,11 @@
 		BC8B4E261D376BDF009B441C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B9E2F1A329D311B6004A283F /* pip_video.mp4 */,
+				B9E2F19D29D30971004A283F /* slience.mp3 */,
+				B9E2F1A129D30ADC004A283F /* gift_demo5.mp4 */,
+				B9E2F19829D2EB22004A283F /* gift_demo1.mp4 */,
+				B9E2F19729D2EB22004A283F /* gift_demo2.mp4 */,
 				BC8B4E271D376BDF009B441C /* main.m */,
 			);
 			name = "Supporting Files";
@@ -522,7 +548,7 @@
 				TargetAttributes = {
 					BC8B4E221D376BDE009B441C = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = 637U33J5E6;
+						DevelopmentTeam = 8XEUVFYSL4;
 						LastSwiftMigration = 1420;
 					};
 					BC8B4E3B1D376BDF009B441C = {
@@ -561,6 +587,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9E2F1A429D311C4004A283F /* pip_video.mp4 in Resources */,
+				B9E2F1A229D30B32004A283F /* gift_demo5.mp4 in Resources */,
+				B9E2F19A29D2EF38004A283F /* gift_demo1.mp4 in Resources */,
+				B9E2F19B29D2EF38004A283F /* gift_demo2.mp4 in Resources */,
+				B9E2F19F29D30971004A283F /* slience.mp3 in Resources */,
 				BC8B4E741D37998D009B441C /* darong.png in Resources */,
 				BC73FDD21D4B1E0500EA9503 /* chenyao.jpg in Resources */,
 				BCE46FA61D61AE370034CC9B /* resource.bundle in Resources */,
@@ -631,6 +662,7 @@
 				B94145EB2993CBC10030EEE1 /* ObjcRuntime.swift in Sources */,
 				BC73FDD41D4B1E0500EA9503 /* XTPopingView.m in Sources */,
 				B94141B029935D940030EEE1 /* LivingViewController.swift in Sources */,
+				B9E2F1A029D30971004A283F /* BackgroundTaskManager.swift in Sources */,
 				B94145E72993C9D90030EEE1 /* Array.swift in Sources */,
 				B939EE3429C612980026F247 /* UIScreen.swift in Sources */,
 				BC8A9D0D1D409E0500981050 /* EmitterSnowController.m in Sources */,
@@ -803,11 +835,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 637U33J5E6;
+				DEVELOPMENT_TEAM = 8XEUVFYSL4;
 				INFOPLIST_FILE = XTAnimations/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "-MyCompanyName-.XTAnimations-summerxx";
+				PRODUCT_BUNDLE_IDENTIFIER = "-MyCompanyName-.XTAnimations-summerxx1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "XTAnimations/XTFoundationSwift/XTAnimations-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -821,11 +853,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 637U33J5E6;
+				DEVELOPMENT_TEAM = 8XEUVFYSL4;
 				INFOPLIST_FILE = XTAnimations/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "-MyCompanyName-.XTAnimations-summerxx";
+				PRODUCT_BUNDLE_IDENTIFIER = "-MyCompanyName-.XTAnimations-summerxx1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "XTAnimations/XTFoundationSwift/XTAnimations-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
