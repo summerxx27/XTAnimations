@@ -196,12 +196,12 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		B939EE3029C611A10026F247 /* CollectionView复杂布局 */ = {
+		B939EE3029C611A10026F247 /* CollectionView填充布局 */ = {
 			isa = PBXGroup;
 			children = (
 				B939EE3129C611D30026F247 /* CollectionViewLayoutDemoViewController.swift */,
 			);
-			path = "CollectionView复杂布局";
+			path = "CollectionView填充布局";
 			sourceTree = "<group>";
 		};
 		B939FB0D29D1BA810026F247 /* UIPageVC */ = {
@@ -350,7 +350,7 @@
 			children = (
 				BC8B4E6C1D377EB7009B441C /* RootViewController */,
 				B939FB0D29D1BA810026F247 /* UIPageVC */,
-				B939EE3029C611A10026F247 /* CollectionView复杂布局 */,
+				B939EE3029C611A10026F247 /* CollectionView填充布局 */,
 				B9414E7E2994F6C50030EEE1 /* 排序算法的实现 */,
 				B94146272994E3480030EEE1 /* 简单跑马灯 */,
 				B94141B529936B960030EEE1 /* XTUIKitSwift */,
