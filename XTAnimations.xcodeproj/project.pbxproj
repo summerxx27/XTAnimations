@@ -31,6 +31,7 @@
 		B94145EB2993CBC10030EEE1 /* ObjcRuntime.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94145EA2993CBC10030EEE1 /* ObjcRuntime.swift */; };
 		B94146292994E3780030EEE1 /* RunningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94146282994E3780030EEE1 /* RunningViewController.swift */; };
 		B9414E802994F6D90030EEE1 /* SortViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9414E7F2994F6D90030EEE1 /* SortViewController.swift */; };
+		B9E2F19429D2D24E004A283F /* PipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E2F19329D2D24E004A283F /* PipViewController.swift */; };
 		BC73FDCC1D4B1DD700EA9503 /* PopingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC73FDCB1D4B1DD700EA9503 /* PopingViewController.m */; };
 		BC73FDD21D4B1E0500EA9503 /* chenyao.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC73FDCE1D4B1E0500EA9503 /* chenyao.jpg */; };
 		BC73FDD31D4B1E0500EA9503 /* chenyao2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC73FDCF1D4B1E0500EA9503 /* chenyao2.jpg */; };
@@ -105,6 +106,7 @@
 		B94145EA2993CBC10030EEE1 /* ObjcRuntime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjcRuntime.swift; sourceTree = "<group>"; };
 		B94146282994E3780030EEE1 /* RunningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningViewController.swift; sourceTree = "<group>"; };
 		B9414E7F2994F6D90030EEE1 /* SortViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortViewController.swift; sourceTree = "<group>"; };
+		B9E2F19329D2D24E004A283F /* PipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipViewController.swift; sourceTree = "<group>"; };
 		BC73FDCA1D4B1DD700EA9503 /* PopingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopingViewController.h; sourceTree = "<group>"; };
 		BC73FDCB1D4B1DD700EA9503 /* PopingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopingViewController.m; sourceTree = "<group>"; };
 		BC73FDCE1D4B1E0500EA9503 /* chenyao.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chenyao.jpg; sourceTree = "<group>"; };
@@ -269,6 +271,14 @@
 			path = "排序算法的实现";
 			sourceTree = "<group>";
 		};
+		B9E2F19229D2D246004A283F /* 画中画 */ = {
+			isa = PBXGroup;
+			children = (
+				B9E2F19329D2D24E004A283F /* PipViewController.swift */,
+			);
+			path = "画中画";
+			sourceTree = "<group>";
+		};
 		BC73FDC81D4B1DC200EA9503 /* POP实践 */ = {
 			isa = PBXGroup;
 			children = (
@@ -348,6 +358,7 @@
 		BC8B4E251D376BDF009B441C /* XTAnimations */ = {
 			isa = PBXGroup;
 			children = (
+				B9E2F19229D2D246004A283F /* 画中画 */,
 				BC8B4E6C1D377EB7009B441C /* RootViewController */,
 				B939FB0D29D1BA810026F247 /* UIPageVC */,
 				B939EE3029C611A10026F247 /* CollectionView填充布局 */,
@@ -630,6 +641,7 @@
 				B94141B2299369670030EEE1 /* LivingView.swift in Sources */,
 				B939FB0F29D1BAA00026F247 /* PageViewController.swift in Sources */,
 				BC8B4E641D37758B009B441C /* ViewController1.m in Sources */,
+				B9E2F19429D2D24E004A283F /* PipViewController.swift in Sources */,
 				B939F6D929CEE6700026F247 /* UIFont.swift in Sources */,
 				B939F6DF29D13FC70026F247 /* ButtonUtils.swift in Sources */,
 				BCE46FA21D61AAB30034CC9B /* XTPictureViewController.m in Sources */,

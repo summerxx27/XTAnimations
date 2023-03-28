@@ -48,6 +48,7 @@
     [self addCell:@"常用的排序算法" class:@"XTAnimations.SortViewController"];
     [self addCell:@"连麦 16 宫格布局" class:@"XTAnimations.CollectionViewLayoutDemoViewController"];
     [self addCell:@"类似于直播间竖直滚动" class:@"XTAnimations.PageViewController"];
+    [self addCell:@"画中画-浮窗" class:@"XTAnimations.PipViewController"];
 
     [self.view addSubview:self.tableView];
     

@@ -80,6 +80,8 @@ private extension CollectionViewLayoutDemoViewController {
 //            self.collectionView.reloadData()
 //            print("Current thread1: \(Thread.current)")
 //        }
+        
+    }
 }
 
 // MARK: - Test Code
