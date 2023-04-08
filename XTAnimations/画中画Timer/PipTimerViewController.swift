@@ -15,8 +15,10 @@ class PipTimerViewController: UIViewController, AVPictureInPictureControllerDele
 
     // 播放器
     private var playerLayer: AVPlayerLayer!
+
     // 画中画
     var pipController: AVPictureInPictureController!
+
     // 你的自定义view
     var customView: FloatClockView! = FloatClockView()
 
@@ -133,9 +135,7 @@ class PipTimerViewController: UIViewController, AVPictureInPictureControllerDele
 
                 let dateString = dateFormat.string(from: date)
                 self.customView.timeLabel.text = dateString
-//                self.customView.offsetLabel.text = self.currentOffsetTimeLabel.text
             }
-
         }
 
     }
@@ -167,15 +167,13 @@ class PipTimerViewController: UIViewController, AVPictureInPictureControllerDele
     }
 
     func pictureInPictureControllerDidStartPictureInPicture(_ pictureInPictureController: AVPictureInPictureController) {
-        //startTimer()
-        // 打印所有window
-        print("画中画弹出后：\(UIApplication.shared.windows)")
+        print("pictureInPictureControllerDidStartPictureInPicture")
     }
 
     func pictureInPictureControllerDidStopPictureInPicture(_ pictureInPictureController: AVPictureInPictureController) {
-        //stopTimer()
-    }
+        print("pictureInPictureControllerDidStopPictureInPicture")
 
+    }
 }
 
 
