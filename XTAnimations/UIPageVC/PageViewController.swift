@@ -29,13 +29,13 @@ class PageViewController: UIViewController {
     private var currentIndex = 0
 
     /// Current viewController
-    private var currentPageVC = LivingViewController()
+    var currentPageVC = PageSubViewController()
 
     /// Next ViewController
-    private var nextPageVC = LivingViewController()
+    private var nextPageVC = PageSubViewController()
 
     /// Prev ViewController
-    private var prevPageVC = LivingViewController()
+    private var prevPageVC = PageSubViewController()
 
     /// Live data: set value after get net data
     var liveData = [0, 1, 2, 3, 4] {
@@ -44,10 +44,12 @@ class PageViewController: UIViewController {
         }
     }
 
-    private lazy  var scrollView = UIScrollView().then {
+    lazy  var scrollView = UIScrollView().then {
         $0.frame = CGRect(0, 0, UIScreen.width, UIScreen.height)
         $0.contentSize = CGSize.zero
         $0.isPagingEnabled = true
+        $0.showsVerticalScrollIndicator = false
+        $0.showsHorizontalScrollIndicator = false
         $0.delegate = self
         $0.contentInsetAdjustmentBehavior = .never
     }
@@ -117,26 +119,31 @@ class PageViewController: UIViewController {
         isFirstTime = false
     }
 
-    func liveViewControllerAt(_ index: Int) -> LivingViewController {
+    func liveViewControllerAt(_ index: Int) -> PageSubViewController {
         if index >= liveData.count {
             debugPrint("异常")
-            return UIViewController() as! LivingViewController
+            return UIViewController() as! PageSubViewController
         }
 //        let model = self.liveData[safe: index]
 //        let params: [String : Any] = [
 //            "pageSource": LiveRoomPageSource.list.rawValue,
 //            "roomInfo": model,
 //        ]
-        let vc = LivingViewController()
+        let vc = PageSubViewController()
 //        vc.params = params
         return vc
+    }
+
+    func xxx(_ x: Bool) {
+        self.scrollView.isScrollEnabled = x
+
     }
 }
 
 extension PageViewController {
 
     /// remove viewController
-    func removeViewController(_ vc: LivingViewController) {
+    func removeViewController(_ vc: PageSubViewController) {
         vc.view.removeFromSuperview()
         vc.removeFromParent()
     }
@@ -146,7 +153,7 @@ extension PageViewController {
     /// - Parameters:
     ///   - vc: vc
     ///   - index: index
-    func addViewController(_ vc: LivingViewController, index: Int) {
+    func addViewController(_ vc: PageSubViewController, index: Int) {
         vc.view.frame = CGRect(0, UIScreen.height * CGFloat((index - startIndex)), UIScreen.width, UIScreen.height)
         scrollView.addSubview(vc.view)
         addChild(vc)
@@ -179,6 +186,10 @@ extension PageViewController: UIScrollViewDelegate {
     }
 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
+
+//        if currentPageVC.tableview {
+//
+//        }
         print("y === \(scrollView.contentOffset.y)")
         if scrollView.contentOffset.y > CGFloat(currentIndex) * UIScreen.height + UIScreen.height / 2 ||
             scrollView.contentOffset.y < CGFloat(currentIndex) * UIScreen.height - UIScreen.height / 2{
@@ -197,6 +208,22 @@ extension PageViewController {
             scrollAtIndex(index + startIndex)
         }
     }
+}
+
+extension PageViewController {
+
+    // 处理通知的方法
+    @objc func handleNotification(_ notification: Notification) {
+
+
+        if let userInfo = notification.userInfo {
+            let isScrollEnabled = userInfo["isScrollEnabled"] as! Bool
+            // 处理接收到的值
+            scrollView.isScrollEnabled = isScrollEnabled
+
+        }
+    }
+
 }
 
 

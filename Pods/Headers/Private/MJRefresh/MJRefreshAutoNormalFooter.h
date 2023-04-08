@@ -1,0 +1,1 @@
+../../../MJRefresh/MJRefresh/include/MJRefreshAutoNormalFooter.h

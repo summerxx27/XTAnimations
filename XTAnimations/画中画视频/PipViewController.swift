@@ -15,17 +15,22 @@ import SnapKit
 class PipViewController: UIViewController, AVPictureInPictureControllerDelegate {
 
     private var displayLink: CADisplayLink?
+
     private var isRunning = false
 
-    // 播放器
-    private var playerLayer: AVPlayerLayer!
+    var count = 1
 
-    // 测试代替拉流
-    private var streamPlayer: AVPlayer!
+    /// 这个当做是拉流的
+    private var meidaPlayerView = PlayerView().then {
+        $0.frame = CGRect(0, 0, UIScreen.width, 200)
+//        guard let url = Bundle.main.url(forResource: "pip_video", withExtension: "mp4") else { return }
+        guard let url = URL(string: "http://livestreamcdn.net:1935/ExtremaTV/ExtremaTV/playlist.m3u8") else { return }
+        $0.player = AVPlayer(url: url)
+        $0.player.play()
+    }
 
-    var displayLinkThread = DisplayLinkThread()
-
-    private var player: AVPlayer!
+    /// 这个是本地开启画中画Layer 层
+    let playerLayer = AVPlayerLayer()
 
     var customView = UIView().then {
         $0.backgroundColor = .cyan
@@ -56,7 +61,6 @@ class PipViewController: UIViewController, AVPictureInPictureControllerDelegate 
             alertVC.addAction(cancelAction)
             present(alertVC, animated: true)
         }
-
     }
 
     private func setupUI() {
@@ -70,30 +74,55 @@ class PipViewController: UIViewController, AVPictureInPictureControllerDelegate 
             make.width.equalTo(200)
             make.height.equalTo(40)
         }
-
     }
 
-    // 配置播放器
+    // 配置本地播放器
     private func setupPlayer() {
-        playerLayer = AVPlayerLayer()
-        playerLayer.backgroundColor = UIColor.cyan.cgColor
-        playerLayer.frame = .init(x: 0, y: 90, width: UIScreen.width, height: 250)
 
-        let mp4Video = Bundle.main.url(forResource: "gift_demo5", withExtension: "mp4")
-        let asset = AVAsset.init(url: mp4Video!)
-        let playerItem = AVPlayerItem.init(asset: asset)
+        // 设置 AVPlayerLayer 的 frame 和 videoGravity
+        playerLayer.frame = CGRect(0, 100, UIScreen.width, 200)
+        playerLayer.videoGravity = .resizeAspectFill
 
-        player = AVPlayer.init(playerItem: playerItem)
+        // 创建 AVPlayer 和 AVPlayerItem
+//        guard let videoURL = Bundle.main.url(forResource: "pip_video", withExtension: "mp4") else { return }
+
+        guard let videoURL = URL(string: "http://devimages.apple.com.edgekey.net/streaming/examples/bipbop_4x3/gear2/prog_index.m3u8") else { return }
+
+        let player = AVPlayer(url: videoURL)
+        let playerItem = AVPlayerItem(url: videoURL)
+
+        // 监听 AVPlayerItem 播放完成的通知
+        NotificationCenter.default.addObserver(self, selector: #selector(playerItemDidReachEnd), name: .AVPlayerItemDidPlayToEndTime, object: playerItem)
+
+        // 将 AVPlayerItem 设置给 AVPlayer
+        player.replaceCurrentItem(with: playerItem)
+
+        // 将 AVPlayer 设置给 AVPlayerLayer
         playerLayer.player = player
-        player.isMuted = true
-        player.allowsExternalPlayback = true
+
+        // 将 AVPlayerLayer 添加到 view 中
         view.layer.addSublayer(playerLayer)
 
-        NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime, object: playerItem, queue: .main) { [weak playerItem] _ in
-            // 循环播放
-            playerItem?.seek(to: CMTime.zero)
-            self.player.play()
+        // 监听播放进度，并在需要循环播放时重新开始播放
+        let duration = playerItem.asset.duration
+        player.addBoundaryTimeObserver(forTimes: [NSValue(time: duration)], queue: .main) { [weak self] in
+            self?.playerDidFinishPlaying()
         }
+
+        // 开始播放
+        player.play()
+    }
+
+    @objc func playerItemDidReachEnd() {
+        playerLayer.player?.seek(to: .zero)
+
+        print("视频循环播放")
+    }
+
+    func playerDidFinishPlaying() {
+        playerLayer.player?.seek(to: .zero)
+        playerLayer.player?.play()
+        print("视频循环播放")
     }
 
     // 配置画中画
@@ -102,6 +131,11 @@ class PipViewController: UIViewController, AVPictureInPictureControllerDelegate 
         pipController.delegate = self
         // 隐藏播放按钮、快进快退按钮
         pipController.setValue(1, forKey: "controlsStyle")
+        if #available(iOS 14.2, *) {
+            pipController.canStartPictureInPictureAutomaticallyFromInline = true
+        } else {
+            // Fallback on earlier versions
+        }
     }
 
     // 开启/关闭 画中画
@@ -114,52 +148,36 @@ class PipViewController: UIViewController, AVPictureInPictureControllerDelegate 
     }
 
     // MARK: - Delegate
-
     func pictureInPictureControllerWillStartPictureInPicture(_ pictureInPictureController: AVPictureInPictureController) {
-        // 打印所有window，你会发现这个时候多了一个window
-        print("画中画初始化后：\(UIApplication.shared.windows)")
-        // 注意是 first window
-        let window = UIApplication.shared.windows.first
-        // 把自定义view加到画中画上
-        window?.addSubview(customView)
-        // 使用自动布局
-        customView.snp.makeConstraints { (make) -> Void in
-            make.edges.equalTo(UIEdgeInsets.init(top: 10, left: 10, bottom: 10, right: 10))
-        }
-
-        let mp4Video = Bundle.main.url(forResource: "gift_demo5", withExtension: "mp4")
-        guard let videoURL = mp4Video else { return }
-        let playerItem = AVPlayerItem(url: videoURL)
-        streamPlayer = AVPlayer(playerItem: playerItem)
-        let playerLayer = AVPlayerLayer(player: streamPlayer)
-        playerLayer.frame = CGRect(0, 0, 200, 300)
-        customView.layer.addSublayer(playerLayer)
-
-        // 监听播放结束事件
-        NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime, object: playerItem, queue: .main) { [weak playerItem] _ in
-            // 循环播放
-            playerItem?.seek(to: CMTime.zero)
-            self.streamPlayer.play()
-        }
-        streamPlayer.play()
+        debugPrint(pictureInPictureControllerWillStartPictureInPicture)
     }
 
     func pictureInPictureControllerDidStartPictureInPicture(_ pictureInPictureController: AVPictureInPictureController) {
         print("画中画弹出后：\(UIApplication.shared.windows)")
         start()
+        // 打印所有window，你会发现这个时候多了一个window
+        print("画中画初始化后：\(UIApplication.shared.windows)")
+        // 注意是 first window
+        let window = UIApplication.shared.windows.first
+
+        meidaPlayerView.removeFromSuperview()
+        // 把自定义view加到画中画上
+        window?.addSubview(meidaPlayerView)
+        meidaPlayerView.snp.makeConstraints { make in
+            make.edges.equalTo(0)
+        }
+        meidaPlayerView.backgroundColor = .yellow
     }
 
     func pictureInPictureControllerDidStopPictureInPicture(_ pictureInPictureController: AVPictureInPictureController) {
+        // 恢复
         stop()
+
     }
 
     deinit {
         print("PipViewController")
     }
-
-}
-
-extension PipViewController {
 
     func start() {
         if isRunning {
@@ -188,10 +206,7 @@ extension PipViewController {
 
     @objc private func handleDisplayLink() {
         // 这里可以执行一些需要常驻后台线程执行的操作
-        customView.backgroundColor = .randomColor
+        count += 1
+        print("线程保活中\(count)")
     }
 }
-class DisplayLinkThread {
-
-}
-

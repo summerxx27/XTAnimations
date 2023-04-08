@@ -36,19 +36,20 @@
     self.classNames = @[].mutableCopy;
     self.titleNames = @[].mutableCopy;
     
-    [self addCell:@"YY直播小心形 - drawRect" class:@"XTLoveHeartViewController"];
-    [self addCell:@"直播图片动画  " class:@"XTPictureViewController"];
+    [self addCell:@"直播点赞动画 - drawRect" class:@"XTLoveHeartViewController"];
+    [self addCell:@"直播点赞动画 - 图片  " class:@"XTPictureViewController"];
     [self addCell:@"烟花动画展示" class:@"ViewController1"];
     [self addCell:@"粒子雪花动画" class:@"EmitterSnowController"];
     [self addCell:@"跑马灯动画" class:@"XTScrollLabelViewController"];
-    [self addCell:@"POP实践" class:@"PopingViewController"];
+    [self addCell:@"简单POP" class:@"PopingViewController"];
     // 在 ObjC 中字符串转成 swift 类需要加模块名字 eg: MyModule.MyClass
-    [self addCell:@"直播中动画,PK 进度条" class:@"XTAnimations.LivingViewController"];
+    [self addCell:@"直播中动画, PK 进度条" class:@"XTAnimations.LivingViewController"];
     [self addCell:@"简单跑马灯" class:@"XTAnimations.RunningViewController"];
     [self addCell:@"常用的排序算法" class:@"XTAnimations.SortViewController"];
     [self addCell:@"连麦 16 宫格布局" class:@"XTAnimations.CollectionViewLayoutDemoViewController"];
     [self addCell:@"类似于直播间竖直滚动" class:@"XTAnimations.PageViewController"];
-    [self addCell:@"画中画-浮窗" class:@"XTAnimations.PipViewController"];
+    [self addCell:@"画中画-浮窗-视频" class:@"XTAnimations.PipViewController"];
+    [self addCell:@"画中画-浮窗-Timer" class:@"XTAnimations.PipTimerViewController"];
 
     [self.view addSubview:self.tableView];
     

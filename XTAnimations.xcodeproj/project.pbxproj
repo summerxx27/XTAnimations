@@ -35,9 +35,17 @@
 		B9E2F19A29D2EF38004A283F /* gift_demo1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B9E2F19829D2EB22004A283F /* gift_demo1.mp4 */; };
 		B9E2F19B29D2EF38004A283F /* gift_demo2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B9E2F19729D2EB22004A283F /* gift_demo2.mp4 */; };
 		B9E2F19F29D30971004A283F /* slience.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9E2F19D29D30971004A283F /* slience.mp3 */; };
-		B9E2F1A029D30971004A283F /* BackgroundTaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E2F19E29D30971004A283F /* BackgroundTaskManager.swift */; };
 		B9E2F1A229D30B32004A283F /* gift_demo5.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B9E2F1A129D30ADC004A283F /* gift_demo5.mp4 */; };
 		B9E2F1A429D311C4004A283F /* pip_video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B9E2F1A329D311B6004A283F /* pip_video.mp4 */; };
+		B9E2F1A829D34457004A283F /* PageSubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E2F1A729D34457004A283F /* PageSubViewController.swift */; };
+		B9E2F1AA29D344AA004A283F /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E2F1A929D344AA004A283F /* UITableView.swift */; };
+		B9E2F1AC29D3481A004A283F /* CustomUIScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E2F1AB29D3481A004A283F /* CustomUIScrollView.swift */; };
+		B9E2F1AE29D34DBF004A283F /* CustomUITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E2F1AD29D34DBF004A283F /* CustomUITableView.swift */; };
+		B9E2F1B229D43144004A283F /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E2F1B129D43144004A283F /* TestViewController.swift */; };
+		B9E2F1B729D5C606004A283F /* PipTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E2F1B629D5C606004A283F /* PipTimerViewController.swift */; };
+		B9E2F1B929D5C6AC004A283F /* MCGCDTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E2F1B829D5C6AC004A283F /* MCGCDTimer.swift */; };
+		B9E2F1BB29D5C6DD004A283F /* FloatClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E2F1BA29D5C6DD004A283F /* FloatClockView.swift */; };
+		B9E2F1C229D68F8E004A283F /* PlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E2F1C129D68F8E004A283F /* PlayerView.m */; };
 		BC73FDCC1D4B1DD700EA9503 /* PopingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC73FDCB1D4B1DD700EA9503 /* PopingViewController.m */; };
 		BC73FDD21D4B1E0500EA9503 /* chenyao.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC73FDCE1D4B1E0500EA9503 /* chenyao.jpg */; };
 		BC73FDD31D4B1E0500EA9503 /* chenyao2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC73FDCF1D4B1E0500EA9503 /* chenyao2.jpg */; };
@@ -116,9 +124,18 @@
 		B9E2F19729D2EB22004A283F /* gift_demo2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = gift_demo2.mp4; sourceTree = "<group>"; };
 		B9E2F19829D2EB22004A283F /* gift_demo1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = gift_demo1.mp4; sourceTree = "<group>"; };
 		B9E2F19D29D30971004A283F /* slience.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = slience.mp3; sourceTree = "<group>"; };
-		B9E2F19E29D30971004A283F /* BackgroundTaskManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundTaskManager.swift; sourceTree = "<group>"; };
 		B9E2F1A129D30ADC004A283F /* gift_demo5.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = gift_demo5.mp4; sourceTree = "<group>"; };
 		B9E2F1A329D311B6004A283F /* pip_video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = pip_video.mp4; sourceTree = "<group>"; };
+		B9E2F1A729D34457004A283F /* PageSubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageSubViewController.swift; sourceTree = "<group>"; };
+		B9E2F1A929D344AA004A283F /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		B9E2F1AB29D3481A004A283F /* CustomUIScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIScrollView.swift; sourceTree = "<group>"; };
+		B9E2F1AD29D34DBF004A283F /* CustomUITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUITableView.swift; sourceTree = "<group>"; };
+		B9E2F1B129D43144004A283F /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		B9E2F1B629D5C606004A283F /* PipTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipTimerViewController.swift; sourceTree = "<group>"; };
+		B9E2F1B829D5C6AC004A283F /* MCGCDTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCGCDTimer.swift; sourceTree = "<group>"; };
+		B9E2F1BA29D5C6DD004A283F /* FloatClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatClockView.swift; sourceTree = "<group>"; };
+		B9E2F1C029D68F8E004A283F /* PlayerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayerView.h; sourceTree = "<group>"; };
+		B9E2F1C129D68F8E004A283F /* PlayerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayerView.m; sourceTree = "<group>"; };
 		BC73FDCA1D4B1DD700EA9503 /* PopingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopingViewController.h; sourceTree = "<group>"; };
 		BC73FDCB1D4B1DD700EA9503 /* PopingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopingViewController.m; sourceTree = "<group>"; };
 		BC73FDCE1D4B1E0500EA9503 /* chenyao.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chenyao.jpg; sourceTree = "<group>"; };
@@ -222,6 +239,10 @@
 			isa = PBXGroup;
 			children = (
 				B939FB0E29D1BAA00026F247 /* PageViewController.swift */,
+				B9E2F1A729D34457004A283F /* PageSubViewController.swift */,
+				B9E2F1AB29D3481A004A283F /* CustomUIScrollView.swift */,
+				B9E2F1AD29D34DBF004A283F /* CustomUITableView.swift */,
+				B9E2F1B129D43144004A283F /* TestViewController.swift */,
 			);
 			path = UIPageVC;
 			sourceTree = "<group>";
@@ -263,6 +284,7 @@
 				B939F6D829CEE6700026F247 /* UIFont.swift */,
 				B939F6DA29CEE6D50026F247 /* UIImage.swift */,
 				B939F6DE29D13FC70026F247 /* ButtonUtils.swift */,
+				B9E2F1A929D344AA004A283F /* UITableView.swift */,
 			);
 			path = XTUIKitSwift;
 			sourceTree = "<group>";
@@ -283,21 +305,24 @@
 			path = "排序算法的实现";
 			sourceTree = "<group>";
 		};
-		B9E2F19229D2D246004A283F /* 画中画 */ = {
+		B9E2F19229D2D246004A283F /* 画中画视频 */ = {
 			isa = PBXGroup;
 			children = (
-				B9E2F19C29D30971004A283F /* BackgroundTaskManager */,
 				B9E2F19329D2D24E004A283F /* PipViewController.swift */,
+				B9E2F1C029D68F8E004A283F /* PlayerView.h */,
+				B9E2F1C129D68F8E004A283F /* PlayerView.m */,
 			);
-			path = "画中画";
+			path = "画中画视频";
 			sourceTree = "<group>";
 		};
-		B9E2F19C29D30971004A283F /* BackgroundTaskManager */ = {
+		B9E2F1B529D5C5E3004A283F /* 画中画Timer */ = {
 			isa = PBXGroup;
 			children = (
-				B9E2F19E29D30971004A283F /* BackgroundTaskManager.swift */,
+				B9E2F1B629D5C606004A283F /* PipTimerViewController.swift */,
+				B9E2F1B829D5C6AC004A283F /* MCGCDTimer.swift */,
+				B9E2F1BA29D5C6DD004A283F /* FloatClockView.swift */,
 			);
-			path = BackgroundTaskManager;
+			path = "画中画Timer";
 			sourceTree = "<group>";
 		};
 		BC73FDC81D4B1DC200EA9503 /* POP实践 */ = {
@@ -379,7 +404,8 @@
 		BC8B4E251D376BDF009B441C /* XTAnimations */ = {
 			isa = PBXGroup;
 			children = (
-				B9E2F19229D2D246004A283F /* 画中画 */,
+				B9E2F1B529D5C5E3004A283F /* 画中画Timer */,
+				B9E2F19229D2D246004A283F /* 画中画视频 */,
 				BC8B4E6C1D377EB7009B441C /* RootViewController */,
 				B939FB0D29D1BA810026F247 /* UIPageVC */,
 				B939EE3029C611A10026F247 /* CollectionView填充布局 */,
@@ -491,6 +517,7 @@
 				BC8B4E1F1D376BDE009B441C /* Sources */,
 				BC8B4E201D376BDE009B441C /* Frameworks */,
 				BC8B4E211D376BDE009B441C /* Resources */,
+				9A050FC3699EFB14F950624D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -645,6 +672,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		9A050FC3699EFB14F950624D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-XTAnimations/Pods-XTAnimations-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-XTAnimations/Pods-XTAnimations-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -652,19 +697,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9E2F1BB29D5C6DD004A283F /* FloatClockView.swift in Sources */,
 				B939EE3629C6133F0026F247 /* UICollectionView.swift in Sources */,
 				B94146292994E3780030EEE1 /* RunningViewController.swift in Sources */,
+				B9E2F1B229D43144004A283F /* TestViewController.swift in Sources */,
 				B94141B729936BAD0030EEE1 /* UIView.swift in Sources */,
 				BC73FDCC1D4B1DD700EA9503 /* PopingViewController.m in Sources */,
+				B9E2F1A829D34457004A283F /* PageSubViewController.swift in Sources */,
+				B9E2F1AE29D34DBF004A283F /* CustomUITableView.swift in Sources */,
 				B94141B429936AB50030EEE1 /* PixelTransformer.swift in Sources */,
 				BCE46FA91D61B63D0034CC9B /* XTThumbUpAnimation.m in Sources */,
 				B939F6DB29CEE6D50026F247 /* UIImage.swift in Sources */,
 				B94145EB2993CBC10030EEE1 /* ObjcRuntime.swift in Sources */,
 				BC73FDD41D4B1E0500EA9503 /* XTPopingView.m in Sources */,
 				B94141B029935D940030EEE1 /* LivingViewController.swift in Sources */,
-				B9E2F1A029D30971004A283F /* BackgroundTaskManager.swift in Sources */,
 				B94145E72993C9D90030EEE1 /* Array.swift in Sources */,
 				B939EE3429C612980026F247 /* UIScreen.swift in Sources */,
+				B9E2F1AA29D344AA004A283F /* UITableView.swift in Sources */,
 				BC8A9D0D1D409E0500981050 /* EmitterSnowController.m in Sources */,
 				B94141AE29935C390030EEE1 /* Then.swift in Sources */,
 				B939F6D729CEE6480026F247 /* NSAttributedStringJoiner.swift in Sources */,
@@ -674,10 +723,13 @@
 				B939FB0F29D1BAA00026F247 /* PageViewController.swift in Sources */,
 				BC8B4E641D37758B009B441C /* ViewController1.m in Sources */,
 				B9E2F19429D2D24E004A283F /* PipViewController.swift in Sources */,
+				B9E2F1B929D5C6AC004A283F /* MCGCDTimer.swift in Sources */,
 				B939F6D929CEE6700026F247 /* UIFont.swift in Sources */,
 				B939F6DF29D13FC70026F247 /* ButtonUtils.swift in Sources */,
 				BCE46FA21D61AAB30034CC9B /* XTPictureViewController.m in Sources */,
+				B9E2F1C229D68F8E004A283F /* PlayerView.m in Sources */,
 				B939EE3229C611D30026F247 /* CollectionViewLayoutDemoViewController.swift in Sources */,
+				B9E2F1B729D5C606004A283F /* PipTimerViewController.swift in Sources */,
 				B939F2AE29CE02140026F247 /* PKProgressBar.swift in Sources */,
 				BC8A9D1C1D40B79000981050 /* NSString+XTAdd.m in Sources */,
 				BC8A9D161D40B0CA00981050 /* XTScrollLabelViewController.m in Sources */,
@@ -688,6 +740,7 @@
 				B94145E52993C6D10030EEE1 /* AssociatedObject.swift in Sources */,
 				BC8B4E681D377BE9009B441C /* XTLoveHeartView.m in Sources */,
 				B94141B92993BEFE0030EEE1 /* UIViewController.swift in Sources */,
+				B9E2F1AC29D3481A004A283F /* CustomUIScrollView.swift in Sources */,
 				BC8B4E721D3781BE009B441C /* XTLoveHeartViewController.m in Sources */,
 				BC8B4E281D376BDF009B441C /* main.m in Sources */,
 				BC8B4E6F1D377EB7009B441C /* RootViewController.m in Sources */,
