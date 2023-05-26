@@ -4,6 +4,7 @@ PODS:
   - MJRefresh (3.7.1)
   - pop (1.0.9)
   - SnapKit (5.0.1)
+  - SwiftTheme (0.6.4)
   - ZLCollectionViewFlowLayout (1.4.8)
 
 DEPENDENCIES:
@@ -12,6 +13,7 @@ DEPENDENCIES:
   - MJRefresh
   - pop
   - SnapKit (= 5.0.1)
+  - SwiftTheme
   - ZLCollectionViewFlowLayout
 
 SPEC REPOS:
@@ -21,6 +23,7 @@ SPEC REPOS:
     - MJRefresh
     - pop
     - SnapKit
+    - SwiftTheme
     - ZLCollectionViewFlowLayout
 
 SPEC CHECKSUMS:
@@ -29,8 +32,9 @@ SPEC CHECKSUMS:
   MJRefresh: c7f1edbaa1f401810f2dc356de2355f68c78d4ca
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SwiftTheme: 007cbaf1f9e171caf6448a4657533e54c682b285
   ZLCollectionViewFlowLayout: 6cd506c05d77cb2ac0772f68155e377d50d39f8a
 
-PODFILE CHECKSUM: a08bf85c1b8c933a8d5c059a1014c398b11190f0
+PODFILE CHECKSUM: 4f933e2db540314eafaaa8482967c705b21348bb
 
 COCOAPODS: 1.11.3

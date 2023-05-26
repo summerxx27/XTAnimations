@@ -1,0 +1,6 @@
+module SwiftTheme {
+  umbrella header "SwiftTheme-umbrella.h"
+
+  export *
+  module * { export * }
+}

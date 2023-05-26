@@ -176,4 +176,37 @@ class PipTimerViewController: UIViewController, AVPictureInPictureControllerDele
     }
 }
 
+import UIKit
+
+class ViewController: UIViewController {
+
+    func regisNotificationCenter() {
+        // 注册通知，监听应用程序进入前台和后台的事件
+        NotificationCenter.default.addObserver(self, selector: #selector(appEnteredForeground), name: UIApplication.willEnterForegroundNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(appEnteredBackground), name: UIApplication.didEnterBackgroundNotification, object: nil)
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+
+    }
+
+    // 应用程序进入前台
+    @objc func appEnteredForeground() {
+        print("应用程序进入前台")
+    }
+
+    // 应用程序进入后台
+    @objc func appEnteredBackground() {
+        print("应用程序进入后台")
+    }
+
+    deinit {
+        // 在视图控制器被销毁时，注销通知
+        NotificationCenter.default.removeObserver(self)
+    }
+}
+
+
 

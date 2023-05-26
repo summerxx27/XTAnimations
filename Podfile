@@ -9,6 +9,7 @@ def public_pods
   pod 'Alamofire', '5.4.1'
   pod 'ZLCollectionViewFlowLayout'
   pod 'MJRefresh'
+  pod 'SwiftTheme'
 
 end
 
