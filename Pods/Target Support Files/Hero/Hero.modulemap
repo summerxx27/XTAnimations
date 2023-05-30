@@ -1,0 +1,6 @@
+module Hero {
+  umbrella header "Hero-umbrella.h"
+
+  export *
+  module * { export * }
+}

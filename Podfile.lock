@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (5.4.1)
+  - Hero (1.6.2)
   - Masonry (1.1.0)
   - MJRefresh (3.7.1)
   - pop (1.0.9)
@@ -9,6 +10,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (= 5.4.1)
+  - Hero
   - Masonry
   - MJRefresh
   - pop
@@ -19,6 +21,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - Hero
     - Masonry
     - MJRefresh
     - pop
@@ -28,6 +31,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
+  Hero: c69009dbc9e2f0472e081adc644dba05fcedae72
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJRefresh: c7f1edbaa1f401810f2dc356de2355f68c78d4ca
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
@@ -35,6 +39,6 @@ SPEC CHECKSUMS:
   SwiftTheme: 007cbaf1f9e171caf6448a4657533e54c682b285
   ZLCollectionViewFlowLayout: 6cd506c05d77cb2ac0772f68155e377d50d39f8a
 
-PODFILE CHECKSUM: 4f933e2db540314eafaaa8482967c705b21348bb
+PODFILE CHECKSUM: d73f6291393d6b69b0057c64cf7564efe74c496b
 
 COCOAPODS: 1.11.3

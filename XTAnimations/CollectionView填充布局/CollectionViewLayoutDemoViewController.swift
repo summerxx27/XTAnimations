@@ -8,6 +8,7 @@
 
 import UIKit
 import SnapKit
+import Hero
 
 class CollectionViewLayoutDemoViewController: UIViewController {
 
@@ -73,13 +74,13 @@ private extension CollectionViewLayoutDemoViewController {
         timer.fire()
 
 
-//        self.collectionView.reloadData()
+        //        self.collectionView.reloadData()
 
         /// 这里需要加回到主线程, 不加可能导致布局错误
-//        DispatchQueue.main.async {
-//            self.collectionView.reloadData()
-//            print("Current thread1: \(Thread.current)")
-//        }
+        //        DispatchQueue.main.async {
+        //            self.collectionView.reloadData()
+        //            print("Current thread1: \(Thread.current)")
+        //        }
         
     }
 }
@@ -88,11 +89,11 @@ private extension CollectionViewLayoutDemoViewController {
 extension CollectionViewLayoutDemoViewController {
 
     @objc func start() {
-        self.count = Int(arc4random()) % (16 - 5 + 1) + 2
-
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.0001) {
-            self.collectionView.reloadData()
-        }
+//        self.count = Int(arc4random()) % (16 - 5 + 1) + 2
+//
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 0.0001) {
+//            self.collectionView.reloadData()
+//        }
     }
 }
 
@@ -115,7 +116,26 @@ extension CollectionViewLayoutDemoViewController: UICollectionViewDelegate, UICo
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
-        print("itwm == \(indexPath.item)")
+
+        guard let selectedCell = collectionView.cellForItem(at: indexPath) else {
+            return
+        }
+        cellTapped(cell: selectedCell.contentView, data: indexPath.item)
+    }
+
+    func cellTapped(cell: UIView, data: Int) {
+
+        let heroId = "cell\(data)"
+        cell.hero.id = heroId
+
+        let vc = HeroTestViewController()
+        vc.hero.isEnabled = true
+        vc.view.hero.id = heroId
+//        vc.contentView.hero.id = heroId
+//        navigationController?.hero.isEnabled = true
+//        navigationController?.hero.navigationAnimationType = .push(direction: .down)
+//        navigationController?.pushViewController(vc, animated: true)
+        present(vc, animated: true)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
