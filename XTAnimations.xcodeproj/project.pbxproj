@@ -31,6 +31,8 @@
 		B94145EB2993CBC10030EEE1 /* ObjcRuntime.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94145EA2993CBC10030EEE1 /* ObjcRuntime.swift */; };
 		B94146292994E3780030EEE1 /* RunningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94146282994E3780030EEE1 /* RunningViewController.swift */; };
 		B9414E802994F6D90030EEE1 /* SortViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9414E7F2994F6D90030EEE1 /* SortViewController.swift */; };
+		B94802C02B07946E00F9F997 /* GoldCoinCalliperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94802BF2B07946E00F9F997 /* GoldCoinCalliperView.swift */; };
+		B94B8D192A5E581400BE206E /* DoubleCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94B8D182A5E581400BE206E /* DoubleCardViewController.swift */; };
 		B96184B82A25A25D0040DEE2 /* HeroTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96184B72A25A25D0040DEE2 /* HeroTestViewController.swift */; };
 		B9E2F19429D2D24E004A283F /* PipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E2F19329D2D24E004A283F /* PipViewController.swift */; };
 		B9E2F19A29D2EF38004A283F /* gift_demo1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B9E2F19829D2EB22004A283F /* gift_demo1.mp4 */; };
@@ -119,6 +121,8 @@
 		B94145EA2993CBC10030EEE1 /* ObjcRuntime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjcRuntime.swift; sourceTree = "<group>"; };
 		B94146282994E3780030EEE1 /* RunningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningViewController.swift; sourceTree = "<group>"; };
 		B9414E7F2994F6D90030EEE1 /* SortViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortViewController.swift; sourceTree = "<group>"; };
+		B94802BF2B07946E00F9F997 /* GoldCoinCalliperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoldCoinCalliperView.swift; sourceTree = "<group>"; };
+		B94B8D182A5E581400BE206E /* DoubleCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleCardViewController.swift; sourceTree = "<group>"; };
 		B96184B72A25A25D0040DEE2 /* HeroTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroTestViewController.swift; sourceTree = "<group>"; };
 		B9E2F19329D2D24E004A283F /* PipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipViewController.swift; sourceTree = "<group>"; };
 		B9E2F19729D2EB22004A283F /* gift_demo2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = gift_demo2.mp4; sourceTree = "<group>"; };
@@ -251,6 +255,7 @@
 				B94141B1299369670030EEE1 /* LivingView.swift */,
 				B94141AF29935D940030EEE1 /* LivingViewController.swift */,
 				B939F2AD29CE02140026F247 /* PKProgressBar.swift */,
+				B94802BF2B07946E00F9F997 /* GoldCoinCalliperView.swift */,
 			);
 			path = "直播状态动画";
 			sourceTree = "<group>";
@@ -300,6 +305,14 @@
 				B9414E7F2994F6D90030EEE1 /* SortViewController.swift */,
 			);
 			path = "排序算法的实现";
+			sourceTree = "<group>";
+		};
+		B94B8D172A5E57F800BE206E /* 双面 Card */ = {
+			isa = PBXGroup;
+			children = (
+				B94B8D182A5E581400BE206E /* DoubleCardViewController.swift */,
+			);
+			path = "双面 Card";
 			sourceTree = "<group>";
 		};
 		B9E2F19229D2D246004A283F /* 画中画视频 */ = {
@@ -401,6 +414,7 @@
 		BC8B4E251D376BDF009B441C /* XTAnimations */ = {
 			isa = PBXGroup;
 			children = (
+				B94B8D172A5E57F800BE206E /* 双面 Card */,
 				B9E2F1B529D5C5E3004A283F /* 画中画Timer */,
 				B9E2F19229D2D246004A283F /* 画中画视频 */,
 				BC8B4E6C1D377EB7009B441C /* RootViewController */,
@@ -699,6 +713,7 @@
 				B94146292994E3780030EEE1 /* RunningViewController.swift in Sources */,
 				B9E2F1B229D43144004A283F /* TestViewController.swift in Sources */,
 				B94141B729936BAD0030EEE1 /* UIView.swift in Sources */,
+				B94B8D192A5E581400BE206E /* DoubleCardViewController.swift in Sources */,
 				BC73FDCC1D4B1DD700EA9503 /* PopingViewController.m in Sources */,
 				B9E2F1A829D34457004A283F /* PageSubViewController.swift in Sources */,
 				B94141B429936AB50030EEE1 /* PixelTransformer.swift in Sources */,
@@ -736,6 +751,7 @@
 				B94145E92993CAD00030EEE1 /* CGGeometry.swift in Sources */,
 				B94145E52993C6D10030EEE1 /* AssociatedObject.swift in Sources */,
 				BC8B4E681D377BE9009B441C /* XTLoveHeartView.m in Sources */,
+				B94802C02B07946E00F9F997 /* GoldCoinCalliperView.swift in Sources */,
 				B94141B92993BEFE0030EEE1 /* UIViewController.swift in Sources */,
 				BC8B4E721D3781BE009B441C /* XTLoveHeartViewController.m in Sources */,
 				BC8B4E281D376BDF009B441C /* main.m in Sources */,

@@ -24,9 +24,17 @@ class SortViewController: UIViewController {
 //        quickSort(&array, low: 0, high: 5)
 //        print(array)
 
-        let array = [10, 2, 5, 3, 7, 1, 8, 9, 6, 4]
-        let sortedArray = mergeSort(array)
-        print(sortedArray)
+//        let array = [10, 2, 5, 3, 7, 1, 8, 9, 6, 4]
+//        let sortedArray = mergeSort(array)
+//        print(sortedArray)
+
+        let array1 = ["1", "2"]
+        let array2 = ["A"]
+
+        print(crossMerge(array1, array2))
+
+
+
     }
 
     /// 1. 冒泡排序
@@ -150,4 +158,22 @@ class SortViewController: UIViewController {
 
         return orderedArray
     }
+
+    func crossMerge<T>(_ array1: [T], _ array2: [T]) -> [T] {
+        var mergedArray: [T] = []
+        let maxLength = max(array1.count, array2.count)
+
+        for i in 0..<maxLength {
+            if i < array1.count {
+                mergedArray.append(array1[i])
+            }
+            if i < array2.count {
+                mergedArray.append(array2[i])
+            }
+        }
+
+        return mergedArray
+    }
 }
+
+

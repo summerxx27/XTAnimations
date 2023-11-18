@@ -19,7 +19,8 @@ public class LivingViewController: UIViewController {
         view += [
             activityView,
             animationView,
-            progressBar
+            progressBar,
+            goldCoinCalliperView
         ]
         
         activityView.snp.makeConstraints {
@@ -36,6 +37,12 @@ public class LivingViewController: UIViewController {
         printPointer(object: animationView)
 
         progressBar.frame = CGRect(0, 400, UIScreen.width, 20)
+
+        goldCoinCalliperView.snp.makeConstraints { make in
+            make.leading.trailing.equalToSuperview()
+            make.bottom.equalTo(-50)
+            make.height.equalTo(60)
+        }
 
         RunLoop.main.add(timer, forMode: .common)
         timer.fire()
@@ -97,6 +104,8 @@ public class LivingViewController: UIViewController {
     lazy var progressBar = PKProgressBar().then {
         $0.backgroundColor = .cyan
     }
+
+    lazy var goldCoinCalliperView = GoldCoinCalliperView()
 }
 
 extension LivingViewController {

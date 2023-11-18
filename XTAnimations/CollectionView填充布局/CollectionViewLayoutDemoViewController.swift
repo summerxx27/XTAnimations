@@ -69,8 +69,8 @@ private extension CollectionViewLayoutDemoViewController {
             $0.height.equalTo(bigW * 2 + 2)
         }
 
-        RunLoop.main.add(timer, forMode: .common)
-        timer.fire()
+//        RunLoop.main.add(timer, forMode: .common)
+//        timer.fire()
 
 
         self.collectionView.reloadData()
