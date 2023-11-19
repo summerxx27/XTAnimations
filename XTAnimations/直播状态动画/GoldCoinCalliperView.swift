@@ -38,6 +38,8 @@ class GoldCoinCalliperView: UIView {
         }
     }
 
+    private lazy var generator = UINotificationFeedbackGenerator()
+
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = 6
@@ -78,6 +80,9 @@ extension GoldCoinCalliperView: UICollectionViewDelegate, UICollectionViewDataSo
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         return collectionView.dequeueReusableCell(GoldCoinCalliperViewCell.self, for: indexPath).then {
             $0.isSmall = !(indexPath.item % 5 == 0) && indexPath.item != 0
+            if (indexPath.item % 5 == 0) {
+                generator.notificationOccurred(.success)
+            }
         }
     }
 }
