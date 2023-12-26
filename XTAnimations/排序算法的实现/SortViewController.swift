@@ -13,28 +13,48 @@ class SortViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        title = "[排序]"
-        view.backgroundColor = .white
-//        var array = [7, 8, 4, 20, 9, 3]
+        let cardView = UIView(frame: CGRect(x: 50, y: 50, width: 200, height: 300))
+        cardView.backgroundColor = UIColor.clear
 
-//        bubbleSort(&array)
-//        selectionSort(&array)
-//        insertionSort(&array)
-//        quickSort(&array, low: 0, high: 5)
-//        print(array)
+        let frontView = UIView(frame: cardView.bounds)
+        frontView.backgroundColor = UIColor.red
 
-//        let array = [10, 2, 5, 3, 7, 1, 8, 9, 6, 4]
-//        let sortedArray = mergeSort(array)
-//        print(sortedArray)
+        let backView = UIView(frame: cardView.bounds)
+        backView.backgroundColor = UIColor.blue
 
-        let array1 = ["1", "2"]
-        let array2 = ["A"]
+        cardView.addSubview(frontView)
+        cardView.addSubview(backView)
 
-        print(crossMerge(array1, array2))
+        view.addSubview(cardView)
 
+        setupDoubleSidedCard(view: cardView)
+    }
 
+    func setupDoubleSidedCard(view: UIView) {
+        view.clipsToBounds = true
 
+        let transform = CATransform3DIdentity
+        view.layer.sublayerTransform = transform
+
+        let frontTransform = CATransform3DIdentity
+        var backTransform = CATransform3DIdentity
+
+        backTransform = CATransform3DMakeRotation(CGFloat.pi, 0, 1, 0)
+
+        let duration = 1.0
+
+        CATransaction.begin()
+        let flipAnimation = CABasicAnimation(keyPath: "transform.rotation.y")
+        flipAnimation.fromValue = 0
+        flipAnimation.toValue = CGFloat.pi
+        flipAnimation.duration = duration
+        flipAnimation.isRemovedOnCompletion = false
+        flipAnimation.fillMode = CAMediaTimingFillMode.forwards
+        CATransaction.setCompletionBlock {
+            view.layer.transform = view.layer.presentation()?.transform ?? backTransform
+        }
+        view.layer.add(flipAnimation, forKey: "flipAnimation")
+        CATransaction.commit()
     }
 
     /// 1. 冒泡排序
@@ -175,5 +195,6 @@ class SortViewController: UIViewController {
         return mergedArray
     }
 }
+
 
 

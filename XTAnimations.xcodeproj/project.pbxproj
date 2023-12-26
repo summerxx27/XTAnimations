@@ -47,6 +47,7 @@
 		B9E2F1B929D5C6AC004A283F /* MCGCDTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E2F1B829D5C6AC004A283F /* MCGCDTimer.swift */; };
 		B9E2F1BB29D5C6DD004A283F /* FloatClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E2F1BA29D5C6DD004A283F /* FloatClockView.swift */; };
 		B9E2F1C229D68F8E004A283F /* PlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E2F1C129D68F8E004A283F /* PlayerView.m */; };
+		B9F8C37B2B24935600E7177F /* TestPersonalPushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F8C37A2B24935600E7177F /* TestPersonalPushViewController.swift */; };
 		BC73FDCC1D4B1DD700EA9503 /* PopingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC73FDCB1D4B1DD700EA9503 /* PopingViewController.m */; };
 		BC73FDD21D4B1E0500EA9503 /* chenyao.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC73FDCE1D4B1E0500EA9503 /* chenyao.jpg */; };
 		BC73FDD31D4B1E0500EA9503 /* chenyao2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC73FDCF1D4B1E0500EA9503 /* chenyao2.jpg */; };
@@ -138,6 +139,7 @@
 		B9E2F1BA29D5C6DD004A283F /* FloatClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatClockView.swift; sourceTree = "<group>"; };
 		B9E2F1C029D68F8E004A283F /* PlayerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayerView.h; sourceTree = "<group>"; };
 		B9E2F1C129D68F8E004A283F /* PlayerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayerView.m; sourceTree = "<group>"; };
+		B9F8C37A2B24935600E7177F /* TestPersonalPushViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPersonalPushViewController.swift; sourceTree = "<group>"; };
 		BC73FDCA1D4B1DD700EA9503 /* PopingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopingViewController.h; sourceTree = "<group>"; };
 		BC73FDCB1D4B1DD700EA9503 /* PopingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopingViewController.m; sourceTree = "<group>"; };
 		BC73FDCE1D4B1E0500EA9503 /* chenyao.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chenyao.jpg; sourceTree = "<group>"; };
@@ -303,6 +305,7 @@
 			isa = PBXGroup;
 			children = (
 				B9414E7F2994F6D90030EEE1 /* SortViewController.swift */,
+				B9F8C37A2B24935600E7177F /* TestPersonalPushViewController.swift */,
 			);
 			path = "排序算法的实现";
 			sourceTree = "<group>";
@@ -753,6 +756,7 @@
 				BC8B4E681D377BE9009B441C /* XTLoveHeartView.m in Sources */,
 				B94802C02B07946E00F9F997 /* GoldCoinCalliperView.swift in Sources */,
 				B94141B92993BEFE0030EEE1 /* UIViewController.swift in Sources */,
+				B9F8C37B2B24935600E7177F /* TestPersonalPushViewController.swift in Sources */,
 				BC8B4E721D3781BE009B441C /* XTLoveHeartViewController.m in Sources */,
 				BC8B4E281D376BDF009B441C /* main.m in Sources */,
 				BC8B4E6F1D377EB7009B441C /* RootViewController.m in Sources */,

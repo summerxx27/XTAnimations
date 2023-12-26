@@ -11,7 +11,6 @@ def public_pods
   pod 'MJRefresh'
   pod 'SwiftTheme'
   pod 'Hero'
-  
 end
 
 target 'XTAnimations' do

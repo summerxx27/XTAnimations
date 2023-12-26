@@ -19,7 +19,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    
     RootViewController *root = [[RootViewController alloc] init];
     UINavigationController *navRoot = [[UINavigationController alloc] initWithRootViewController:root];
     self.window.rootViewController = navRoot;
