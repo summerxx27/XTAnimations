@@ -10,6 +10,7 @@
 
 
 @implementation NSString (XTAdd)
+
 - (CGFloat)widthWithStringAttribute:(NSDictionary <NSString *, id> *)attribute {
     
     NSParameterAssert(attribute);
@@ -29,4 +30,5 @@
     
     return width;
 }
+
 @end

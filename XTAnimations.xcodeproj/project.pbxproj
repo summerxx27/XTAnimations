@@ -310,12 +310,12 @@
 			path = "排序算法的实现";
 			sourceTree = "<group>";
 		};
-		B94B8D172A5E57F800BE206E /* 双面 Card */ = {
+		B94B8D172A5E57F800BE206E /* 倒计时 */ = {
 			isa = PBXGroup;
 			children = (
 				B94B8D182A5E581400BE206E /* DoubleCardViewController.swift */,
 			);
-			path = "双面 Card";
+			path = "倒计时";
 			sourceTree = "<group>";
 		};
 		B9E2F19229D2D246004A283F /* 画中画视频 */ = {
@@ -341,19 +341,11 @@
 		BC73FDC81D4B1DC200EA9503 /* POP实践 */ = {
 			isa = PBXGroup;
 			children = (
-				BC73FDC91D4B1DC200EA9503 /* POP-01 */,
-			);
-			path = "POP实践";
-			sourceTree = "<group>";
-		};
-		BC73FDC91D4B1DC200EA9503 /* POP-01 */ = {
-			isa = PBXGroup;
-			children = (
-				BC73FDCD1D4B1DEC00EA9503 /* PopingView */,
 				BC73FDCA1D4B1DD700EA9503 /* PopingViewController.h */,
 				BC73FDCB1D4B1DD700EA9503 /* PopingViewController.m */,
+				BC73FDCD1D4B1DEC00EA9503 /* PopingView */,
 			);
-			path = "POP-01";
+			path = "POP实践";
 			sourceTree = "<group>";
 		};
 		BC73FDCD1D4B1DEC00EA9503 /* PopingView */ = {
@@ -417,10 +409,10 @@
 		BC8B4E251D376BDF009B441C /* XTAnimations */ = {
 			isa = PBXGroup;
 			children = (
-				B94B8D172A5E57F800BE206E /* 双面 Card */,
+				BC8B4E6C1D377EB7009B441C /* RootViewController */,
+				B94B8D172A5E57F800BE206E /* 倒计时 */,
 				B9E2F1B529D5C5E3004A283F /* 画中画Timer */,
 				B9E2F19229D2D246004A283F /* 画中画视频 */,
-				BC8B4E6C1D377EB7009B441C /* RootViewController */,
 				B939FB0D29D1BA810026F247 /* UIPageVC */,
 				B939EE3029C611A10026F247 /* CollectionView填充布局 */,
 				B9414E7E2994F6C50030EEE1 /* 排序算法的实现 */,

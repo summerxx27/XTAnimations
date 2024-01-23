@@ -11,7 +11,6 @@ import AVFoundation
 import SnapKit
 
 /// 画中画的大小跟你正在用player 播放的视频相关
-///
 class PipViewController: UIViewController, AVPictureInPictureControllerDelegate {
 
     private var displayLink: CADisplayLink?

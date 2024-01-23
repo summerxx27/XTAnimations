@@ -54,7 +54,6 @@ class TestViewController: UIViewController, UITableViewDataSource, UITableViewDe
         15
     }
 
-
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(UITableViewCell.self, for: indexPath)
         cell.backgroundColor = UIColor.randomColor

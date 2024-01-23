@@ -11,6 +11,7 @@ import Foundation
 typealias ActionBlock = () -> ()
 
 class MCGCDTimer {
+
     //单例
     static let shared = MCGCDTimer()
 
@@ -58,7 +59,6 @@ class MCGCDTimer {
         timer?.cancel()
     }
 
-
     /// 检查定时器是否已存在
     ///
     /// - Parameter name: 定时器名字
@@ -69,6 +69,5 @@ class MCGCDTimer {
         }
         return false
     }
-
 }
 

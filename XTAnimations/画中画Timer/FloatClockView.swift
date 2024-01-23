@@ -142,8 +142,5 @@ class FloatClockView: UIView {
             make.top.equalTo(timeLabel.snp.bottom)
             make.height.equalTo(12)
         }
-
-
     }
-
 }

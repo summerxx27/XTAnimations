@@ -10,5 +10,7 @@
 #import <UIKit/UIKit.h>
 
 @interface NSString (XTAdd)
+
 - (CGFloat)widthWithStringAttribute:(NSDictionary <NSString *, id> *)attribute;
+
 @end
