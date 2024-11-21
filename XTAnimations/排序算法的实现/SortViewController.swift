@@ -13,21 +13,71 @@ class SortViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let cardView = UIView(frame: CGRect(x: 50, y: 50, width: 200, height: 300))
-        cardView.backgroundColor = UIColor.clear
+//        let cardView = UIView(frame: CGRect(x: 50, y: 50, width: 200, height: 300))
+//        cardView.backgroundColor = UIColor.clear
+//
+//        let frontView = UIView(frame: cardView.bounds)
+//        frontView.backgroundColor = UIColor.red
+//
+//        let backView = UIView(frame: cardView.bounds)
+//        backView.backgroundColor = UIColor.blue
+//
+//        cardView.addSubview(frontView)
+//        cardView.addSubview(backView)
+//
+//        view.addSubview(cardView)
+//
+//        setupDoubleSidedCard(view: cardView)
 
-        let frontView = UIView(frame: cardView.bounds)
-        frontView.backgroundColor = UIColor.red
 
-        let backView = UIView(frame: cardView.bounds)
-        backView.backgroundColor = UIColor.blue
+        let testView = UIView().then {
+            $0.backgroundColor = UIColor.purple
+        }
 
-        cardView.addSubview(frontView)
-        cardView.addSubview(backView)
+        view.addSubview(testView)
 
-        view.addSubview(cardView)
+        testView.snp.makeConstraints { make in
+            make.top.equalTo(200)
+            make.left.equalTo(200)
+            make.width.height.equalTo(50)
+        }
 
-        setupDoubleSidedCard(view: cardView)
+        animateView(testView)
+    }
+
+    func animateView(_ view: UIView) {
+        // 初始状态：位置在屏幕底部，透明度为0
+        view.transform = CGAffineTransform(translationX: 0, y: 50)
+        view.alpha = 0
+
+        // 动画开始
+        UIView.animateKeyframes(withDuration: 2.0, delay: 0, options: [], animations: {
+
+            // Step 1: 移动到原位置并淡入
+            UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 0.5) {
+                view.transform = .identity // 回到初始位置
+                view.alpha = 1.0 // 完全可见
+            }
+
+            // Step 2: 前后翻转 90 度
+            UIView.addKeyframe(withRelativeStartTime: 0.5, relativeDuration: 0.25) {
+                var transform = CATransform3DIdentity
+                transform.m34 = -1.0 / 500.0 // 设置透视效果
+                transform = CATransform3DRotate(transform, .pi / 2, 1, 0, 0) // 沿 X 轴翻转 90 度
+                view.layer.transform = transform
+            }
+
+
+            // Step 3: 淡出并消失
+            UIView.addKeyframe(withRelativeStartTime: 0.75, relativeDuration: 0.25) {
+                view.alpha = 0.0 // 完全不可见
+            }
+
+        }, completion: { _ in
+            // 动画完成时，将 view 位置和透明度恢复到初始状态
+            view.transform = .identity
+            view.alpha = 0
+        })
     }
 
     func setupDoubleSidedCard(view: UIView) {
