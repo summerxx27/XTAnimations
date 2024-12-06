@@ -51,7 +51,8 @@
     [self addCell:@"画中画-浮窗-视频" class:@"XTAnimations.PipViewController"];
     [self addCell:@"画中画-浮窗-Timer" class:@"XTAnimations.PipTimerViewController"];
     [self addCell:@"0.1s倒计时" class:@"XTAnimations.DoubleCardViewController"];
-
+    [self addCell:@"3D效果的 CollectionView" class:@"XTAnimations.XTCircleCollectionViewTestVC"];
+    
     [self.view addSubview:self.tableView];
     
     [_tableView reloadData];
