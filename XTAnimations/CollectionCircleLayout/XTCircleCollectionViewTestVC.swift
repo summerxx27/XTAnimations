@@ -30,35 +30,98 @@ class Horizontal3DLayout: UICollectionViewFlowLayout {
         let collectionViewCenterX = collectionView!.contentOffset.x + collectionView!.bounds.size.width / 2
 
         for attribute in attributes {
-            let distance = abs(collectionViewCenterX - attribute.center.x)
-            let scale = 1 - min(distance / (collectionView!.bounds.size.width / 2), 1) * scaleFactor
-            attribute.transform = CGAffineTransform(scaleX: scale, y: scale)
-            attribute.zIndex = Int(scale * 1000)  // 更大 scale 的 cell 置顶
+            var transform = CGAffineTransform.identity
+            transform.tx = -CGFloat(attribute.indexPath.item) * attribute.size.width + (collectionView?.bounds.width ?? 0) / 2 - attribute.size.width / 2
+            attribute.transform = transform
         }
 
         return attributes
     }
+
+
 }
 
 class XTCircleCollectionViewTestVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     var collectionView: UICollectionView!
 
+    private var lastTranslation: CGPoint = .zero
+
+    var timer: Timer?
+
+    var coutt: Int = 0
+
+    var lastDeltaX = 0
+
+    var awareView = EllipticalRotatingImagesDepthAwareView()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // 初始化 collectionView
-        let layout = Horizontal3DLayout()
-        layout.scrollDirection = .horizontal
-        collectionView = UICollectionView(frame: CGRect(x: 0, y: 200, width: UIScreen.width, height: 320), collectionViewLayout: layout)
-        collectionView.dataSource = self
-        collectionView.delegate = self
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
+//        // 初始化 collectionView
+//        let layout = Horizontal3DLayout()
+//        layout.scrollDirection = .horizontal
+//        layout.itemSize = CGSize(width: 50, height: 200)
+//        layout.minimumLineSpacing = 0
+//        layout.minimumInteritemSpacing = 0
+//        collectionView = UICollectionView(frame: CGRect(x: 0, y: 200, width: UIScreen.width, height: 320), collectionViewLayout: layout)
+//        collectionView.dataSource = self
+//        collectionView.delegate = self
+//        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
+//
+//        self.view.addSubview(collectionView)
+//
+//        self.collectionView.scrollToItem(at: IndexPath(row: 1, section: 0), at: .centeredHorizontally, animated: true)
 
-        self.view.addSubview(collectionView)
 
-        self.collectionView.scrollToItem(at: IndexPath(row: 1, section: 0), at: .centeredHorizontally, animated: true)
+        self.view += awareView
+        awareView.backgroundColor = .cyan
+        awareView.frame = CGRect(x: 0, y: 200, width: UIScreen.width, height: 300)
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateCountdown), userInfo: nil, repeats: true)
+
+
+        let pan = UIPanGestureRecognizer.init(target: self, action: #selector(panAction))
+        awareView.addGestureRecognizer(pan)
+
+
+        let testView = UIView()
+        view += testView
+        testView.frame = CGRect(0, 500, 100, 100)
+        testView.backgroundColor = .yellow
+
+        let angle = CGFloat(30 * Double.pi / 180) // 将 30 度转换为弧度
+        var transform = CATransform3DIdentity // 初始 Transform
+        transform.m34 = -1.0 / 500.0 // 设置透视效果
+        transform = CATransform3DRotate(transform, angle, 0, 1, 0) // 绕 Y 轴旋转
+        testView.layer.transform = transform
     }
+
+    @objc func updateCountdown() {
+        coutt += 13
+//        awareView.rotationAngle = CGFloat(coutt)
+    }
+
+    var lastAngle = 0.0
+
+    @objc func panAction(sender: UIPanGestureRecognizer) {
+        let translation = sender.translation(in: self.awareView)
+
+        // 获取拖动的增量
+        let deltaX = translation.x - lastTranslation.x
+        let newX = deltaX / 10 + lastAngle
+
+        if newX > 360 {
+            lastAngle = newX - 360
+        } else if newX < 0 {
+            lastAngle = 360 + newX
+        } else {
+            lastAngle = newX
+        }
+        awareView.rotationAngle = -lastAngle
+
+    }
+
+
 
     // 数据源方法
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -73,10 +136,5 @@ class XTCircleCollectionViewTestVC: UIViewController, UICollectionViewDataSource
         cell.layer.masksToBounds = true
 
         return cell
-    }
-
-    // 设置每个 cell 的尺寸
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 200, height: 300) // 你可以根据需求调整尺寸
     }
 }

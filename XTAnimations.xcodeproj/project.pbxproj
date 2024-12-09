@@ -33,6 +33,10 @@
 		B9414E802994F6D90030EEE1 /* SortViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9414E7F2994F6D90030EEE1 /* SortViewController.swift */; };
 		B9468CF02D01904A009D62FB /* XTCircleCollectionViewTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9468CEF2D01904A009D62FB /* XTCircleCollectionViewTestVC.swift */; };
 		B9468CF22D02DDD9009D62FB /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9468CF12D02DDD9009D62FB /* ImageCollectionViewCell.swift */; };
+		B9468D072D034AF9009D62FB /* Transform3DVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9468D062D034AF9009D62FB /* Transform3DVC.swift */; };
+		B9468D092D0358F4009D62FB /* EllipticalRotatingImagesDepthAwareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9468D082D0358F4009D62FB /* EllipticalRotatingImagesDepthAwareView.swift */; };
+		B9468D0C2D03629F009D62FB /* cardBack.png in Resources */ = {isa = PBXBuildFile; fileRef = B9468D0A2D03629E009D62FB /* cardBack.png */; };
+		B9468D0D2D03629F009D62FB /* cardFront.png in Resources */ = {isa = PBXBuildFile; fileRef = B9468D0B2D03629F009D62FB /* cardFront.png */; };
 		B94802C02B07946E00F9F997 /* GoldCoinCalliperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94802BF2B07946E00F9F997 /* GoldCoinCalliperView.swift */; };
 		B94B8D192A5E581400BE206E /* DoubleCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94B8D182A5E581400BE206E /* DoubleCardViewController.swift */; };
 		B96184B82A25A25D0040DEE2 /* HeroTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96184B72A25A25D0040DEE2 /* HeroTestViewController.swift */; };
@@ -126,6 +130,10 @@
 		B9414E7F2994F6D90030EEE1 /* SortViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortViewController.swift; sourceTree = "<group>"; };
 		B9468CEF2D01904A009D62FB /* XTCircleCollectionViewTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XTCircleCollectionViewTestVC.swift; sourceTree = "<group>"; };
 		B9468CF12D02DDD9009D62FB /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		B9468D062D034AF9009D62FB /* Transform3DVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transform3DVC.swift; sourceTree = "<group>"; };
+		B9468D082D0358F4009D62FB /* EllipticalRotatingImagesDepthAwareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EllipticalRotatingImagesDepthAwareView.swift; sourceTree = "<group>"; };
+		B9468D0A2D03629E009D62FB /* cardBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cardBack.png; sourceTree = "<group>"; };
+		B9468D0B2D03629F009D62FB /* cardFront.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cardFront.png; sourceTree = "<group>"; };
 		B94802BF2B07946E00F9F997 /* GoldCoinCalliperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoldCoinCalliperView.swift; sourceTree = "<group>"; };
 		B94B8D182A5E581400BE206E /* DoubleCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleCardViewController.swift; sourceTree = "<group>"; };
 		B96184B72A25A25D0040DEE2 /* HeroTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroTestViewController.swift; sourceTree = "<group>"; };
@@ -317,10 +325,21 @@
 		B9468CEC2D018FEA009D62FB /* CollectionCircleLayout */ = {
 			isa = PBXGroup;
 			children = (
+				B9468D0A2D03629E009D62FB /* cardBack.png */,
+				B9468D0B2D03629F009D62FB /* cardFront.png */,
 				B9468CEF2D01904A009D62FB /* XTCircleCollectionViewTestVC.swift */,
 				B9468CF12D02DDD9009D62FB /* ImageCollectionViewCell.swift */,
+				B9468D082D0358F4009D62FB /* EllipticalRotatingImagesDepthAwareView.swift */,
 			);
 			path = CollectionCircleLayout;
+			sourceTree = "<group>";
+		};
+		B9468D032D034AAB009D62FB /* 3D */ = {
+			isa = PBXGroup;
+			children = (
+				B9468D062D034AF9009D62FB /* Transform3DVC.swift */,
+			);
+			path = 3D;
 			sourceTree = "<group>";
 		};
 		B94B8D172A5E57F800BE206E /* 倒计时 */ = {
@@ -422,6 +441,7 @@
 		BC8B4E251D376BDF009B441C /* XTAnimations */ = {
 			isa = PBXGroup;
 			children = (
+				B9468D032D034AAB009D62FB /* 3D */,
 				B9468CEC2D018FEA009D62FB /* CollectionCircleLayout */,
 				BC8B4E6C1D377EB7009B441C /* RootViewController */,
 				B94B8D172A5E57F800BE206E /* 倒计时 */,
@@ -639,7 +659,9 @@
 				B9E2F19A29D2EF38004A283F /* gift_demo1.mp4 in Resources */,
 				B9E2F19B29D2EF38004A283F /* gift_demo2.mp4 in Resources */,
 				B9E2F19F29D30971004A283F /* slience.mp3 in Resources */,
+				B9468D0C2D03629F009D62FB /* cardBack.png in Resources */,
 				BC8B4E741D37998D009B441C /* darong.png in Resources */,
+				B9468D0D2D03629F009D62FB /* cardFront.png in Resources */,
 				BC73FDD21D4B1E0500EA9503 /* chenyao.jpg in Resources */,
 				BCE46FA61D61AE370034CC9B /* resource.bundle in Resources */,
 				BC8A9D0F1D40A0A900981050 /* snow@2x.png in Resources */,
@@ -733,6 +755,7 @@
 				B939F6DB29CEE6D50026F247 /* UIImage.swift in Sources */,
 				B94145EB2993CBC10030EEE1 /* ObjcRuntime.swift in Sources */,
 				BC73FDD41D4B1E0500EA9503 /* XTPopingView.m in Sources */,
+				B9468D092D0358F4009D62FB /* EllipticalRotatingImagesDepthAwareView.swift in Sources */,
 				B94141B029935D940030EEE1 /* LivingViewController.swift in Sources */,
 				B94145E72993C9D90030EEE1 /* Array.swift in Sources */,
 				B939EE3429C612980026F247 /* UIScreen.swift in Sources */,
@@ -755,6 +778,7 @@
 				B9E2F1B729D5C606004A283F /* PipTimerViewController.swift in Sources */,
 				B939F2AE29CE02140026F247 /* PKProgressBar.swift in Sources */,
 				BC8A9D1C1D40B79000981050 /* NSString+XTAdd.m in Sources */,
+				B9468D072D034AF9009D62FB /* Transform3DVC.swift in Sources */,
 				BC8A9D161D40B0CA00981050 /* XTScrollLabelViewController.m in Sources */,
 				B939EE3829C613AE0026F247 /* UIColor.swift in Sources */,
 				BC8A9D191D40B0E100981050 /* XTScrollLabelView.m in Sources */,
