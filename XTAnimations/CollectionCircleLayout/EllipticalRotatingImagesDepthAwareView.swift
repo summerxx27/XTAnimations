@@ -17,19 +17,12 @@ class EllipticalRotatingImagesDepthAwareView: UIView {
         }
     }
 
-    /// 长轴半径
     var horizontalRadius: CGFloat = 150.0
-
-    /// 短轴半径
-    var verticalRadius: CGFloat = 70.0
-
-    /// 图片数量
+    var verticalRadius: CGFloat = 40.0
     var imageCount: Int = 6
 
-    /// 图片数组
     private var images: [ImageParams] = []
 
-    /// 图片大小
     private let imageViewSize: CGFloat = 80.0
 
     override init(frame: CGRect) {
@@ -40,35 +33,6 @@ class EllipticalRotatingImagesDepthAwareView: UIView {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         setupImages()
-    }
-
-    // 绘制图像
-    override func draw(_ rect: CGRect) {
-        super.draw(rect)
-
-        for item in images {
-            let imageView = UIImageView()
-            imageView.frame = CGRect(x:item.centerX + bounds.width / 2 - imageViewSize / 2, y: item.centerY + bounds.height / 2 - imageViewSize / 2, width: imageViewSize, height: imageViewSize)
-            imageView.backgroundColor = .randomColor
-            // 设置 3D 旋转和缩放
-
-            let angle = CGFloat(-item.rotation * Double.pi / 180) // 将 30 度转换为弧度
-            var transform = CATransform3DIdentity // 初始 Transform
-//            transform.m34 = -1.0 / 500.0
-            transform = CATransform3DRotate(transform, angle, 0, 1, 0) // 绕 Y 轴旋转
-//            testView.layer.transform = transform
-
-//            let transform = CATransform3DMakeRotation(item.rotation * .pi / 180.0, 0, 1, 0)
-            let scaledTransform = CATransform3DScale(transform, item.scale, item.scale, 1)
-
-            imageView.layer.transform = scaledTransform
-
-            // 反面/正面切换
-            let imageName = item.showFront ? "cardFront" : "cardBack" // 用你的图片替代
-            imageView.image = UIImage(named: imageName)
-
-            addSubview(imageView)
-        }
     }
 
     // 初始化图像的位置、旋转、缩放等
@@ -86,7 +50,6 @@ class EllipticalRotatingImagesDepthAwareView: UIView {
 
             // 模拟 3D 缩放效果
             let scale = 0.8 + (1.2 - 0.8) * (1 + centerY * 2 / verticalRadius) / 2
-
 
             var item = ImageParams(centerX: centerX, centerY: centerY, scale: scale)
             item.updateAngle(angle: angle)
@@ -108,6 +71,37 @@ class EllipticalRotatingImagesDepthAwareView: UIView {
         animation.duration = duration
         animation.repeatCount = .infinity
         layer.add(animation, forKey: "rotationAnimation")
+    }
+
+    // 绘制图像
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
+
+        // 清除所有已经添加的 imageView
+        self.subviews.forEach { subview in
+            if subview is UIImageView {
+                subview.removeFromSuperview()
+            }
+        }
+
+        for item in images {
+            let imageView = UIImageView()
+            imageView.frame = CGRect(x:item.centerX + bounds.width / 2 - imageViewSize / 2, y: item.centerY + bounds.height / 2 - imageViewSize / 2, width: imageViewSize, height: imageViewSize)
+            imageView.backgroundColor = .randomColor
+            // 设置 3D 旋转和缩放
+
+            let angle = CGFloat(-item.rotation * Double.pi / 180) // 将 30 度转换为弧度
+            var transform = CATransform3DIdentity // 初始 Transform
+            transform = CATransform3DRotate(transform, angle, 0, 1, 0) // 绕 Y 轴旋转
+            let scaledTransform = CATransform3DScale(transform, item.scale, item.scale, 1)
+            imageView.layer.transform = scaledTransform
+
+            // 反面/正面切换
+            let imageName = item.showFront ? "cardFront" : "cardBack" // 用你的图片替代
+            imageView.image = UIImage(named: imageName)
+
+            addSubview(imageView)
+        }
     }
 }
 
