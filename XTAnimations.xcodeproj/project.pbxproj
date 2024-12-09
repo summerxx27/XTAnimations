@@ -32,7 +32,6 @@
 		B94146292994E3780030EEE1 /* RunningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94146282994E3780030EEE1 /* RunningViewController.swift */; };
 		B9414E802994F6D90030EEE1 /* SortViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9414E7F2994F6D90030EEE1 /* SortViewController.swift */; };
 		B9468CF02D01904A009D62FB /* XTCircleCollectionViewTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9468CEF2D01904A009D62FB /* XTCircleCollectionViewTestVC.swift */; };
-		B9468CF22D02DDD9009D62FB /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9468CF12D02DDD9009D62FB /* ImageCollectionViewCell.swift */; };
 		B9468D072D034AF9009D62FB /* Transform3DVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9468D062D034AF9009D62FB /* Transform3DVC.swift */; };
 		B9468D092D0358F4009D62FB /* EllipticalRotatingImagesDepthAwareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9468D082D0358F4009D62FB /* EllipticalRotatingImagesDepthAwareView.swift */; };
 		B9468D0C2D03629F009D62FB /* cardBack.png in Resources */ = {isa = PBXBuildFile; fileRef = B9468D0A2D03629E009D62FB /* cardBack.png */; };
@@ -129,7 +128,6 @@
 		B94146282994E3780030EEE1 /* RunningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningViewController.swift; sourceTree = "<group>"; };
 		B9414E7F2994F6D90030EEE1 /* SortViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortViewController.swift; sourceTree = "<group>"; };
 		B9468CEF2D01904A009D62FB /* XTCircleCollectionViewTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XTCircleCollectionViewTestVC.swift; sourceTree = "<group>"; };
-		B9468CF12D02DDD9009D62FB /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		B9468D062D034AF9009D62FB /* Transform3DVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transform3DVC.swift; sourceTree = "<group>"; };
 		B9468D082D0358F4009D62FB /* EllipticalRotatingImagesDepthAwareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EllipticalRotatingImagesDepthAwareView.swift; sourceTree = "<group>"; };
 		B9468D0A2D03629E009D62FB /* cardBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cardBack.png; sourceTree = "<group>"; };
@@ -328,7 +326,6 @@
 				B9468D0A2D03629E009D62FB /* cardBack.png */,
 				B9468D0B2D03629F009D62FB /* cardFront.png */,
 				B9468CEF2D01904A009D62FB /* XTCircleCollectionViewTestVC.swift */,
-				B9468CF12D02DDD9009D62FB /* ImageCollectionViewCell.swift */,
 				B9468D082D0358F4009D62FB /* EllipticalRotatingImagesDepthAwareView.swift */,
 			);
 			path = CollectionCircleLayout;
@@ -741,7 +738,6 @@
 			files = (
 				B9E2F1BB29D5C6DD004A283F /* FloatClockView.swift in Sources */,
 				B939EE3629C6133F0026F247 /* UICollectionView.swift in Sources */,
-				B9468CF22D02DDD9009D62FB /* ImageCollectionViewCell.swift in Sources */,
 				B94146292994E3780030EEE1 /* RunningViewController.swift in Sources */,
 				B9E2F1B229D43144004A283F /* TestViewController.swift in Sources */,
 				B94141B729936BAD0030EEE1 /* UIView.swift in Sources */,

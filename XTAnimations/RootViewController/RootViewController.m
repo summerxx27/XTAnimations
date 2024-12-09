@@ -52,7 +52,8 @@
     [self addCell:@"画中画-浮窗-Timer" class:@"XTAnimations.PipTimerViewController"];
     [self addCell:@"0.1s倒计时" class:@"XTAnimations.DoubleCardViewController"];
     [self addCell:@"3D效果的 CollectionView" class:@"XTAnimations.XTCircleCollectionViewTestVC"];
-    
+    [self addCell:@"地球围绕太阳转" class:@"XTAnimations.Transform3DVC"];
+
     [self.view addSubview:self.tableView];
     
     [_tableView reloadData];
