@@ -134,8 +134,7 @@ class EllipticalRotatingImagesDepthAwareView: UIView {
             imageView.layer.transform = scaledTransform
 
             // 计算 zPosition：根据旋转角度和深度，确保前面的视图有更高的 zPosition
-            let zPositionFactor = cos(CGFloat(item.angle) * .pi / 180) // 计算根据角度的 zPosition
-            imageView.layer.zPosition = CGFloat(item.index) * 10 + (zPositionFactor * 100) // 视角前的卡片 zPosition 更大
+            imageView.layer.zPosition = item.scale * 100
 
             // 反面/正面切换
             let imageName = item.showFront ? "cardFront" : "cardBack"
