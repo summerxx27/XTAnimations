@@ -1,5 +1,5 @@
 //
-//  EllipticalRotatingImagesDepthAwareView.swift
+//  LiveRoomLoopEllipticalView.swift
 //  XTAnimations
 //
 //  Created by summerxx on 2024/12/7.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EllipticalRotatingImagesDepthAwareView: UIView {
+class LiveRoomLoopEllipticalView: UIView {
 
     // 配置参数
     var rotationAngle: CGFloat = 0.0 {
@@ -153,7 +153,7 @@ class EllipticalRotatingImagesDepthAwareView: UIView {
     }
 }
 
-extension EllipticalRotatingImagesDepthAwareView {
+extension LiveRoomLoopEllipticalView {
 
     func getRotationY(index: Int, angle: CGFloat) -> CGFloat {
         let rotation: CGFloat

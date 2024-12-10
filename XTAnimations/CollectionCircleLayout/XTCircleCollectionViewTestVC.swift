@@ -13,7 +13,7 @@ class XTCircleCollectionViewTestVC: UIViewController {
 
     var lastAngle = 0.0
 
-    var awareView = EllipticalRotatingImagesDepthAwareView()
+    var awareView = LiveRoomLoopEllipticalView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
