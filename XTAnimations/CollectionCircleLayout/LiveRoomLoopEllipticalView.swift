@@ -49,9 +49,16 @@ class LiveRoomLoopEllipticalView: UIView {
         }
     }
 
+    /// 长半轴
     var horizontalRadius: CGFloat = 150.0
+    /// 短半轴
     var verticalRadius: CGFloat = 40.0
+    /// 图片个数
     var imageCount: Int = 5
+    /// 最后一次的偏移
+    var lastTranslation: CGPoint = .zero
+    /// 最后一次的弧度
+    var lastAngle = 0.0
 
     private var images: [ImageParams] = []
 
@@ -59,16 +66,17 @@ class LiveRoomLoopEllipticalView: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setupImages()
+        configUI()
+        configGusture()
     }
 
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        setupImages()
+        configUI()
     }
 
     // 初始化图像的位置、旋转、缩放等
-    func setupImages() {
+    func configUI() {
         let pieceAngle = 360.0 / CGFloat(imageCount)
         self.subviews.forEach { v in
             v.removeFromSuperview()
@@ -155,6 +163,7 @@ class LiveRoomLoopEllipticalView: UIView {
 
 extension LiveRoomLoopEllipticalView {
 
+    /// 计算倾斜角: 绕 Y 轴
     func getRotationY(index: Int, angle: CGFloat) -> CGFloat {
         let rotation: CGFloat
 
@@ -174,7 +183,6 @@ extension LiveRoomLoopEllipticalView {
 
             rotation = 285.0 - ((currentAngle - 162.0) / changeAngleTotal) * changeRotationTotal
         }
-
 //        print("index: \(index), angle: \(angle), rotation: \(rotation)")
         return rotation
     }

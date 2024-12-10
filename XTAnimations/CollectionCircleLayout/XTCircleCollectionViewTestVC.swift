@@ -17,15 +17,9 @@ class XTCircleCollectionViewTestVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-
         self.view += awareView
         awareView.backgroundColor = .cyan
         awareView.frame = CGRect(x: 0, y: 200, width: UIScreen.width, height: 400)
-
-        let pan = UIPanGestureRecognizer.init(target: self, action: #selector(panAction))
-        awareView.addGestureRecognizer(pan)
-
 
         let testView = UIView()
         view += testView
@@ -37,23 +31,5 @@ class XTCircleCollectionViewTestVC: UIViewController {
         transform.m34 = -1.0 / 500.0 // 设置透视效果
         transform = CATransform3DRotate(transform, angle, 0, 1, 0) // 绕 Y 轴旋转
         testView.layer.transform = transform
-    }
-
-
-    @objc func panAction(sender: UIPanGestureRecognizer) {
-        let translation = sender.translation(in: self.awareView)
-
-        // 获取拖动的增量
-        let deltaX = translation.x - lastTranslation.x
-        let newX = deltaX / 10 + lastAngle
-
-        if newX > 360 {
-            lastAngle = newX - 360
-        } else if newX < 0 {
-            lastAngle = 360 + newX
-        } else {
-            lastAngle = newX
-        }
-        awareView.rotationAngle = -lastAngle
     }
 }
