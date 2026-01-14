@@ -37,9 +37,11 @@
 		B9468D0C2D03629F009D62FB /* cardBack.png in Resources */ = {isa = PBXBuildFile; fileRef = B9468D0A2D03629E009D62FB /* cardBack.png */; };
 		B9468D0D2D03629F009D62FB /* cardFront.png in Resources */ = {isa = PBXBuildFile; fileRef = B9468D0B2D03629F009D62FB /* cardFront.png */; };
 		B9468D1C2D085F08009D62FB /* LiveRoomLoopEllipticalView+Gesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9468D1B2D085F08009D62FB /* LiveRoomLoopEllipticalView+Gesture.swift */; };
+		B9468D1E2D0967F0009D62FB /* CardResourceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9468D1D2D0967F0009D62FB /* CardResourceManager.swift */; };
 		B94802C02B07946E00F9F997 /* GoldCoinCalliperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94802BF2B07946E00F9F997 /* GoldCoinCalliperView.swift */; };
 		B94B8D192A5E581400BE206E /* DoubleCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94B8D182A5E581400BE206E /* DoubleCardViewController.swift */; };
 		B96184B82A25A25D0040DEE2 /* HeroTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96184B72A25A25D0040DEE2 /* HeroTestViewController.swift */; };
+		B9BC7CF12DA799D400324CAC /* live_share_screen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B9BC7CF02DA799D400324CAC /* live_share_screen.mp4 */; };
 		B9E2F19429D2D24E004A283F /* PipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E2F19329D2D24E004A283F /* PipViewController.swift */; };
 		B9E2F19A29D2EF38004A283F /* gift_demo1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B9E2F19829D2EB22004A283F /* gift_demo1.mp4 */; };
 		B9E2F19B29D2EF38004A283F /* gift_demo2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B9E2F19729D2EB22004A283F /* gift_demo2.mp4 */; };
@@ -134,9 +136,11 @@
 		B9468D0A2D03629E009D62FB /* cardBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cardBack.png; sourceTree = "<group>"; };
 		B9468D0B2D03629F009D62FB /* cardFront.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cardFront.png; sourceTree = "<group>"; };
 		B9468D1B2D085F08009D62FB /* LiveRoomLoopEllipticalView+Gesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LiveRoomLoopEllipticalView+Gesture.swift"; sourceTree = "<group>"; };
+		B9468D1D2D0967F0009D62FB /* CardResourceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardResourceManager.swift; sourceTree = "<group>"; };
 		B94802BF2B07946E00F9F997 /* GoldCoinCalliperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoldCoinCalliperView.swift; sourceTree = "<group>"; };
 		B94B8D182A5E581400BE206E /* DoubleCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleCardViewController.swift; sourceTree = "<group>"; };
 		B96184B72A25A25D0040DEE2 /* HeroTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroTestViewController.swift; sourceTree = "<group>"; };
+		B9BC7CF02DA799D400324CAC /* live_share_screen.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = live_share_screen.mp4; sourceTree = "<group>"; };
 		B9E2F19329D2D24E004A283F /* PipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipViewController.swift; sourceTree = "<group>"; };
 		B9E2F19729D2EB22004A283F /* gift_demo2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = gift_demo2.mp4; sourceTree = "<group>"; };
 		B9E2F19829D2EB22004A283F /* gift_demo1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = gift_demo1.mp4; sourceTree = "<group>"; };
@@ -330,6 +334,7 @@
 				B9468CEF2D01904A009D62FB /* XTCircleCollectionViewTestVC.swift */,
 				B9468D082D0358F4009D62FB /* LiveRoomLoopEllipticalView.swift */,
 				B9468D1B2D085F08009D62FB /* LiveRoomLoopEllipticalView+Gesture.swift */,
+				B9468D1D2D0967F0009D62FB /* CardResourceManager.swift */,
 			);
 			path = CollectionCircleLayout;
 			sourceTree = "<group>";
@@ -363,6 +368,7 @@
 		B9E2F1B529D5C5E3004A283F /* 画中画Timer */ = {
 			isa = PBXGroup;
 			children = (
+				B9BC7CF02DA799D400324CAC /* live_share_screen.mp4 */,
 				B9E2F1B629D5C606004A283F /* PipTimerViewController.swift */,
 				B9E2F1B829D5C6AC004A283F /* MCGCDTimer.swift */,
 				B9E2F1BA29D5C6DD004A283F /* FloatClockView.swift */,
@@ -617,6 +623,7 @@
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 8XEUVFYSL4;
 						LastSwiftMigration = 1420;
+						ProvisioningStyle = Automatic;
 					};
 					BC8B4E3B1D376BDF009B441C = {
 						CreatedOnToolsVersion = 7.3;
@@ -657,6 +664,7 @@
 				B9E2F1A429D311C4004A283F /* pip_video.mp4 in Resources */,
 				B9E2F1A229D30B32004A283F /* gift_demo5.mp4 in Resources */,
 				B9E2F19A29D2EF38004A283F /* gift_demo1.mp4 in Resources */,
+				B9BC7CF12DA799D400324CAC /* live_share_screen.mp4 in Resources */,
 				B9E2F19B29D2EF38004A283F /* gift_demo2.mp4 in Resources */,
 				B9E2F19F29D30971004A283F /* slience.mp3 in Resources */,
 				B9468D0C2D03629F009D62FB /* cardBack.png in Resources */,
@@ -744,6 +752,7 @@
 				B94146292994E3780030EEE1 /* RunningViewController.swift in Sources */,
 				B9E2F1B229D43144004A283F /* TestViewController.swift in Sources */,
 				B94141B729936BAD0030EEE1 /* UIView.swift in Sources */,
+				B9468D1E2D0967F0009D62FB /* CardResourceManager.swift in Sources */,
 				B9468CF02D01904A009D62FB /* XTCircleCollectionViewTestVC.swift in Sources */,
 				B94B8D192A5E581400BE206E /* DoubleCardViewController.swift in Sources */,
 				BC73FDCC1D4B1DD700EA9503 /* PopingViewController.m in Sources */,
@@ -936,12 +945,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8XEUVFYSL4;
 				INFOPLIST_FILE = XTAnimations/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "-MyCompanyName-.XTAnimations-summerxx2";
+				PRODUCT_BUNDLE_IDENTIFIER = com.weo.projectz1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "XTAnimations/XTFoundationSwift/XTAnimations-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -954,12 +966,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8XEUVFYSL4;
 				INFOPLIST_FILE = XTAnimations/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "-MyCompanyName-.XTAnimations-summerxx2";
+				PRODUCT_BUNDLE_IDENTIFIER = com.weo.projectz1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "XTAnimations/XTFoundationSwift/XTAnimations-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};

@@ -73,9 +73,9 @@ class PipTimerViewController: UIViewController, AVPictureInPictureControllerDele
     private func setupPlayer() {
         playerLayer = AVPlayerLayer()
         playerLayer.backgroundColor = UIColor.cyan.cgColor
-        playerLayer.frame = .init(x: 90, y: 90, width: 200, height: 150)
+        playerLayer.frame = .init(x: 90, y: 90, width: 194, height: 156)
 
-        let mp4Video = Bundle.main.url(forResource: "pip_video", withExtension: "mp4")
+        let mp4Video = Bundle.main.url(forResource: "live_share_screen", withExtension: "mp4")
         let asset = AVAsset.init(url: mp4Video!)
         let playerItem = AVPlayerItem.init(asset: asset)
 

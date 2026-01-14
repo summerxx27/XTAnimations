@@ -28,8 +28,7 @@ class LiveRoomLoopEllipticalView: UIView {
                 let rotationY = self.getRotationY(index: item.index, angle: correctedAngle)
 
                 // 模拟 3D 缩放效果
-                let depthFactor = (centerY + verticalRadius) / (2 * verticalRadius)
-                let scale = 0.6 + depthFactor + (1.5 - 0.6)
+                let scale = updateScale(angle: correctedAngle)
 
                 // 使用索引来访问和更新元素
                 images[index].angle = correctedAngle
@@ -40,6 +39,7 @@ class LiveRoomLoopEllipticalView: UIView {
 
                 // 计算正反面显示
                 images[index].showFront = rotationY <= 90.0 || rotationY >= 270.0
+                images[index].updateLetter(rotation: rotationY)
             }
 
             images.sort { $0.centerY < $1.centerY }
@@ -52,7 +52,7 @@ class LiveRoomLoopEllipticalView: UIView {
     /// 长半轴
     var horizontalRadius: CGFloat = 150.0
     /// 短半轴
-    var verticalRadius: CGFloat = 40.0
+    var verticalRadius: CGFloat = 20.0
     /// 图片个数
     var imageCount: Int = 5
     /// 最后一次的偏移
@@ -60,9 +60,16 @@ class LiveRoomLoopEllipticalView: UIView {
     /// 最后一次的弧度
     var lastAngle = 0.0
 
+    /// 定义常量: 用于 scale 的计算
+    let selfMax: CGFloat = 1.2
+    let selfMiddle: CGFloat = 1.1
+    let selfMin: CGFloat = 0.5
+
+    var letter: String = "" // 假设 letter 是类中的一个属性
+
     private var images: [ImageParams] = []
 
-    private let imageViewSize: CGSize = CGSize(width: 55, height: 86)
+    private let imageViewSize: CGSize = CGSize(width: 158, height: 211)
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -91,15 +98,15 @@ class LiveRoomLoopEllipticalView: UIView {
             let centerX = horizontalRadius * cos(correctedAngle * .pi / 180)
             let centerY = verticalRadius * sin(correctedAngle * .pi / 180)
 
-            // 模拟 3D 缩放效果
-            let depthFactor = (centerY + verticalRadius) / (2 * verticalRadius)
-            let scale = 0.6 + depthFactor + (1.5 - 0.6)
+            // 计算缩放
+            let scale = updateScale(angle: correctedAngle)
 
             var item = ImageParams(index: index, centerX: centerX, centerY: centerY, scale: scale)
             let rotationY = getRotationY(index: index, angle: correctedAngle)
             item.rotationY = CGFloat(ceilf(Float(rotationY)))
             item.angle = correctedAngle
             item.showFront = rotationY <= 90.0 || rotationY >= 270.0
+            item.updateLetter(rotation: rotationY)
             return item
         }
 
@@ -136,13 +143,13 @@ class LiveRoomLoopEllipticalView: UIView {
             transform.m34 = -1.0 / 500.0 // 设置透视效果
             transform = CATransform3DRotate(transform, angle, 0, 1, 0) // 绕 Y 轴旋转
 
-            print("draw index: \(item.index), angle: \(item.angle), rotation: \(item.rotationY)")
+            print("draw index: \(item.index), angle: \(item.angle), rotation: \(item.rotationY), centerY: \(item.centerY)")
 
             let scaledTransform = CATransform3DScale(transform, item.scale, item.scale, 1)
             imageView.layer.transform = scaledTransform
 
             // 计算 zPosition：根据旋转角度和深度，确保前面的视图有更高的 zPosition
-            imageView.layer.zPosition = item.scale * 100
+            imageView.layer.zPosition = item.centerY * 100
 
             // 反面/正面切换
             let imageName = item.showFront ? "cardFront" : "cardBack"
@@ -153,10 +160,10 @@ class LiveRoomLoopEllipticalView: UIView {
             let textL = UILabel().then {
                 $0.font = .systemFont(ofSize: 14)
                 $0.textColor = UIColor(0x333333)
-                $0.text = "\(item.index)"
+                $0.text = "卡片+\(item.letter)"
             }
-            textL.frame = CGRect(x: imageX, y: imageY, width: imageViewSize.width, height: imageViewSize.height)
-            addSubview(textL)
+            textL.frame = CGRect(x: 0, y: 0, width: imageViewSize.width, height: imageViewSize.height)
+            imageView.addSubview(textL)
         }
     }
 }
@@ -186,6 +193,44 @@ extension LiveRoomLoopEllipticalView {
 //        print("index: \(index), angle: \(angle), rotation: \(rotation)")
         return rotation
     }
+
+    /// 获取缩放数据
+    /// - Parameter angle: 卡片在轨道上的角度(0..359)
+    /// - Returns: 获取到的 scale
+    func updateScale(angle: CGFloat) -> CGFloat {
+        // 自身缩放的开始
+        let selfStart = selfMiddle
+
+        // 自身缩放的终点
+        var selfEnd = selfMiddle
+
+        var angleChangeRadio: CGFloat = 0.0
+
+        switch angle {
+        case 0..<90:
+            selfEnd = selfMax
+            angleChangeRadio = (angle - 0) / 90.0  // 变化总量是90f
+        case 90..<180:
+            selfEnd = selfMax
+            angleChangeRadio = (angle - 180) / 90.0
+        case 180..<270:
+            selfEnd = selfMin
+            angleChangeRadio = (angle - 180) / 90.0
+        case 270..<360:
+            selfEnd = selfMin
+            angleChangeRadio = (angle - 360) / 90.0
+        default:
+            break
+        }
+
+        // 自身的缩放
+        let selfScale = selfStart + (selfEnd - selfStart) * abs(angleChangeRadio)
+
+        // 抵抗Y轴自旋带来的视觉高度差
+        let resistScale = 0.5 + (1.0 - 0.5) * abs(angleChangeRadio)
+
+        return selfScale * resistScale
+    }
 }
 
 // 数据结构
@@ -197,4 +242,23 @@ struct ImageParams {
     var showFront: Bool = false
     var rotationY: CGFloat = 0.0
     var angle: CGFloat = 0.0
+    var letter: String = ""
+
+    mutating func updateLetter(rotation: CGFloat) {
+        if rotation >= 0.0 && rotation < 90.0 && letter.isEmpty {
+            // 向后取1
+            letter = CardResourceManager.shared.acquireBack() ?? ""
+        } else if rotation >= 90.0 && rotation < 180.0 && !letter.isEmpty {
+            // 向后释放1
+            letter = ""
+            CardResourceManager.shared.releaseBack()
+        } else if rotation > 270.0 && letter.isEmpty {
+            // 向前取1
+            letter = CardResourceManager.shared.acquireForward() ?? ""
+        } else if rotation <= 270.0 && rotation > 180.0 && !letter.isEmpty {
+            // 向前释放1
+            letter = ""
+            CardResourceManager.shared.releaseForward()
+        }
+    }
 }

@@ -10,7 +10,7 @@ def public_pods
   pod 'ZLCollectionViewFlowLayout'
   pod 'MJRefresh'
   pod 'SwiftTheme'
-  pod 'Hero'
+
 end
 
 target 'XTAnimations' do

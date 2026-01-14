@@ -8,12 +8,12 @@
 
 import UIKit
 import SnapKit
-import Hero
 
 class CollectionViewLayoutDemoViewController: UIViewController {
 
     /// 测试
-    var count = Int(arc4random()) % (16 - 2 + 1) + 2
+//    var count = Int(arc4random()) % (16 - 2 + 1) + 2
+    var count = 5
 
     /// 间隔
     static let spaceing = 2.0
@@ -44,6 +44,7 @@ class CollectionViewLayoutDemoViewController: UIViewController {
         layout.delegate = self
         layout.canDrag = false
         layout.isFloor = false
+//        layout.layoutType = .init(6)
         layout.minimumLineSpacing = CollectionViewLayoutDemoViewController.spaceing
         layout.minimumInteritemSpacing = CollectionViewLayoutDemoViewController.spaceing
         layout.sectionInset = UIEdgeInsets.only(left: CollectionViewLayoutDemoViewController.spaceing, right: CollectionViewLayoutDemoViewController.spaceing)
@@ -96,8 +97,18 @@ extension CollectionViewLayoutDemoViewController {
     }
 }
 
+//extension CollectionViewLayoutDemoViewController: ZLCollectionViewBaseFlowLayoutDelegate {
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewFlowLayout, typeOfLayout section: Int) -> ZLLayoutType {
+//        return ZLLayoutType.init(rawValue: 6)
+//    }
+//}
+
 // MARK: - UICollectionViewDelegate, UICollectionViewDataSourc
 extension CollectionViewLayoutDemoViewController: UICollectionViewDelegate, UICollectionViewDataSource, ZLCollectionViewBaseFlowLayoutDelegate {
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewFlowLayout, typeOfLayout section: Int) -> ZLLayoutType {
+        return ZLLayoutType.init(rawValue: 6)
+    }
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         1
@@ -123,76 +134,88 @@ extension CollectionViewLayoutDemoViewController: UICollectionViewDelegate, UICo
     }
 
     func cellTapped(cell: UIView, data: Int) {
-
-        let heroId = "cell\(data)"
-        cell.hero.id = heroId
-
-        let vc = HeroTestViewController()
-        vc.hero.isEnabled = true
-        vc.view.hero.id = heroId
-        vc.contentView.hero.id = heroId
-        navigationController?.hero.isEnabled = true
-        //        navigationController?.hero.navigationAnimationType = .push(direction: .down)
-        navigationController?.pushViewController(vc, animated: true)
+        debugPrint("\(data)")
     }
 
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//
+//        /// TODO: 一个的时候应该需要特殊处理, 暂时先放着
+//        if count == 1 {
+//            return CGSize(UIScreen.width, UIScreen.width)
+//        }
+//
+//        if count == 2 {
+//            return CGSize(bigW, bigW * 2 + CollectionViewLayoutDemoViewController.spaceing)
+//        }
+//
+//        if count == 3 {
+//            switch indexPath.item {
+//            case 0:
+//                return CGSize(bigW, bigW * 2 + CollectionViewLayoutDemoViewController.spaceing)
+//            default:
+//                return CGSize(bigW, bigW)
+//            }
+//
+//        }
+//
+//        if count == 4 {
+//            return CGSize(bigW, bigW)
+//        }
+//
+//        if count == 5 || count == 6 || count == 7 {
+//            switch indexPath.item {
+//            case 0, 1, 2:
+//                return CGSize(bigW, bigW)
+//            default:
+//                return CGSize(smallW, smallW)
+//            }
+//        }
+//
+//        if count == 8 || count == 9 || count == 10 {
+//            switch indexPath.item {
+//            case 0, 1:
+//                return CGSize(bigW, bigW)
+//            default:
+//                return CGSize(smallW, smallW)
+//            }
+//        }
+//
+//        if count == 11 || count == 12 || count == 13 {
+//            switch indexPath.item {
+//            case 0:
+//                return CGSize(bigW, bigW)
+//            default:
+//                return CGSize(smallW, smallW)
+//            }
+//        }
+//
+//        if count == 14 || count == 15 || count == 16 {
+//            return CGSize(smallW, smallW)
+//        }
+//
+//        return CGSize(bigW, bigW)
+//    }
 
-        /// TODO: 一个的时候应该需要特殊处理, 暂时先放着
-        if count == 1 {
-            return CGSize(UIScreen.width, UIScreen.width)
+
+    //如果是绝对定位布局必须是否该代理，设置每个item的frame
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewFlowLayout, rectOfItem indexPath: IndexPath) -> CGRect {
+        let width = (collectionView.frame.size.width - 200) / 3
+        let height = width
+        let space = 10.0
+        switch indexPath.item {
+        case 0:
+            return CGRect(x: 0, y: 0, width: 200, height: 400)
+        case 1:
+            return CGRect(x: 220, y: space, width: width , height: height)
+        case 2:
+            return CGRect(x: 240, y: height + space * (2), width: width, height: height)
+        case 3:
+            return CGRect(x: 260, y: height * (3 - 1) + space * (3), width: width, height: height)
+        case 4:
+            return CGRect(x: 280, y: height * (4 - 1) + space * (4), width: width, height: height)
+        default:
+            return .zero
         }
-
-        if count == 2 {
-            return CGSize(bigW, bigW * 2 + CollectionViewLayoutDemoViewController.spaceing)
-        }
-
-        if count == 3 {
-            switch indexPath.item {
-            case 0:
-                return CGSize(bigW, bigW * 2 + CollectionViewLayoutDemoViewController.spaceing)
-            default:
-                return CGSize(bigW, bigW)
-            }
-
-        }
-
-        if count == 4 {
-            return CGSize(bigW, bigW)
-        }
-
-        if count == 5 || count == 6 || count == 7 {
-            switch indexPath.item {
-            case 0, 1, 2:
-                return CGSize(bigW, bigW)
-            default:
-                return CGSize(smallW, smallW)
-            }
-        }
-
-        if count == 8 || count == 9 || count == 10 {
-            switch indexPath.item {
-            case 0, 1:
-                return CGSize(bigW, bigW)
-            default:
-                return CGSize(smallW, smallW)
-            }
-        }
-
-        if count == 11 || count == 12 || count == 13 {
-            switch indexPath.item {
-            case 0:
-                return CGSize(bigW, bigW)
-            default:
-                return CGSize(smallW, smallW)
-            }
-        }
-
-        if count == 14 || count == 15 || count == 16 {
-            return CGSize(smallW, smallW)
-        }
-
-        return CGSize(bigW, bigW)
     }
 }
 

@@ -80,21 +80,21 @@ class FloatClockView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
-        let mp4Video = Bundle.main.url(forResource: "gift_demo5", withExtension: "mp4")
-        guard let videoURL = mp4Video else { return }
-        let playerItem = AVPlayerItem(url: videoURL)
-        streamPlayer = AVPlayer(playerItem: playerItem)
-        let playerLayer = AVPlayerLayer(player: streamPlayer)
-        playerLayer.frame = CGRect(0, 0, 100, 100)
-        self.layer.addSublayer(playerLayer)
-
-        // 监听播放结束事件
-        NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime, object: playerItem, queue: .main) { [weak playerItem] _ in
-            // 循环播放
-            playerItem?.seek(to: CMTime.zero)
-            self.streamPlayer.play()
-        }
-        streamPlayer.play()
+//        let mp4Video = Bundle.main.url(forResource: "gift_demo5", withExtension: "mp4")
+//        guard let videoURL = mp4Video else { return }
+//        let playerItem = AVPlayerItem(url: videoURL)
+//        streamPlayer = AVPlayer(playerItem: playerItem)
+//        let playerLayer = AVPlayerLayer(player: streamPlayer)
+//        playerLayer.frame = CGRect(0, 0, 100, 100)
+//        self.layer.addSublayer(playerLayer)
+//
+//        // 监听播放结束事件
+//        NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime, object: playerItem, queue: .main) { [weak playerItem] _ in
+//            // 循环播放
+//            playerItem?.seek(to: CMTime.zero)
+//            self.streamPlayer.play()
+//        }
+//        streamPlayer.play()
     }
 
     required init?(coder: NSCoder) {

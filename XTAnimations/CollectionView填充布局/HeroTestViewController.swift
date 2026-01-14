@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Hero
 
 class HeroTestViewController: UIViewController {
     let contentView = UIView()
